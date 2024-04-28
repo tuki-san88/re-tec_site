@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/*
+Theme Name: Original theme
+Theme URL: zigzow.com
+Description: テーマの説明
+Author: 作者の名前
+Version: テーマのバージョン
+*/
+
+body {
+    text-align: center;
+}
+main {
+    margin: 0 auto;
+    padding: 4rem;
+    background: #fafafa;
+}
+aside {
+    background: #e1e1e1;
+}
