@@ -28,3 +28,7 @@ $breakpoints: ('sp':'screen and (max-width:480px)', /*767px以下（スマホ）
 body{
   font-family: 'Noto Serif JP', serif;
 }
+
+
+@import url(pc);//pc.scssを呼び出す
+@import url(sp);//sp.scssを呼び出す
