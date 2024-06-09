@@ -10,30 +10,29 @@
 <?php wp_head(); ?>
 </head>
 <body>
-<header>
 
-<header id="masthead" class="site-header" role="banner">
+<header id="masthead" class="site-header gothic-font" role="banner">
     <div class="header-content">
         <!-- ヘッダーの左側にロゴを配置 -->
-        <div class="header-left">
+        <h1 class="header-left">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php bloginfo( 'name' ); ?> <!-- サイトのタイトルを表示 -->
+                <img src="<?php echo get_template_directory_uri(); ?>/images/headerLogo.png" alt="<?php bloginfo( 'name' ); ?>"> <!-- サイトのタイトルロゴを表示 -->
             </a>
-        </div>
+        </h1>
         <!-- ヘッダーの右側にメニューを配置 -->
         <div class="header-right">
             <!-- ヘッダー上部に公式オンラインショップへのリンクを配置 -->
-            <div class="header-top-menu">
-                <a href="公式オンラインショップのURL">公式オンラインショップ</a>
+            <div class="header-shop-menu">
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/headerShopBanner.png" alt="公式オンラインショップのURL"></a>
             </div>
             <!-- メインナビゲーションメニューを配置 -->
             <nav id="site-navigation" class="main-navigation" role="navigation">
                 <ul class="menu">
-                    <li><a href="#">トップ</a></li>
-                    <li><a href="#">会社概要</a></li>
-                    <li><a href="#">サンプル</a></li>
-                    <li><a href="#">サンプル</a></li>
-                    <li><a href="#">サンプル</a></li>
+                    <li><a href="/">トップ</a></li>
+                    <li><a href="#">会社案内</a></li>
+                    <li><a href="#">事業案内</a></li>
+                    <li><a href="#">事業所一覧</a></li>
+                    <li><a href="#">採用情報</a></li>
                 </ul>
             </nav>
             <!-- ハンバーガーメニューのトグルボタン -->
@@ -45,6 +44,4 @@
             </div>
         </div>
     </div>
-</header>
-
 </header>

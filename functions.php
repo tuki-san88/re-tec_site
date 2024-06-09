@@ -3,8 +3,18 @@
  * Template Name: functions.php
  */
 
-/* style.cssの読み込み */
-function register_style() {
-    wp_enqueue_style( 'style-name', get_template_directory_uri() . '/style.css');
+/* CSSの読み込み */
+function register_styles() {
+    wp_enqueue_style('main-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('common-style', get_template_directory_uri() . '/css/common.css');
 }
-add_action( 'wp_enqueue_scripts', 'register_style' );
+add_action('wp_enqueue_scripts', 'register_styles');
+
+/* JavaScriptの読み込み */
+function register_scripts() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('main-slider', get_template_directory_uri() . '/js/main-slider.js', array('jquery'), null, true);
+    wp_enqueue_script('custom-slider', get_template_directory_uri() . '/js/custom-slider.js', array('jquery'), null, true);
+}
+add_action('wp_enqueue_scripts', 'register_scripts');
+?>
