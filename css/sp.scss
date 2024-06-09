@@ -1,0 +1,12 @@
+/*sp.scss*/
+/* スマホ用メニュー */
+@include mq(sp) {
+    .header-right {
+        .main-navigation {
+            display: none;
+        }
+        .mobile-menu-toggle {
+            display: block;
+        }
+    }
+}

@@ -2,7 +2,384 @@
 /*===================================
 # マップ型変数breakpointsを定義
 ===================================*/
+/* Reset SCSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, main,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /*共通*/
 body {
   font-family: "Noto Serif JP", serif;
+  line-height: 1.5;
+}
+
+a:hover {
+  color: #ff7f50;
+}
+
+a img:hover {
+  opacity: 0.7; /*リンクの透過処理*/
+}
+
+/* ゴシック体のフォントを設定するクラス */
+.gothic-font {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS PGothic", "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+/*pc.scssの読み込み*/
+/*PCベースフォント*/
+body {
+  font-size: 23px;
+}
+
+/*共通ラッパー*/
+.mainWrapper {
+  max-width: 1640px;
+  margin: 0 auto;
+}
+
+/* ヘッダー */
+header {
+  background-color: #ffffff; /* ヘッダーの背景色 */
+  border-bottom: #707070 1px solid;
+}
+header .header-content {
+  display: flex; /* 子要素を横並びに */
+  align-items: center; /* 子要素を縦方向中央揃え */
+  margin: 0 20px;
+}
+
+/* ヘッダーの左側にロゴを配置 */
+.header-left a {
+  text-decoration: none; /* リンクの下線をなくす */
+  color: #333333; /* リンクの色 */
+  font-size: 24px; /* フォントサイズ */
+}
+
+/* ヘッダーの右側にメニューを配置 */
+.header-right {
+  flex: 1; /* 幅を自動調整 */
+  align-items: center; /* 子要素を縦方向中央揃え */
+  /* メインナビゲーションメニュー */
+}
+.header-right .header-shop-menu {
+  width: 100%;
+  text-align: right;
+}
+.header-right .main-navigation {
+  margin-left: auto; /* 左側の余白を自動調整 */
+}
+.header-right .main-navigation .menu {
+  list-style: none; /* リストのマーカーをなくす */
+  padding: 0; /* リストの余白をなくす */
+  margin: 20px 0 0 0; /* リストの余白をなくす */
+  display: flex; /* 子要素を横並びに */
+  justify-content: flex-end; /*子要素を右詰めに*/
+}
+.header-right .main-navigation .menu li {
+  display: inline-block; /* メニュー項目を横並びに */
+  margin-right: 20px; /* メニュー項目の右側の余白 */
+}
+.header-right .main-navigation .menu li a:hover {
+  color: #ff7f50;
+}
+.header-right .main-navigation .menu li:last-child {
+  margin-right: 0; /* 最後のメニュー項目の右側の余白をなくす */
+}
+.header-right .main-navigation .menu li a {
+  text-decoration: none; /* リンクの下線をなくす */
+  color: #333333; /* リンクの色 */
+}
+
+/* ハンバーガーメニューのトグルボタン */
+.mobile-menu-toggle {
+  display: none; /* デフォルトでは非表示 */
+}
+
+/* メニュートグルボタンのアイコン */
+.menu-toggle-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #333333;
+}
+
+/* メニュートグルボタンのテキスト */
+.menu-toggle-text {
+  margin-left: 5px;
+}
+
+/*トップページ*/
+/* メインキャッチスライダー */
+.mainSliderWrapper {
+  position: relative;
+}
+.mainSliderWrapper .main-slider {
+  width: 100%;
+  max-width: 1920px;
+  height: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.mainSliderWrapper .main-slider .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* 初期状態で透明にする */
+  transition: opacity 1s ease-in-out; /* フェードのトランジションを設定 */
+}
+.mainSliderWrapper .main-slider .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像の縦横比を保持しつつ、コンテナ全体をカバー */
+}
+.mainSliderWrapper .main-slider .slide.active {
+  opacity: 1; /* 表示するスライドを不透明にする */
+}
+.mainSliderWrapper .slideOnMesseage {
+  position: absolute;
+  left: 10%;
+  top: 200px;
+  font-size: 75px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+.mainSliderWrapper .slideOnMesseage span {
+  display: block;
+  font-size: 113px;
+}
+
+/*トップ｜メッセージ*/
+.topMessageWrapper {
+  margin: 80px auto;
+  width: 1088px;
+}
+.topMessageWrapper h2 {
+  font-size: 50px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.topMessageWrapper section {
+  line-height: 2;
+}
+
+/* トップ　カスタムスライダー */
+.topSubSlideWrapper {
+  width: 100%;
+  max-width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.topSubSlideWrapper h2 {
+  text-align: center;
+  margin: 80px;
+}
+
+.custom-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.custom-slider .custom-slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.custom-slider .custom-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* 縦横比を維持して拡大 */
+}
+.custom-slider .custom-slide.active {
+  display: block;
+}
+
+/*トップ｜トータルサポートリンク*/
+.topTortalSupportWrapper {
+  display: flex;
+  width: 1364px;
+  margin: 0 auto;
+}
+.topTortalSupportWrapper .supportLeft {
+  width: 60px;
+  max-width: 60px;
+  border-right: #707070 1px solid;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  margin-right: 34px;
+  line-height: 3;
+  font-weight: bold;
+}
+.topTortalSupportWrapper .supportRight {
+  flex: 1;
+}
+.topTortalSupportWrapper .supportRight .supportNav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 3;
+}
+.topTortalSupportWrapper .supportRight .supportNav li {
+  display: inline-block;
+}
+.topTortalSupportWrapper .supportRight .supportNavDescription {
+  margin: 40px auto;
+  text-align: center;
+  line-height: 2;
+}
+
+.topTortalSupportBanner {
+  width: 1364px;
+  margin: 0 auto;
+}
+.topTortalSupportBanner .supportBanner {
+  width: 530px;
+  margin: 0 auto;
+}
+.topTortalSupportBanner .supportBanner a {
+  display: flex;
+  border: #707070 1px solid;
+  align-items: center;
+  text-decoration: none;
+}
+.topTortalSupportBanner .supportBanner span {
+  display: inline-block;
+  font-size: 19px;
+  line-height: 1.5;
+  padding-left: 25px;
+}
+
+/* トップ｜施行実績 */
+.topResultWrapper {
+  display: flex;
+  width: 1364px;
+  margin: 400px auto;
+}
+.topResultWrapper .resultLeft {
+  width: 60px;
+  max-width: 60px;
+  border-right: #707070 1px solid;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  margin-right: 34px;
+  line-height: 3;
+  font-weight: bold;
+}
+.topResultWrapper .resultRight {
+  flex: 1;
+}
+.topResultWrapper .resultRight h2 {
+  margin-bottom: 60px;
+  font-size: 16px;
+}
+.topResultWrapper .resultRight .resultNav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 3;
+}
+.topResultWrapper .resultRight .resultNav .resultNaviItem {
+  display: inline-block;
+}
+.topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink {
+  display: block;
+  text-decoration: none;
+}
+.topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviImage {
+  display: block;
+  margin-bottom: 10px;
+}
+.topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviTitle {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviDate {
+  display: block;
+  font-size: 12px;
+  color: #707070;
+  margin-bottom: 10px;
+}
+.topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviDescription {
+  font-size: 12px;
+  color: #707070;
+}
+.topResultWrapper .resultRight .ResultButton {
+  margin: 40px auto;
+  text-align: center;
+  line-height: 2;
+}
+.topResultWrapper .resultRight .ResultButton a {
+  padding: 5px 30px;
+  background-color: #707070;
+  color: #ffffff;
+}
+
+/*sp.scssの読み込み*/
+/*sp.scss*/
+/* スマホ用メニュー */
+@media screen and (max-width:480px) {
+  .header-right .main-navigation {
+    display: none;
+  }
+  .header-right .mobile-menu-toggle {
+    display: block;
+  }
 }/*# sourceMappingURL=common.css.map */
