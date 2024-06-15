@@ -1,9 +1,29 @@
+@charset "UTF-8";
 @use "sass:math";
+
+$breakpoints: (
+    "sp": "screen and (max-width:480px)" /*767px以下（スマホ）用の表示*/,
+    "tab": "screen and (max-width:834px)" /*834px以下（タブレット）用の表示*/,
+    "pc": "screen and (min-width:835px)" /*835px以上（PC）用の表示*/
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はsp
+@mixin mq($breakpoint: sp) {
+    //map-get(マップ型変数, キー)で値を取得
+    @media #{
+        map-get($breakpoints, $breakpoint)
+    } {
+        //この中をカスタムできる
+        @content;
+    }
+}
+
+
 // レスポンシブ設定
 $innerValue: 1496;
 $inner: calc($innerValue * 1px);
 $maxVw: $innerValue;
-$minVw: 375;
+$minVw: 390;
 
 //レスポンシブ可変フォント設定
 @function rfz(
@@ -38,6 +58,7 @@ $minVw: 375;
   --pink: #efb9b9;
   --green: #0ba500;
   --green-light: #b1f19e;
+  --gray: #707070;
   // フォントウェイト
   --light: 300;
   --normal: 400;
@@ -51,11 +72,6 @@ $minVw: 375;
   --duration: 0.3s ease;
 }
 
-.sub {
-  // 下層ページ基本設定
-  color: var(--base-color);
-}
-
 .hoverOpacity {
   transition: opacity var(--duration);
   @media (any-hover: hover) {
@@ -67,33 +83,88 @@ $minVw: 375;
 
 
 // フッター
-
 .footer {
+  box-sizing: border-box;
+  font-family: var(--sans-family);
+  text-align: left;
+  padding-block-end: rfz(38, 156, $minVw, $maxVw);
+  @include mq(tab) {
+    background-color: color-mix(in srgb,var(--gray) 12%, transparent);
+  }
 
+  * {
+    box-sizing: border-box;
+  }
 }
 
-.footer__inner {
+.footer__inner { 
+  max-width: calc(var(--inner) + var(--padding-pc) * 2);
+  margin-inline: auto;
+  padding-inline: var(--padding-pc);
+
+  @include mq(tab) {
+    padding-inline: var(--padding-sp);
+  }
+
 
 }
 
 .footer__contents {
+  border-top: 1px solid var(--gray);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-block-start: rfz(22, 120, $minVw, $maxVw);
 
+  @include mq(tab) {
+    border-top: none;
+    display: block;
+  }
 }
 
 .footer__main {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  column-gap: 20px;
+  width: max(600px, 62%);
+  padding-inline: min(130px, 6vw) 50px;
 
+  @include mq(tab) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.footer__mainWrap {
+
+  @include mq(tab) {
+    display: contents;
+  }
 }
 
 .footer__head {
-
+  @include mq(tab) {
+    order: 1;
+    text-align: center;
+  }
 }
 
 .footer__logo {
+  width: rfz(108, 294, $minVw, $maxVw);
 
+  @include mq(tab) {
+    display: inline-block;
+  }
 }
 
 .footer__body {
+  margin-block-start: 9px;
 
+  @include mq(tab) {
+    margin-block-start: 30px;
+    order: 3;
+  }
 }
 
 .footer__sns {
@@ -101,62 +172,156 @@ $minVw: 375;
 }
 
 .footer__snsTitle {
+  font-size: 20px;
+  font-family: var(--sans-family);
+  font-weight: var(--ex-bold);
+  line-height: calc(29 / 20);
+  letter-spacing: 0.067em;
 
+  @include mq(tab) {
+    padding-block-end: 10px;
+    border-bottom: 1px solid var(--gray);
+    text-align: center;
+  }
 }
 
 .footer__snsLists {
+  margin-block-start: 14px;
 
+  @include mq(tab) {
+    margin-block-start: 30px;
+  }
+}
+.footer__list {
+  @include mq(tab) {
+    text-align: center;
+  }
 }
 
-.footer__snsList {
+.footer__list.mt {
+  margin-block-start: 50px;
+}
 
+.footer__snsList + .footer__snsList {
+  margin-block-start: 10px;
+
+  @include mq(tab) {
+    margin-block-start: 20px;
+  }
 }
 
 .footer__snsText {
+  font-size: rfz(12, 20, $minVw, $maxVw);
 
+  @include mq(tab) {
+    text-align: center;
+  }
 }
 
 .footer__snsLink {
-
+  display: block;
+  width: 45px;
+  margin-block-start: 10px;
+  text-align: center;
+  
+  @include mq(tab) {
+    margin-inline: auto;
+    
+  }
 }
 
 .footer__bottom {
-
+  @include mq(tab) {
+    order: 2;
+  }
 }
 
-.footer__adBlock {
-
+.footer__adBlock + .footer__adBlock {
+  margin-block-start: 15px;
 }
 
 .footer__adText {
+  font-size: rfz(12, 20, $minVw, $maxVw);
+  line-height: calc(29 / 20);
 
+  @include mq(tab) {
+    text-align: center;
+  }
 }
 
 .footer__adTel {
-
+  font-size: rfz(20, 37, $minVw, $maxVw);
+  line-height: calc(54 / 37);
+  @include mq(tab) {
+    text-align: center;
+  }
 }
 
 .footer__sub {
-
+  width: max(400px, 38%);
+  padding-inline: 50px;
+  border-right: 1px solid var(--gray);
+  @include mq(tab) {
+    display: none;
+  }
 }
 
 .footer__listWrap {
-
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px 60px;
 }
 
 .footer__lists {
-
+  
 }
 
 .footer__list {
-
+  margin-block-start: 10px;
+  
+  a {
+    font-size: 20px;
+    line-height: calc(29 / 20);
+    letter-spacing: 0.067em;
+    color: var(--base-color);
+    text-decoration: none;
+  }
 }
 
 .footer__subLists {
-
+  padding-left: 2em;
 }
 
 .footer__subList {
-
+  a {
+    font-size: 20px;
+    line-height: calc(29 / 20);
+    letter-spacing: 0.067em;
+    color: var(--base-color);
+    text-decoration: none;
+  }
 }
 
+.footer__copy {
+  font-size: rfz(12, 20, $minVw, $maxVw);
+  line-height: calc(29 / 20);
+  text-align: center;
+  margin-block-start: rfz(30, 269, $minVw, $maxVw);
+}
+
+.sub {
+  // 下層ページ基本設定
+  color: var(--base-color);
+
+
+  .inner {
+    max-width: calc(var(--inner) + var(--padding-pc) * 2);
+    margin-inline: auto;
+    padding-inline: var(--padding-pc);
+
+    @include mq(tab) {
+      padding-inline: var(--padding-sp);
+    }
+  }
+
+}

@@ -34,28 +34,42 @@ $contact = esc_url(home_url("/"));
   <div class="footer__inner">
     <div class="footer__contents">
       <div class="footer__main">
-        <div class="footer__head">
-          <div class="footer__logo">
-            <?php
-            $args = [
-              'pictureImg' => 'footerLogo',
-              'spImg' => 'true',
-              'spImgName' => '',
-              'alt' => '',
-              'file' => '.png',
-              'webp' => '',
-              'pcWidth' => '294',
-              'pcHeight' => '219',
-              'spWidth' => '108',
-              'spHeight' => '81',
-              'async' => 'true',
-              'lazy' => 'true',
-            ];
-            get_template_part('tmp/picture', null, $args);
-            ?>
+        <div class="footer__mainWrap">
+          <div class="footer__head">
+            <div class="footer__logo">
+              <?php
+              $args = [
+                'pictureImg' => 'footerLogo',
+                'spImg' => 'true',
+                'spImgName' => '',
+                'alt' => '',
+                'file' => '.png',
+                'webp' => '',
+                'pcWidth' => '294',
+                'pcHeight' => '219',
+                'spWidth' => '108',
+                'spHeight' => '81',
+                'async' => 'true',
+                'lazy' => 'true',
+              ];
+              get_template_part('tmp/picture', null, $args);
+              ?>
+            </div>
+          </div>
+          <div class="footer__body">
+            <address>
+              <div class="footer__adBlock">
+                <p class="footer__adText">〒520-2277</p>
+                <p class="footer__adText">滋賀県大津市関津3丁目5-6</p>
+              </div>
+              <div class="footer__adBlock">
+                <p class="footer__adTel">077-536-6594</p>
+                <p class="footer__adText">事務所　平日9：00～15：00</p>
+              </div>
+            </address>
           </div>
         </div>
-        <div class="footer__body">
+        <div class="footer__bottom">
           <div class="footer__sns">
             <div class="footer__snsTitle">公式アカウント</div>
             <ul class="footer__snsLists">
@@ -81,57 +95,43 @@ $contact = esc_url(home_url("/"));
               <?php foreach ($snsLists as $snsList) { ?>
                 <li class="footer__snsList">
                   <p class="footer__snsText"><?php echo $snsList["title"]; ?></p>
-                  <a href="<?php echo $aboutList["link"]; ?>" target="_blank" class="footer__snsLink"><img src="<?php echo get_template_directory_uri() ?><?php echo $snsList["image"]; ?>" alt=""></a>
+                  <a href="<?php echo $aboutList["link"]; ?>" target="_blank" class="footer__snsLink hoverOpacity"><img src="<?php echo get_template_directory_uri() ?><?php echo $snsList["image"]; ?>" alt=""></a>
                 </li>
               <?php } ?>
             </ul>
           </div>
         </div>
-        <div class="footer__bottom">
-          <address>
-            <div class="footer__adBlock">
-              <p class="footer__adText">〒520-2277</p>
-              <p class="footer__adText">滋賀県大津市関津3丁目5-6</p>
-            </div>
-            <div class="footer__adBlock">
-              <p class="footer__adTel">077-536-6594</p>
-              <p class="footer__adText">事務所　平日9：00～15：00</p>
-            </div>
-          </address>
-        </div>
       </div>
       <div class="footer__sub">
         <div class="footer__listWrap">
           <ul class="footer__lists">
-            <li class="footer__list"><a href="<?php echo $home; ?>">トップ</a></li>
-            <li class="footer__list"><a href="<?php echo $company; ?>">会社案内</a></li>
-            <li class="footer__list"><a href="<?php echo $business; ?>">事業案内</a>
+            <li class="footer__list"><a href="<?php echo $home; ?> " class="hoverOpacity">トップ</a></li>
+            <li class="footer__list mt"><a href="<?php echo $company; ?>" class="hoverOpacity">会社案内</a></li>
+            <li class="footer__list"><a href="<?php echo $business; ?>" class="hoverOpacity">事業案内</a>
               <ul class="footer__subLists">
-                <li class="footer__subList"><a href="<?php echo $electrical; ?>">アパレル部門</a></li>
-                <li class="footer__subList"><a href="<?php echo $sweets; ?>">スィーツ部門</a></li>
-                <li class="footer__subList"><a href="<?php echo $electrical; ?>">電気工事部門</a></li>
-                <li class="footer__subList"><a href="<?php echo $automotive; ?>">自動車部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $electrical; ?>" class="hoverOpacity">アパレル部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $sweets; ?>" class="hoverOpacity">スィーツ部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $electrical; ?>" class="hoverOpacity">電気工事部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $automotive; ?>" class="hoverOpacity">自動車部門</a></li>
               </ul>
             </li>
           </ul>
-        </div>
-        <div class="footer__listWrap">
           <ul class="footer__lists">
-            <li class="footer__list"><a href="<?php echo $offices; ?>">事業所一覧</a></li>
-            <li class="footer__list"><a href="<?php echo $careers; ?>">採用について</a></li>
-            <li class="footer__list"><a href="<?php echo $topics; ?>">職人名鑑</a></li>
-            <li class="footer__list"><a href="<?php echo $Archive; ?>">施工実績（一覧）</a>
+            <li class="footer__list"><a href="<?php echo $offices; ?>" class="hoverOpacity">事業所一覧</a></li>
+            <li class="footer__list"><a href="<?php echo $careers; ?>" class="hoverOpacity">採用について</a></li>
+            <li class="footer__list"><a href="<?php echo $topics; ?>" class="hoverOpacity">職人名鑑</a></li>
+            <li class="footer__list"><a href="<?php echo $Archive; ?>" class="hoverOpacity">施工実績（一覧）</a>
               <ul class="footer__subLists">
-                <li class="footer__subList"><a href="<?php echo $details; ?>">施工実績（詳細）</a></li>
+                <li class="footer__subList"><a href="<?php echo $details; ?>" class="hoverOpacity">施工実績（詳細）</a></li>
               </ul>
             </li>
-            <li class="footer__list"><a href="<?php echo $privacy; ?>">プライバシーポリシー</a></li>
-            <li class="footer__list"><a href="<?php echo $contact; ?>">お問い合わせ</a></li>
+            <li class="footer__list"><a href="<?php echo $privacy; ?>" class="hoverOpacity">プライバシーポリシー</a></li>
+            <li class="footer__list"><a href="<?php echo $contact; ?>" class="hoverOpacity">お問い合わせ</a></li>
           </ul>
         </div>
       </div>
-
     </div>
+    <div class="footer__copy">&copy;2023 株式会社Re-tec All Rights Reserved.</div>
   </div>
 </footer>
 <?php wp_footer(); ?>
