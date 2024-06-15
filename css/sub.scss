@@ -1,0 +1,162 @@
+@use "sass:math";
+// レスポンシブ設定
+$innerValue: 1496;
+$inner: calc($innerValue * 1px);
+$maxVw: $innerValue;
+$minVw: 375;
+
+//レスポンシブ可変フォント設定
+@function rfz(
+  $fontSizeMin,
+  $fontSizeMax,
+  $viewportWidthMin,
+  $viewportWidthMax
+) {
+  $X: math.div(
+    $fontSizeMax - $fontSizeMin,
+    $viewportWidthMax - $viewportWidthMin
+  );
+  $Y: $fontSizeMin - $viewportWidthMin * $X;
+  $Z: $X * 100;
+
+  @return clamp(#{$fontSizeMin}px, calc(#{$Y}px + #{$Z}vw), #{$fontSizeMax}px);
+}
+// 使用例: font-size: rfz(16, 20, $minVw, $maxVw);
+// 説明: font-size: rfz(spPx, pcPx, 可変画面幅最小, 可変画面幅最大);
+:root {
+  // レスポンシブ設定
+  --innerValue: #{$innerValue};
+  --inner: #{$inner};
+  --padding-pc: 40px;
+  --padding-sp: 35px;
+  // カラー設定
+  --base-color: #3b3b3b;
+  --white: #ffffff;
+  --black: #000000;
+  --yellow: #fef30b;
+  --yellow-light: #fff982;
+  --pink: #efb9b9;
+  --green: #0ba500;
+  --green-light: #b1f19e;
+  // フォントウェイト
+  --light: 300;
+  --normal: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --ex-bold: 800;
+  //フォント
+  --sans-family: "Noto Sans JP", sans-serif;
+  // 差異時間
+  --duration: 0.3s ease;
+}
+
+.sub {
+  // 下層ページ基本設定
+  color: var(--base-color);
+}
+
+.hoverOpacity {
+  transition: opacity var(--duration);
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+// フッター
+
+.footer {
+
+}
+
+.footer__inner {
+
+}
+
+.footer__contents {
+
+}
+
+.footer__main {
+
+}
+
+.footer__head {
+
+}
+
+.footer__logo {
+
+}
+
+.footer__body {
+
+}
+
+.footer__sns {
+
+}
+
+.footer__snsTitle {
+
+}
+
+.footer__snsLists {
+
+}
+
+.footer__snsList {
+
+}
+
+.footer__snsText {
+
+}
+
+.footer__snsLink {
+
+}
+
+.footer__bottom {
+
+}
+
+.footer__adBlock {
+
+}
+
+.footer__adText {
+
+}
+
+.footer__adTel {
+
+}
+
+.footer__sub {
+
+}
+
+.footer__listWrap {
+
+}
+
+.footer__lists {
+
+}
+
+.footer__list {
+
+}
+
+.footer__subLists {
+
+}
+
+.footer__subList {
+
+}
+

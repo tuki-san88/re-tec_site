@@ -1,0 +1,43 @@
+:root {
+	--innerValue: 1496;
+	--inner: 1496px;
+	--padding-pc: 40px;
+	--padding-sp: 35px;
+	--base-color: #3b3b3b;
+	--white: #ffffff;
+	--black: #000000;
+	--yellow: #fef30b;
+	--yellow-light: #fff982;
+	--pink: #efb9b9;
+	--green: #0ba500;
+	--green-light: #b1f19e;
+	--light: 300;
+	--normal: 400;
+	--medium: 500;
+	--semi-bold: 600;
+	--bold: 700;
+	--ex-bold: 800;
+	--sans-family: "Noto Sans JP", sans-serif;
+	--duration: 0.3s ease;
+}
+
+.sub {
+	color: #3b3b3b;
+	color: var(--base-color);
+}
+
+.hoverOpacity {
+	transition: opacity 0.3s ease;
+	transition: opacity var(--duration);
+}
+
+@media (any-hover: hover) {
+
+.hoverOpacity:hover {
+	opacity: 0.7;
+}
+
+}
+
+
+/*# sourceMappingURL=sub.css.map */
