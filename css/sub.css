@@ -32,6 +32,7 @@
 header {
 	height: 118px;
 	height: var(--header-height-pc);
+	padding-bottom: 10px;
 }
 
 header * {
@@ -374,8 +375,17 @@ header .header-content {
 }
 
 .sub {
+	background: #ffffff;
+	background: var(--white);
 	color: #3b3b3b;
 	color: var(--base-color);
+	text-align: left;
+}
+
+.sub img {
+	display: block;
+	height: auto;
+	width: 100%;
 }
 
 .sub .inner {
@@ -404,10 +414,190 @@ header .header-content {
 	line-height: 1.4347826087;
 }
 
+.sub .subMv {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.sub .subMv__title {
+	padding-top: max(20px, min(calc(-33.3333333333px + 13.6752136752vw), 180px));
+	text-align: center;
+}
+
+.sub .subMv__title[class*=st_] {
+	padding-bottom: max(100px, min(calc(15px + 21.7948717949vw), 355px));
+}
+
+.sub .subMv__title.st_yellow {
+	background: #fef30b;
+	background: var(--yellow);
+}
+
+.sub .subMv__title.st_pink {
+	background: #efb9b9;
+	background: var(--pink);
+}
+
+.sub .subMv__title.st_green {
+	background: #0ba500;
+	background: var(--green);
+}
+
+.sub .subMv__text {
+	font-size: max(12px, min(calc(-0.6666666667px + 3.2478632479vw), 50px));
+}
+
+.sub .subMv__img {
+	aspect-ratio: 1920/402;
+	overflow: hidden;
+	width: 100%;
+}
+
+.sub .subMv__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .media__item {
+	display: flex;
+}
+
+.sub .media__content {
+	flex: 0 0 50%;
+}
+
+.sub .media__textWrap {
+	padding: max(33px, min(calc(25.3333333333px + 1.9658119658vw), 56px)) max(35px, min(calc(20.3333333333px + 3.7606837607vw), 79px));
+}
+
+.sub .media__item {
+	font-size: max(18px, min(calc(8.6666666667px + 2.3931623932vw), 46px));
+	line-height: 1.4347826087;
+}
+
+.sub .media__item + .media__item {
+	margin-top: max(33px, min(calc(-26.6666666667px + 15.2991452991vw), 212px));
+}
+
+.sub .media__text {
+	margin-top: max(13px, min(calc(7.3333333333px + 1.452991453vw), 30px));
+}
+
+.sub .media__imgWrap {
+	--padding-block: max(12px, min(calc(4.6666666667px + 1.8803418803vw), 34px));
+	--padding-inline: max(18px, min(calc(4.3333333333px + 3.5042735043vw), 59px));
+	position: relative;
+}
+
+.sub .media__img {
+	aspect-ratio: 911/814;
+	position: relative;
+	width: 100%;
+}
+
+.sub .media__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+.sub .media__img::after {
+	background: #707070;
+	background: var(--gray);
+	bottom: var(--padding-block);
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.sub .media__item:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.sub .media__item:nth-child(odd) .media__imgWrap {
+	padding-right: var(--padding-inline);
+	padding-top: var(--padding-block);
+}
+
+.sub .media__item:nth-child(odd) .media__img::after {
+	left: var(--padding-inline);
+}
+
+.sub .media__item:nth-child(even) .media__imgWrap {
+	padding-left: var(--padding-inline);
+	padding-top: var(--padding-block);
+}
+
+.sub .media__item:nth-child(even) .media__img::after {
+	right: var(--padding-inline);
+}
+
+.sub .media.st_yellow .media__img::after {
+	background: #fef30b;
+	background: var(--yellow);
+}
+
+.sub .media.st_pink .media__img::after {
+	background: #efb9b9;
+	background: var(--pink);
+}
+
+.sub .media.st_green .media__img::after {
+	background: #0ba500;
+	background: var(--green);
+}
+
+.sub .media.reverse .media__item:nth-child(odd) {
+	flex-direction: row;
+}
+
+.sub .media.reverse .media__item:nth-child(odd) .media__imgWrap {
+	padding-left: var(--padding-inline);
+	padding-right: 0;
+	padding-right: initial;
+}
+
+.sub .media.reverse .media__item:nth-child(odd) .media__img::after {
+	left: auto;
+	left: initial;
+	right: var(--padding-inline);
+}
+
+.sub .media.reverse .media__item:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.sub .media.reverse .media__item:nth-child(even) .media__imgWrap {
+	padding-left: 0;
+	padding-left: initial;
+	padding-right: var(--padding-inline);
+}
+
+.sub .media.reverse .media__item:nth-child(even) .media__img::after {
+	left: var(--padding-inline);
+	right: auto;
+	right: initial;
+}
+
 .sub .subInfo {
 	background: #ffffff;
 	background: var(--white);
 	margin-top: max(147px, min(calc(-30.6666666667px + 45.5555555556vw), 680px));
+}
+
+.sub .relatedInfo__head {
+	text-align: left;
 }
 
 .sub .relatedInfo__body {
@@ -447,7 +637,6 @@ header .header-content {
 .sub .relatedInfo__content {
 	position: absolute;
 	right: 15px;
-	z-index: 2;
 }
 
 .sub .relatedInfo__content.positionTop {
@@ -626,6 +815,78 @@ header {
 	padding-left: var(--padding-sp);
 	padding-right: 35px;
 	padding-right: var(--padding-sp);
+}
+
+.sub .subMv {
+	flex-direction: column;
+}
+
+.sub .subMv__title {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: max(82px, min(calc(39.8378378378px + 10.8108108108vw), 130px));
+	justify-content: center;
+	padding-top: 0;
+}
+
+.sub .subMv__title[class*=st_] {
+	padding-bottom: 0;
+}
+
+.sub .subMv__title.st_yellow {
+	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+	background: initial;
+}
+
+.sub .subMv__title.st_pink {
+	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+	background: initial;
+}
+
+.sub .subMv__title.st_green {
+	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
+	background: initial;
+}
+
+.sub .media__content {
+	flex: initial;
+}
+
+.sub .media__item:nth-child(odd) {
+	flex-direction: column-reverse;
+}
+
+.sub .media__item:nth-child(odd) .media__imgWrap {
+	margin-right: 45px;
+}
+
+.sub .media__item:nth-child(even) {
+	flex-direction: column-reverse;
+}
+
+.sub .media__item:nth-child(even) .media__imgWrap {
+	margin-left: 45px;
+}
+
+.sub .media.reverse .media__item:nth-child(odd) {
+	flex-direction: column-reverse;
+}
+
+.sub .media.reverse .media__item:nth-child(odd) .media__imgWrap {
+	margin-left: 45px;
+	margin-right: 0;
+	margin-right: initial;
+}
+
+.sub .media.reverse .media__item:nth-child(even) {
+	flex-direction: column-reverse;
+}
+
+.sub .media.reverse .media__item:nth-child(even) .media__imgWrap {
+	margin-left: 0;
+	margin-left: initial;
+	margin-right: 45px;
 }
 
 }

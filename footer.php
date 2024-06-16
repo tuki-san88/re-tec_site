@@ -38,24 +38,24 @@
                 array(
                   "title" => "Re-tec株式会社",
                   "link" => "",
-                  "image" => "/images/sub/icon_instagram.png",
+                  "image" => "sub/icon_instagram.png",
                 ),
                 array(
                   "title" => "SessionsGarden",
                   "link" => "",
-                  "image" => "/images/sub/icon_instagram.png",
+                  "image" => "sub/icon_instagram.png",
                 ),
                 array(
                   "title" => "Sessions",
                   "link" => "",
-                  "image" => "/images/sub/icon_instagram.png",
+                  "image" => "sub/icon_instagram.png",
                 ),
               );
               ?>
               <?php foreach ($snsLists as $snsList) { ?>
                 <li class="footer__snsList">
                   <p class="footer__snsText"><?php echo $snsList["title"]; ?></p>
-                  <a href="<?php echo $aboutList["link"]; ?>" target="_blank" class="footer__snsLink hoverOpacity"><img src="<?php echo get_template_directory_uri() ?><?php echo $snsList["image"]; ?>" alt=""></a>
+                  <a href="<?php echo $snsList["link"]; ?>" target="_blank" class="footer__snsLink hoverOpacity"><img src="<?php echo get_template_directory_uri() ?>/images/<?php echo $snsList["image"]; ?>" alt=""></a>
                 </li>
               <?php } ?>
             </ul>

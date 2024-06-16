@@ -6,7 +6,7 @@
 <!-- 各ページへのリンクfunction呼び出し -->
 <?php $urls = get_my_urls(); ?>
 <!DOCTYPE html>
-<htm <?php language_attributes(); ?>l>
+<html <?php language_attributes(); ?>>
 
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
         <meta charset="<?php bloginfo('charset'); ?>">
@@ -56,7 +56,7 @@
                     <ul class="drawer-menu__lists">
                         <li class="drawer-menu__list"><a href="<?php echo $urls['home']; ?>" class="hoverOpacity">トップ<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['company']; ?>" class="hoverOpacity">会社案内<span></span></a></li>
-                        <li class="drawer-menu__list"><a href="<?php echo $urls['business']; ?>" class="hoverOpacity">事業案内<span></span></a>
+                        <li class="drawer-menu__list"><a href="<?php echo $urls['business']; ?>" class="hoverOpacity">事業案内<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['electrical']; ?>" class="hoverOpacity">アパレル部門<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['sweets']; ?>" class="hoverOpacity">スィーツ部門<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['electrical']; ?>" class="hoverOpacity">電気工事部門<span></span></a></li>
@@ -64,7 +64,7 @@
                         <li class="drawer-menu__list"><a href="<?php echo $urls['offices']; ?>" class="hoverOpacity">事業所一覧<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['careers']; ?>" class="hoverOpacity">採用について<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['artisans']; ?>" class="hoverOpacity">職人名鑑<span></span></a></li>
-                        <li class="drawer-menu__list"><a href="<?php echo $urls['Archive']; ?>" class="hoverOpacity">施工実績（一覧）<span></span></a>
+                        <li class="drawer-menu__list"><a href="<?php echo $urls['Archive']; ?>" class="hoverOpacity">施工実績（一覧）<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['details']; ?>" class="hoverOpacity">施工実績（詳細）<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['privacy']; ?>" class="hoverOpacity">プライバシーポリシー<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['contact']; ?>" class="hoverOpacity">お問い合わせ<span></span></a></li>

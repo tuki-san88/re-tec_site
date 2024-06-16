@@ -25,6 +25,7 @@ $breakpoints: (
 $innerValue: 1560;
 $inner: calc($innerValue * 1px);
 $maxVw: $innerValue;
+$midVw: 834;
 $minVw: 390;
 
 //レスポンシブ可変フォント設定
@@ -44,7 +45,9 @@ $minVw: 390;
   @return clamp(#{$fontSizeMin}px, calc(#{$Y}px + #{$Z}vw), #{$fontSizeMax}px);
 }
 // 使用例: font-size: rfz(16, 20, $minVw, $maxVw);
-// 説明: font-size: rfz(spPx, pcPx, 可変画面幅最小, 可変画面幅最大);
+// 説明: font-size: rfz(spフォントサイズ, pcフォントサイズ, 可変画面幅最小, 可変画面幅最大);
+// 可変画面幅最小〜可変画面幅最大まではspフォントサイズとpcフォントサイズの間でサイズ可変
+
 :root {
   // レスポンシブ設定
   --innerValue: #{$innerValue};
@@ -101,6 +104,7 @@ header {
     box-sizing: border-box;
   }
   height: var(--header-height-pc);
+  padding-bottom: 10px;
   @include mq(tab) {
     height: var(--header-height-sp);
   }
@@ -531,6 +535,14 @@ header {
 .sub {
   // 下層ページ基本設定
   color: var(--base-color);
+  background: var(--white);
+  text-align: left;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 
   .inner {
     max-width: calc(var(--inner) + var(--padding-pc) * 2);
@@ -557,13 +569,236 @@ header {
     line-height: calc(33 / 23);
   }
 
+  //下層MV
+  .subMv {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include mq(tab) {
+      flex-direction: column;
+    }
+  }
+
+  .subMv__title {
+    text-align: center;
+    padding-block-start: rfz(20, 180, $minVw, $maxVw);
+
+    @include mq(tab) {
+      height: rfz(82, 130, $minVw, $midVw);
+      padding-block-start: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &[class*="st_"] {
+      padding-block-end: rfz(100, 355, $minVw, $maxVw);
+      @include mq(tab) {
+        padding-bottom: 0;
+      }
+    }
+
+    &.st_yellow {
+      background: var(--yellow);
+
+      @include mq(tab) {
+        background: initial;
+      }
+    }
+    &.st_pink {
+      background: var(--pink);
+
+      @include mq(tab) {
+        background: initial;
+      }
+    }
+    &.st_green {
+      background: var(--green);
+
+      @include mq(tab) {
+        background: initial;
+      }
+    }
+  }
+  .subMv__text {
+    font-size: rfz(12, 50, $minVw, $maxVw);
+  }
+
+  .subMv__img {
+    width: 100%;
+    aspect-ratio: 1920 / 402;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // メディアパーツ
+  .media {
+    
+  }
+
+  .media__item {
+    display: flex;
+  }
+
+  .media__content {
+    flex: 0 0 50%;
+
+    @include mq(tab) {
+      flex: initial;
+    }
+  }
+
+  .media__textWrap {
+    padding: rfz(33, 56, $minVw, $maxVw) rfz(35, 79, $minVw, $maxVw);
+  }
+
+  .media__item {
+    font-size: rfz(18, 46, $minVw, $maxVw);
+    line-height: calc(66 / 46);
+  }
+
+  .media__item + .media__item {
+    margin-block-start: rfz(33, 212, $minVw, $maxVw);
+  }
+
+  .media__text {
+    margin-block-start: rfz(13, 30, $minVw, $maxVw);
+  }
+
+  .media__imgWrap {
+    position: relative;
+    --padding-block: #{rfz(12, 34, $minVw, $maxVw)};
+    --padding-inline: #{rfz(18, 59, $minVw, $maxVw)};
+  }
+
+  .media__img {
+    width: 100%;
+    aspect-ratio: 911 / 814;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: var(--padding-block);
+      background: var(--gray);
+    }
+  }
+
+  .media__item:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    @include mq(tab) {
+      flex-direction: column-reverse;
+    }
+
+    .media__imgWrap {
+      padding-block-start: var(--padding-block);
+      padding-inline-end: var(--padding-inline);
+
+      @include mq(tab) {
+        margin-inline-end: 45px;
+      }
+    }
+    .media__img::after {
+      left: var(--padding-inline);
+    }
+  }
+  .media__item:nth-child(even) {
+    @include mq(tab) {
+      flex-direction: column-reverse;
+    }
+    .media__imgWrap {
+      padding-block-start: var(--padding-block);
+      padding-inline-start: var(--padding-inline);
+
+      @include mq(tab) {
+        margin-inline-start: 45px;
+      }
+    }
+    .media__img::after {
+      right: var(--padding-inline);
+    }
+  }
+
+  .media {
+    &.st_yellow .media__img::after {
+      background: var(--yellow);
+    }
+    &.st_pink .media__img::after {
+      background: var(--pink);
+    }
+    &.st_green .media__img::after {
+      background: var(--green);
+    }
+    &.reverse {
+      .media__item:nth-child(odd) {
+        flex-direction: row;
+        @include mq(tab) {
+          flex-direction: column-reverse;
+        }
+        .media__imgWrap {
+          padding-inline-start: var(--padding-inline);
+          padding-inline-end: initial;
+          @include mq(tab) {
+            margin-inline-start: 45px;
+            margin-inline-end: initial;
+          }
+        }
+        .media__img::after {
+          right: var(--padding-inline);
+          left: initial;
+        }
+      }
+      .media__item:nth-child(even) {
+        flex-direction: row-reverse;
+
+        @include mq(tab) {
+          flex-direction: column-reverse;
+        }
+        .media__imgWrap {
+          padding-inline-start: initial;
+          padding-inline-end: var(--padding-inline);
+    
+          @include mq(tab) {
+            margin-inline-end: 45px;
+            margin-inline-start: initial;
+          }
+        }
+        .media__img::after {
+          left: var(--padding-inline);
+          right: initial;
+        }
+      }
+    }
+  }
+
+
   // 関連情報
   .subInfo {
     background: var(--white);
     margin-block-start: rfz(147, 680, $minVw, $maxVw);
   }
-  .relatedInfo {
-
+  .relatedInfo__head {
+    text-align: left;
   }
   .relatedInfo__body {
     margin-block-start: rfz(33, 268, $minVw, $maxVw);
@@ -573,7 +808,7 @@ header {
     max-width: 812px;
     margin-inline: auto;
   }
-  
+
   .relatedInfo__item {
     display: block;
     width: 100%;
@@ -599,7 +834,6 @@ header {
   .relatedInfo__content {
     position: absolute;
     right: 15px;
-    z-index: 2;
 
     &.positionTop {
       top: rfz(7, 25, $minVw, $maxVw);
@@ -618,7 +852,7 @@ header {
     &.white {
       color: var(--white);
     }
-    
+
     &.gray {
       color: var(--gray);
     }
@@ -637,6 +871,5 @@ header {
     text-transform: uppercase;
     display: grid;
     place-content: center;
-    
   }
 }
