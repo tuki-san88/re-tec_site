@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @use "sass:math";
 
+// ---------------------
+// 設定
+// ---------------------
 $breakpoints: (
   "sp": "screen and (max-width:480px)" /*767px以下（スマホ）用の表示*/,
   "tab": "screen and (max-width:834px)" /*834px以下（タブレット）用の表示*/,
@@ -19,7 +22,7 @@ $breakpoints: (
 }
 
 // レスポンシブ設定
-$innerValue: 1496;
+$innerValue: 1560;
 $inner: calc($innerValue * 1px);
 $maxVw: $innerValue;
 $minVw: 390;
@@ -90,7 +93,9 @@ body:has(#mobile-menu-button[aria-expanded="true"]) {
   }
 }
 
+// ---------------------
 // ヘッダー
+// ---------------------
 header {
   * {
     box-sizing: border-box;
@@ -190,7 +195,9 @@ header {
   }
 }
 
+// ---------------------
 // ドロワーメニュー
+// ---------------------
 .drawer-menu {
   display: block;
   position: fixed;
@@ -209,10 +216,10 @@ header {
   clip-path: inset(0 0 100% 0);
   transition: opacity var(--duration), visibility var(--duration),
     clip-path var(--duration);
-  
-    @include mq(pc) {
-      display: none;
-    }
+
+  @include mq(pc) {
+    display: none;
+  }
 }
 .drawer-menu[aria-hidden="false"],
 .drawer-menu:popover-open {
@@ -289,12 +296,15 @@ header {
   }
 }
 
+// ---------------------
 // フッター
+// ---------------------
 .footer {
   box-sizing: border-box;
   font-family: var(--sans-family);
   text-align: left;
   padding-block-end: rfz(38, 156, $minVw, $maxVw);
+  margin-block-start: rfz(85, 265, $minVw, $maxVw);
   @include mq(tab) {
     background-color: color-mix(in srgb, var(--gray) 12%, transparent);
   }
@@ -515,6 +525,9 @@ header {
   margin-block-start: rfz(30, 269, $minVw, $maxVw);
 }
 
+// ---------------------
+// 下層ページ
+// ---------------------
 .sub {
   // 下層ページ基本設定
   color: var(--base-color);
@@ -527,5 +540,103 @@ header {
     @include mq(tab) {
       padding-inline: var(--padding-sp);
     }
+  }
+
+  .secTitle {
+    font-size: rfz(19, 75, $minVw, $maxVw);
+    line-height: calc(107 / 75);
+  }
+
+  .secTitleSub {
+    font-size: rfz(16, 50, $minVw, $maxVw);
+    line-height: calc(72 / 50);
+  }
+
+  .baseText {
+    font-size: rfz(14, 23, $minVw, $maxVw);
+    line-height: calc(33 / 23);
+  }
+
+  // 関連情報
+  .subInfo {
+    background: var(--white);
+    margin-block-start: rfz(147, 680, $minVw, $maxVw);
+  }
+  .relatedInfo {
+
+  }
+  .relatedInfo__body {
+    margin-block-start: rfz(33, 268, $minVw, $maxVw);
+  }
+
+  .relatedInfo__items {
+    max-width: 812px;
+    margin-inline: auto;
+  }
+  
+  .relatedInfo__item {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .relatedInfo__item + .relatedInfo__item {
+    margin-block-start: rfz(45, 83, $minVw, $maxVw);
+  }
+
+  .relatedInfo__img {
+    aspect-ratio: 812 / 247;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .relatedInfo__content {
+    position: absolute;
+    right: 15px;
+    z-index: 2;
+
+    &.positionTop {
+      top: rfz(7, 25, $minVw, $maxVw);
+    }
+    &.positionBottom {
+      bottom: rfz(7, 25, $minVw, $maxVw);
+    }
+  }
+
+  .relatedInfo__title {
+    font-size: rfz(12, 32, $minVw, $maxVw);
+    font-weight: var(--bold);
+    letter-spacing: 0.067em;
+    line-height: calc(46 / 32);
+
+    &.white {
+      color: var(--white);
+    }
+    
+    &.gray {
+      color: var(--gray);
+    }
+  }
+
+  .relatedInfo__deco {
+    font-size: rfz(10, 18, $minVw, $maxVw);
+    line-height: calc(26 / 18);
+    font-weight: var(--medium);
+    margin-block-start: rfz(7, 20, $minVw, $maxVw);
+    margin-inline-start: auto;
+    background: var(--gray);
+    color: var(--white);
+    width: rfz(58, 147, $minVw, $maxVw);
+    min-height: rfz(20, 26, $minVw, $maxVw);
+    text-transform: uppercase;
+    display: grid;
+    place-content: center;
+    
   }
 }
