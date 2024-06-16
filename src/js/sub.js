@@ -10,7 +10,6 @@
       const hidden = isOpen ? "true" : "false";
       hamburger.setAttribute("aria-expanded", expanded);
       spHeaderMenu.setAttribute("aria-hidden", hidden);
-      document.body.style.overflow = isOpen ? "" : "hidden";
     }
 
     hamburger.addEventListener("click", function () {

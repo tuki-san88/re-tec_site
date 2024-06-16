@@ -44,7 +44,7 @@
                     </nav>
                     <!-- ハンバーガーメニューのトグルボタン -->
                     <div class="mobile-menu-toggle">
-                        <button id="mobile-menu-button" aria-controls="site-sp-navigation" aria-expanded="false">
+                        <button id="mobile-menu-button" aria-controls="site-sp-navigation" aria-expanded="false" popoverTarget="site-sp-navigation">
                             <span class="menu-toggle-icon"></span>
                             <span class="menu-toggle-icon"></span>
                             <span class="menu-toggle-text">メニュー</span>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <!-- ドロワーメニュー -->
-                <nav class="drawer-menu js-drawer-menu" id="site-sp-navigation" aria-hidden="true">
+                <nav class="drawer-menu js-drawer-menu" id="site-sp-navigation" aria-hidden="true" popover>
                     <ul class="drawer-menu__lists">
                         <li class="drawer-menu__list"><a href="<?php echo $urls['home']; ?>" class="hoverOpacity">トップ<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['company']; ?>" class="hoverOpacity">会社案内<span></span></a></li>

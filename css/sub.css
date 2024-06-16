@@ -115,7 +115,28 @@ header .header-content {
 }
 
 .drawer-menu {
-	display: none;
+	-webkit-clip-path: inset(0 0 100% 0);
+	background: #efefef;
+	bottom: 0;
+	clip-path: inset(0 0 100% 0);
+	display: block;
+	height: calc(100% - 60px);
+	height: calc(100% - var(--header-height-sp));
+	left: 0;
+	overflow-y: scroll;
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	top: 60px;
+	top: var(--header-height-sp);
+	transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-clip-path 0.3s ease;
+	transition: opacity 0.3s ease, visibility 0.3s ease, clip-path 0.3s ease;
+	transition: opacity 0.3s ease, visibility 0.3s ease, clip-path 0.3s ease, -webkit-clip-path 0.3s ease;
+	transition: opacity var(--duration), visibility var(--duration), -webkit-clip-path var(--duration);
+	transition: opacity var(--duration), visibility var(--duration), clip-path var(--duration);
+	transition: opacity var(--duration), visibility var(--duration), clip-path var(--duration), -webkit-clip-path var(--duration);
+	width: 100%;
+	z-index: 100;
 }
 
 .drawer-menu[aria-hidden=false],
@@ -375,7 +396,19 @@ header .header-content {
 
 }
 
+@media screen and (min-width:835px) {
+
+.drawer-menu {
+	display: none;
+}
+
+}
+
 @media screen and (max-width:834px) {
+
+body:has(#mobile-menu-button[aria-expanded=true]) {
+	overflow: hidden;
+}
 
 header {
 	height: 60px;
@@ -395,31 +428,6 @@ header {
 .header-right .mobile-menu-toggle {
 	display: block;
 	height: 100%;
-}
-
-.drawer-menu {
-	-webkit-clip-path: inset(0 0 100% 0);
-	background: #efefef;
-	bottom: 0;
-	clip-path: inset(0 0 100% 0);
-	display: block;
-	height: calc(100% - 60px);
-	height: calc(100% - var(--header-height-sp));
-	left: 0;
-	overflow-y: scroll;
-	pointer-events: none;
-	position: fixed;
-	right: 0;
-	top: 60px;
-	top: var(--header-height-sp);
-	transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-clip-path 0.3s ease;
-	transition: opacity 0.3s ease, visibility 0.3s ease, clip-path 0.3s ease;
-	transition: opacity 0.3s ease, visibility 0.3s ease, clip-path 0.3s ease, -webkit-clip-path 0.3s ease;
-	transition: opacity var(--duration), visibility var(--duration), -webkit-clip-path var(--duration);
-	transition: opacity var(--duration), visibility var(--duration), clip-path var(--duration);
-	transition: opacity var(--duration), visibility var(--duration), clip-path var(--duration), -webkit-clip-path var(--duration);
-	width: 100%;
-	z-index: 100;
 }
 
 .footer {

@@ -84,6 +84,12 @@ $minVw: 390;
   }
 }
 
+body:has(#mobile-menu-button[aria-expanded="true"]) {
+  @include mq(tab) {
+    overflow: hidden;
+  }
+}
+
 // ヘッダー
 header {
   * {
@@ -186,27 +192,27 @@ header {
 
 // ドロワーメニュー
 .drawer-menu {
-  display: none;
-
-  @include mq(tab) {
-    display: block;
-    position: fixed;
-    top: var(--header-height-sp);
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% - var(--header-height-sp));
-    overflow-y: scroll;
-    z-index: 100;
-    background: #efefef;
-    // visibility: hidden;
-    // opacity: 0;
-    pointer-events: none;
-    clip-path: inset(0 0 100% 0);
-    transition: opacity var(--duration), visibility var(--duration),
-      clip-path var(--duration);
-  }
+  display: block;
+  position: fixed;
+  top: var(--header-height-sp);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-height-sp));
+  overflow-y: scroll;
+  z-index: 100;
+  background: #efefef;
+  // visibility: hidden;
+  // opacity: 0;
+  pointer-events: none;
+  clip-path: inset(0 0 100% 0);
+  transition: opacity var(--duration), visibility var(--duration),
+    clip-path var(--duration);
+  
+    @include mq(pc) {
+      display: none;
+    }
 }
 .drawer-menu[aria-hidden="false"],
 .drawer-menu:popover-open {
