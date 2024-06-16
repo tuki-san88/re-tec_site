@@ -3,33 +3,9 @@
  * Template Name: footer.php
  */
 ?>
-<?php
-// 会社案内f
-$home = esc_url(home_url("/"));
-// 事業案内
-$company = esc_url(home_url("/company/"));
-// 電気工事事案
-$business = esc_url(home_url("/business/"));
-// アパレル事案
-$electrical = esc_url(home_url("/electrical-construction/"));
-// スイーツ事業
-$sweets = esc_url(home_url("/sweets/"));
-// 自動車工事事案
-$automotive = esc_url(home_url("/automotive/"));
-// 採用について
-$careers = esc_url(home_url("/careers/"));
-// 事業所一覧
-$offices = esc_url(home_url("/offices/"));
-// 施工実績（一覧）
-$Archive = esc_url(home_url("/"));
-// 施工実績（詳細）
-$details = esc_url(home_url("/"));
-// プライバシーポリシー
-$privacy = esc_url(home_url("/"));
-// お問い合わせ
-$contact = esc_url(home_url("/"));
+<!-- 各ページへのリンクfunction呼び出し -->
+<?php $urls = get_my_urls(); ?>
 
-?>
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__contents">
@@ -37,23 +13,7 @@ $contact = esc_url(home_url("/"));
         <div class="footer__mainWrap">
           <div class="footer__head">
             <div class="footer__logo">
-              <?php
-              $args = [
-                'pictureImg' => 'footerLogo',
-                'spImg' => 'true',
-                'spImgName' => '',
-                'alt' => '',
-                'file' => '.png',
-                'webp' => '',
-                'pcWidth' => '294',
-                'pcHeight' => '219',
-                'spWidth' => '108',
-                'spHeight' => '81',
-                'async' => 'true',
-                'lazy' => 'true',
-              ];
-              get_template_part('tmp/picture', null, $args);
-              ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/images/footerLogo.png" alt="<?php bloginfo('name'); ?>">
             </div>
           </div>
           <div class="footer__body">
@@ -105,28 +65,28 @@ $contact = esc_url(home_url("/"));
       <div class="footer__sub">
         <div class="footer__listWrap">
           <ul class="footer__lists">
-            <li class="footer__list"><a href="<?php echo $home; ?> " class="hoverOpacity">トップ</a></li>
-            <li class="footer__list mt"><a href="<?php echo $company; ?>" class="hoverOpacity">会社案内</a></li>
-            <li class="footer__list"><a href="<?php echo $business; ?>" class="hoverOpacity">事業案内</a>
+            <li class="footer__list"><a href="<?php echo $urls['home']; ?>" class="hoverOpacity">トップ</a></li>
+            <li class="footer__list mt"><a href="<?php echo $urls['company']; ?>" class="hoverOpacity">会社案内</a></li>
+            <li class="footer__list"><a href="<?php echo $urls['business']; ?>" class="hoverOpacity">事業案内</a>
               <ul class="footer__subLists">
-                <li class="footer__subList"><a href="<?php echo $electrical; ?>" class="hoverOpacity">アパレル部門</a></li>
-                <li class="footer__subList"><a href="<?php echo $sweets; ?>" class="hoverOpacity">スィーツ部門</a></li>
-                <li class="footer__subList"><a href="<?php echo $electrical; ?>" class="hoverOpacity">電気工事部門</a></li>
-                <li class="footer__subList"><a href="<?php echo $automotive; ?>" class="hoverOpacity">自動車部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $urls['electrical']; ?>" class="hoverOpacity">アパレル部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $urls['sweets']; ?>" class="hoverOpacity">スィーツ部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $urls['electrical']; ?>" class="hoverOpacity">電気工事部門</a></li>
+                <li class="footer__subList"><a href="<?php echo $urls['automotive']; ?>" class="hoverOpacity">自動車部門</a></li>
               </ul>
             </li>
           </ul>
           <ul class="footer__lists">
-            <li class="footer__list"><a href="<?php echo $offices; ?>" class="hoverOpacity">事業所一覧</a></li>
-            <li class="footer__list"><a href="<?php echo $careers; ?>" class="hoverOpacity">採用について</a></li>
-            <li class="footer__list"><a href="<?php echo $topics; ?>" class="hoverOpacity">職人名鑑</a></li>
-            <li class="footer__list"><a href="<?php echo $Archive; ?>" class="hoverOpacity">施工実績（一覧）</a>
+            <li class="footer__list"><a href="<?php echo $urls['offices']; ?>" class="hoverOpacity">事業所一覧</a></li>
+            <li class="footer__list"><a href="<?php echo $urls['careers']; ?>" class="hoverOpacity">採用について</a></li>
+            <li class="footer__list"><a href="<?php echo $urls['artisans']; ?>" class="hoverOpacity">職人名鑑</a></li>
+            <li class="footer__list"><a href="<?php echo $urls['Archive']; ?>" class="hoverOpacity">施工実績（一覧）</a>
               <ul class="footer__subLists">
-                <li class="footer__subList"><a href="<?php echo $details; ?>" class="hoverOpacity">施工実績（詳細）</a></li>
+                <li class="footer__subList"><a href="<?php echo $urls['details']; ?>" class="hoverOpacity">施工実績（詳細）</a></li>
               </ul>
             </li>
-            <li class="footer__list"><a href="<?php echo $privacy; ?>" class="hoverOpacity">プライバシーポリシー</a></li>
-            <li class="footer__list"><a href="<?php echo $contact; ?>" class="hoverOpacity">お問い合わせ</a></li>
+            <li class="footer__list"><a href="<?php echo $urls['privacy']; ?>" class="hoverOpacity">プライバシーポリシー</a></li>
+            <li class="footer__list"><a href="<?php echo $urls['contact']; ?>" class="hoverOpacity">お問い合わせ</a></li>
           </ul>
         </div>
       </div>

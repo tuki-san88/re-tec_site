@@ -19,4 +19,40 @@ function register_scripts() {
     wp_enqueue_script('sub', get_template_directory_uri() . '/js/sub.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'register_scripts');
+
+// 各ページへのリンク
+function get_my_urls()
+{
+	return array(
+		// 会社案内
+        'home' => esc_url(home_url("/")),
+        // 事業案内
+        'company' => esc_url(home_url("/company/")),
+        // 電気工事事案
+        'business' => esc_url(home_url("/business/")),
+        // アパレル事案
+        'electrical' => esc_url(home_url("/electrical-construction/")),
+        // スイーツ事業
+        'sweets' => esc_url(home_url("/sweets/")),
+        // 自動車工事事案
+        'automotive' => esc_url(home_url("/automotive/")),
+        // 採用について
+        'careers' => esc_url(home_url("/careers/")),
+        // 職人名盤
+        'artisans' => esc_url(home_url("/artisans/")),
+        // 事業所一覧
+        'offices' => esc_url(home_url("/offices/")),
+        // 施工実績（一覧）
+        'Archive' => esc_url(home_url("/")),
+        // 施工実績（詳細）
+        'details' => esc_url(home_url("/")),
+        // プライバシーポリシー
+        'privacy' => esc_url(home_url("/")),
+        // お問い合わせ
+        'contact' => esc_url(home_url("/")),
+	);
+}
+
 ?>
+
+
