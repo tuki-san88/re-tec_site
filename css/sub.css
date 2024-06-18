@@ -590,6 +590,66 @@ header .header-content {
 	right: initial;
 }
 
+.sub .directory {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1144px;
+}
+
+.sub .directory + .directory {
+	margin-top: max(69px, min(calc(58.6666666667px + 2.6495726496vw), 100px));
+}
+
+.sub .directory__head {
+	display: flex;
+	gap: max(22px, min(calc(12.6666666667px + 2.3931623932vw), 50px));
+}
+
+.sub .directory:nth-child(even) .directory__head {
+	flex-direction: row-reverse;
+}
+
+.sub .directory__lists {
+	flex: 1;
+}
+
+.sub .directory__list {
+	display: flex;
+}
+
+.sub .directory__dt,
+.sub .directory__dd {
+	font-size: max(14px, min(calc(10px + 1.0256410256vw), 26px));
+	line-height: 1.5769230769;
+	padding: max(5px, min(calc(1.6666666667px + 0.8547008547vw), 15px)) max(15px, min(calc(15px + 0vw), 15px));
+}
+
+.sub .directory__dt {
+	flex-shrink: 0;
+	text-align: center;
+	width: max(70px, min(calc(15px + 14.1025641026vw), 235px));
+}
+
+.sub .directory__dd {
+	flex: 1;
+	text-align: center;
+	width: max(165px, min(calc(62px + 26.4102564103vw), 474px));
+}
+
+.sub .directory__img {
+	aspect-ratio: 390/370;
+	width: max(179px, min(calc(108.6666666667px + 18.0341880342vw), 390px));
+}
+
+.sub .directory__title {
+	font-size: max(14px, min(calc(10px + 1.0256410256vw), 26px));
+}
+
+.sub .directory__text {
+	font-size: max(12px, min(calc(7.3333333333px + 1.1965811966vw), 26px));
+	margin-top: max(5px, min(calc(0px + 1.2820512821vw), 20px));
+}
+
 .sub .subInfo {
 	background: #ffffff;
 	background: var(--white);
@@ -887,6 +947,48 @@ header {
 	margin-left: 0;
 	margin-left: initial;
 	margin-right: 45px;
+}
+
+.sub .directory {
+	max-width: max(236px, min(calc(-83.7297297297px + 81.981981982vw), 600px));
+}
+
+.sub .directory__head {
+	flex-direction: column-reverse;
+}
+
+.sub .directory:nth-child(even) .directory__head {
+	flex-direction: column-reverse;
+}
+
+.sub .directory__lists {
+	border: 1px solid #707070;
+	border: 1px solid var(--gray);
+	flex: initial;
+}
+
+.sub .directory__list {
+	border-bottom: 1px solid #707070;
+	border-bottom: 1px solid var(--gray);
+}
+
+.sub .directory__dd {
+	border-left: 1px solid #707070;
+	border-left: 1px solid var(--gray);
+	text-align: left;
+}
+
+.sub .directory__img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sub .directory__body {
+	margin-top: 10px;
+}
+
+.sub .directory__title {
+	text-align: center;
 }
 
 }

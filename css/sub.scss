@@ -791,6 +791,108 @@ header {
     }
   }
 
+  // 職人名鑑リスト
+  .directory {
+    max-width: 1144px;
+    margin-inline: auto;
+
+    @include mq(tab) {
+      max-width: rfz(236, 600, $minVw, $midVw);
+    }
+  }
+
+  .directory + .directory {
+    margin-block-start: rfz(69, 100, $minVw, $maxVw);
+  }
+  
+  .directory__head {
+    display: flex;
+    gap: rfz(22, 50, $minVw, $maxVw);
+
+    @include mq(tab) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .directory:nth-child(even) {
+    .directory__head {
+      flex-direction: row-reverse;
+
+      @include mq(tab) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+  
+  .directory__lists {
+    flex: 1;
+    @include mq(tab) {
+      border: 1px solid var(--gray);
+      flex: initial;
+    }
+  }
+  
+  .directory__list {
+    display: flex;
+
+    @include mq(tab) {
+      border-bottom: 1px solid var(--gray);
+    }
+  }
+
+  .directory__dt,
+  .directory__dd {
+    padding: rfz(5, 15, $minVw, $maxVw) rfz(15, 15, $minVw, $maxVw);
+    font-size: rfz(14, 26, $minVw, $maxVw);
+    line-height: calc(41 / 26);
+  }
+  
+  .directory__dt {
+    text-align: center;
+    width: rfz(70, 235, $minVw, $maxVw);
+    flex-shrink: 0;
+  }
+  
+  .directory__dd {
+    text-align: center;
+    width: rfz(165, 474, $minVw, $maxVw);
+    flex: 1;
+    @include mq(tab) {
+      text-align: left;
+      border-left: 1px solid var(--gray);
+    }
+  }
+  
+  .directory__img {
+    width: rfz(179, 390, $minVw, $maxVw);
+    aspect-ratio: 390 / 370;
+
+    @include mq(tab) {
+      margin-inline: auto;
+    }
+  }
+  
+  .directory__body {
+    @include mq(tab) {
+      margin-block-start: 10px;
+    }
+  }
+  
+  .directory__title {
+    font-size: rfz(14, 26, $minVw, $maxVw);
+
+    @include mq(tab) {
+      text-align: center;
+    }
+  }
+  
+  .directory__text {
+    font-size: rfz(12, 26, $minVw, $maxVw);
+    margin-block-start: rfz(5, 20, $minVw, $maxVw);
+  }
+  
+  
+
 
   // 関連情報
   .subInfo {

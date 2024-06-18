@@ -31,7 +31,7 @@ const compilingSet = "wp";
 // const wpDevSet = ""; //local or mamp or docker
 // const wpProject = "test3";
 // const wpThemeName = "test"; //style.cssのテーマ名も変更すること
-const wpLocalUrl = "http://re-tac.local/"; //ローカル環境のURLを設定
+const wpLocalUrl = "http://re-tac.local/company"; //ローカル環境のURLを設定
 //出力先のWordPressテーマのフォルダパス
 
 // WordPressの場合の出力先
