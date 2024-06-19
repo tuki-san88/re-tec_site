@@ -463,8 +463,8 @@ header .header-content {
 }
 
 .sub .subMv__title.st_yellow {
-	background: #fef30b;
-	background: var(--yellow);
+	background: #fff982;
+	background: var(--yellow-light);
 }
 
 .sub .subMv__title.st_pink {
@@ -523,7 +523,7 @@ header .header-content {
 
 .sub .media__imgWrap {
 	--padding-block: max(12px, min(calc(4.6666666667px + 1.8803418803vw), 34px));
-	--padding-inline: max(18px, min(calc(4.3333333333px + 3.5042735043vw), 59px));
+	--padding-inline: max(18px, min(calc(7.6666666667px + 2.6495726496vw), 49px));
 	position: relative;
 }
 
@@ -732,6 +732,10 @@ header .header-content {
 	background: #ffffff;
 	background: var(--white);
 	margin-top: max(147px, min(calc(-30.6666666667px + 45.5555555556vw), 680px));
+}
+
+.sub .subInfo.subInfo-1 {
+	margin-top: max(147px, min(calc(36px + 28.4615384615vw), 480px));
 }
 
 .sub .relatedInfo__head {
@@ -1074,6 +1078,60 @@ header .header-content {
 	margin-top: max(40px, min(calc(33.3333333333px + 1.7094017094vw), 60px));
 }
 
+.sub .secElectricalTop {
+	padding-top: max(87px, min(calc(51.6666666667px + 9.0598290598vw), 193px));
+}
+
+.sub .secElectricalTop__head {
+	font-size: max(17px, min(calc(-2.3333333333px + 4.9572649573vw), 75px));
+	line-height: 1.4266666667;
+	padding-left: 35px;
+	padding-left: var(--padding-sp);
+	padding-right: 35px;
+	padding-right: var(--padding-sp);
+	text-align: center;
+}
+
+.sub .secElectricalTop__head small {
+	display: block;
+	font-size: max(14px, min(calc(1.3333333333px + 3.2478632479vw), 52px));
+}
+
+.sub .secElectricalTop__head span {
+	-webkit-text-decoration: double;
+	display: inline-block;
+	text-decoration: none;
+	text-decoration: double;
+}
+
+.sub .secElectricalTop__img {
+	aspect-ratio: 1920/474;
+	margin-top: max(15px, min(calc(-16.6666666667px + 8.1196581197vw), 110px));
+}
+
+.sub .secElectricalTop__body {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: max(17px, min(calc(-14px + 7.9487179487vw), 110px));
+	max-width: 1373px;
+	padding-left: 35px;
+	padding-left: var(--padding-sp);
+	padding-right: 35px;
+	padding-right: var(--padding-sp);
+}
+
+.sub .secElectricalWrap-l {
+	margin-top: max(35px, min(calc(-41px + 19.4871794872vw), 263px));
+}
+
+.sub .secElectricalWrap__head {
+	text-align: center;
+}
+
+.sub .secElectricalWrap__body {
+	margin-top: max(20px, min(calc(-54.6666666667px + 19.1452991453vw), 244px));
+}
+
 @media (any-hover: hover) {
 
 .hoverOpacity:hover {
@@ -1368,6 +1426,13 @@ header {
 	padding-right: 35px;
 	padding-right: var(--padding-sp);
 	text-align: left;
+}
+
+.sub .secElectricalTop {
+	background: #fff982;
+	background: var(--yellow-light);
+	margin-bottom: max(17px, min(calc(-14px + 7.9487179487vw), 110px));
+	padding-bottom: 30px;
 }
 
 }

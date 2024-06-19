@@ -631,7 +631,7 @@ header {
     }
 
     &.st_yellow {
-      background: var(--yellow);
+      background: var(--yellow-light);
 
       @include mq(tab) {
         background: initial;
@@ -713,7 +713,7 @@ header {
   .media__imgWrap {
     position: relative;
     --padding-block: #{rfz(12, 34, $minVw, $maxVw)};
-    --padding-inline: #{rfz(18, 59, $minVw, $maxVw)};
+    --padding-inline: #{rfz(18, 49, $minVw, $maxVw)};
   }
 
   .media__img {
@@ -973,6 +973,10 @@ header {
   .subInfo {
     background: var(--white);
     margin-block-start: rfz(147, 680, $minVw, $maxVw);
+    
+    &.subInfo-1 {
+      margin-block-start: rfz(147, 480, $minVw, $maxVw);
+    }
   }
   .relatedInfo__head {
     text-align: left;
@@ -1285,23 +1289,23 @@ header {
   .secBusinessDetail-l {
     margin-block-start: rfz(160, 760, $minVw, $maxVw);
   }
-  
+
   .secBusinessDetail + .secBusinessDetail {
     margin-block-start: rfz(80, 475, $minVw, $maxVw);
   }
-  
+
   .secBusinessDetail__title {
     text-align: center;
   }
-  
+
   .secBusinessDetail__subTitle {
     text-align: center;
   }
-  
+
   .secBusinessDetail__body {
     margin-block-start: 30px;
   }
-  
+
   .secBusinessDetail__img {
     width: 100%;
     aspect-ratio: 1920 / 520;
@@ -1319,19 +1323,69 @@ header {
     line-height: calc(53 / 23);
     text-align: center;
     padding-inline: var(--padding-pc);
-    
+
     @include mq(tab) {
       line-height: 1.5;
       padding-inline: var(--padding-sp);
-      text-align: left
-    };
+      text-align: left;
+    }
   }
-  
+
   .secBusinessDetail__btn {
     margin-block-start: rfz(40, 60, $minVw, $maxVw);
     display: flex;
     justify-content: center;
   }
+
+  .secElectricalTop {
+    padding-top: rfz(87, 193, $minVw, $maxVw);
+
+    @include mq(tab) {
+      background: var(--yellow-light);
+      padding-block-end: 30px;
+      margin-block-end: rfz(17, 110, $minVw, $maxVw);
+    }
+  }
+
+  .secElectricalTop__head {
+    text-align: center;
+    padding-inline: var(--padding-sp);
+    font-size: rfz(17, 75, $minVw, $maxVw);
+    line-height: calc(107 / 75);
+    small {
+      font-size: rfz(14, 52, $minVw, $maxVw);
+      display: block;
+    }
+    span {
+      display: inline-block;
+      text-decoration: double;
+    }
+  }
+
+  .secElectricalTop__img {
+    margin-block-start: rfz(15, 110, $minVw, $maxVw);
+    aspect-ratio: 1920 / 474;
+  }
+
+  .secElectricalTop__body {
+    padding-inline: var(--padding-sp);
+    margin-block-start: rfz(17, 110, $minVw, $maxVw);
+    max-width: 1373px;
+    margin-inline: auto;
+  }
+  // 取扱工事内容
+  .secElectricalWrap-l {
+    margin-block-start: rfz(35, 263, $minVw, $maxVw);
+  }
+  
+  .secElectricalWrap__head {
+    text-align: center;
+  }
+  
+  .secElectricalWrap__body {
+    margin-block-start: rfz(20, 244, $minVw, $maxVw);
+  }
   
   
+
 } // sub

@@ -50,15 +50,15 @@
             <?php
             $args = [
               'pictureImg' => $businessList['img'],
-              'spImg' => 'true',
+              'spImg' => '',
               'spImgName' => '',
               'alt' => '',
               'file' => '.jpg',
               'webp' => 'true',
-              'pcWidth' => '420',
-              'pcHeight' => '420',
-              'spWidth' => '150',
-              'spHeight' => '150',
+              'pcWidth' => '',
+              'pcHeight' => '',
+              'spWidth' => '',
+              'spHeight' => '',
               'async' => 'true',
               'lazy' => 'true',
             ];
