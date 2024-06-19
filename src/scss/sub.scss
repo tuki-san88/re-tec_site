@@ -538,6 +538,10 @@ header {
   background: var(--white);
   text-align: left;
 
+  * {
+    box-sizing: border-box;
+  }
+
   img {
     display: block;
     width: 100%;
@@ -551,6 +555,14 @@ header {
 
     @include mq(tab) {
       padding-inline: var(--padding-sp);
+    }
+  }
+
+  .sp-only {
+    display: none;
+
+    @include mq(tab) {
+      display: block;
     }
   }
 
@@ -640,7 +652,6 @@ header {
 
   // メディアパーツ
   .media {
-    
   }
 
   .media__item {
@@ -777,7 +788,7 @@ header {
         .media__imgWrap {
           padding-inline-start: initial;
           padding-inline-end: var(--padding-inline);
-    
+
           @include mq(tab) {
             margin-inline-end: 45px;
             margin-inline-start: initial;
@@ -804,7 +815,7 @@ header {
   .directory + .directory {
     margin-block-start: rfz(69, 100, $minVw, $maxVw);
   }
-  
+
   .directory__head {
     display: flex;
     gap: rfz(22, 50, $minVw, $maxVw);
@@ -823,7 +834,7 @@ header {
       }
     }
   }
-  
+
   .directory__lists {
     flex: 1;
     @include mq(tab) {
@@ -831,7 +842,7 @@ header {
       flex: initial;
     }
   }
-  
+
   .directory__list {
     display: flex;
 
@@ -846,13 +857,13 @@ header {
     font-size: rfz(14, 26, $minVw, $maxVw);
     line-height: calc(41 / 26);
   }
-  
+
   .directory__dt {
     text-align: center;
     width: rfz(70, 235, $minVw, $maxVw);
     flex-shrink: 0;
   }
-  
+
   .directory__dd {
     text-align: center;
     width: rfz(165, 474, $minVw, $maxVw);
@@ -862,7 +873,7 @@ header {
       border-left: 1px solid var(--gray);
     }
   }
-  
+
   .directory__img {
     width: rfz(179, 390, $minVw, $maxVw);
     aspect-ratio: 390 / 370;
@@ -871,13 +882,13 @@ header {
       margin-inline: auto;
     }
   }
-  
+
   .directory__body {
     @include mq(tab) {
       margin-block-start: 10px;
     }
   }
-  
+
   .directory__title {
     font-size: rfz(14, 26, $minVw, $maxVw);
 
@@ -885,7 +896,7 @@ header {
       text-align: center;
     }
   }
-  
+
   .directory__text {
     font-size: rfz(12, 26, $minVw, $maxVw);
     margin-block-start: rfz(5, 20, $minVw, $maxVw);
@@ -928,25 +939,6 @@ header {
         line-height: calc(107 / 75);
         text-align: center;
       }
-    }
-  }
-  
-  
-  
-  // 地図
-  .map {
-    width: 100%;
-    aspect-ratio: 1560 / 1159;
-
-    @include mq(tab) {
-      aspect-ratio: 390 / 290;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
     }
   }
 
@@ -1031,4 +1023,183 @@ header {
     display: grid;
     place-content: center;
   }
-}
+
+  // 代表挨拶
+  .secGreeting {
+
+  }
+
+  .secGreeting-l {
+    margin-block-start: rfz( 38, 457, $minVw, $maxVw);
+  }
+  .secGreeting__inner {
+    --inner: 1640px;
+  }
+  
+  .secGreeting__contents {
+    display: flex;
+    align-items: flex-start;
+    gap: rfz(20, 70, $minVw, $maxVw);
+
+    @include mq(tab) {
+      flex-wrap: wrap;
+      align-items: initial;
+    }
+  }
+  
+  .secGreeting__textBlock {
+    flex: 0 1 1046px;
+
+    @include mq(tab) {
+      display: contents;
+    }
+  }
+  
+  .secGreeting__textWrap {
+    @include mq(tab) {
+      width: 100%;
+    }
+  }
+  
+  .secGreeting__title {
+    font-size: rfz(18, 46, $minVw, $maxVw);
+  }
+  
+  .secGreeting__text {
+    margin-block-start: rfz(10, 20, $minVw, $maxVw);
+  }
+  
+  .secGreeting__name {
+    width: rfz(150, 462, $minVw, $maxVw);
+    margin-block-start: rfz(10, 23, $minVw, $maxVw);
+    margin-left: auto;
+
+    @include mq(tab) {
+      margin-block-start: 0;
+      margin-left: initial;
+      width: 50%;
+    }
+  }
+  
+  .secGreeting__imgBlock {
+    flex: 0 1 524px;
+    aspect-ratio: 524 / 640;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include mq(tab) {
+      flex: initial;
+      width: 40%;
+    }
+  }
+  
+  // 理念
+  .secPhilosophy-l {
+    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+  }
+  
+  .secPhilosophy__title {
+    text-align: center;
+  }
+  
+  .secPhilosophy__body {
+    margin-block-start: rfz(25, 149, $minVw, $maxVw);
+  }
+  
+  .secPhilosophy__text {
+    font-size: rfz(12, 52, $minVw, $maxVw);
+    line-height: calc(107 / 52);
+    text-align: center;
+  }
+
+  // 会社概要(会社案内ページ)
+  .secCompanyView-l {
+    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+  }
+  
+  .secCompanyView__inner {
+    --inner: 825px;
+  }
+  
+  .secCompanyView__title {
+    text-align: center;
+  }
+  
+  .secCompanyView__body {
+    margin-block-start: rfz(30, 112, $minVw, $maxVw);
+  }
+  
+  // SDG'sの取り組みについて
+  .secSdgs-l {
+    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+  }
+  
+  .secSdgs__title {
+    text-align: center;
+  }
+  
+  .secSdgs__body {
+    margin-block-start: rfz(37, 189, $minVw, $maxVw);
+  }
+  
+  .secSdgs__img {
+    width: 100%;
+    aspect-ratio: 1920 / 584;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  .secSdgs__text {
+    margin-block-start: rfz(53, 224, $minVw, $maxVw);
+    line-height: calc(107 / 23);
+    text-align: center;
+
+    @include mq(tab) {
+      line-height: calc(17 / 12);
+    }
+  }
+  
+  // アクセス
+  .secMap-l {
+    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+  }
+  
+  .secMap__title {
+    text-align: center;
+  }
+  
+  .secMap__body {
+    margin-block-start: rfz(60, 224, $minVw, $maxVw);
+  }
+
+  // 地図
+  .map {
+    width: 100%;
+    aspect-ratio: 1560 / 1159;
+
+    @include mq(tab) {
+      aspect-ratio: 390 / 290;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  
+  
+  
+
+} // sub

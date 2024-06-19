@@ -382,6 +382,10 @@ header .header-content {
 	text-align: left;
 }
 
+.sub * {
+	box-sizing: border-box;
+}
+
 .sub img {
 	display: block;
 	height: auto;
@@ -397,6 +401,10 @@ header .header-content {
 	padding-left: var(--padding-pc);
 	padding-right: 40px;
 	padding-right: var(--padding-pc);
+}
+
+.sub .sp-only {
+	display: none;
 }
 
 .sub .secTitle {
@@ -694,20 +702,6 @@ header .header-content {
 	text-align: center;
 }
 
-.sub .map {
-	aspect-ratio: 1560/1159;
-	width: 100%;
-}
-
-.sub .map iframe {
-	-o-object-fit: cover;
-	-o-object-position: center;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	width: 100%;
-}
-
 .sub .subInfo {
 	background: #ffffff;
 	background: var(--white);
@@ -801,6 +795,144 @@ header .header-content {
 	place-content: center;
 	text-transform: uppercase;
 	width: max(58px, min(calc(28.3333333333px + 7.6068376068vw), 147px));
+}
+
+.sub .secGreeting-l {
+	margin-top: max(38px, min(calc(-101.6666666667px + 35.811965812vw), 457px));
+}
+
+.sub .secGreeting__inner {
+	--inner: 1640px;
+}
+
+.sub .secGreeting__contents {
+	align-items: flex-start;
+	display: flex;
+	gap: max(20px, min(calc(3.3333333333px + 4.2735042735vw), 70px));
+}
+
+.sub .secGreeting__textBlock {
+	flex: 0 1 1046px;
+}
+
+.sub .secGreeting__title {
+	font-size: max(18px, min(calc(8.6666666667px + 2.3931623932vw), 46px));
+}
+
+.sub .secGreeting__text {
+	margin-top: max(10px, min(calc(6.6666666667px + 0.8547008547vw), 20px));
+}
+
+.sub .secGreeting__name {
+	margin-left: auto;
+	margin-top: max(10px, min(calc(5.6666666667px + 1.1111111111vw), 23px));
+	width: max(150px, min(calc(46px + 26.6666666667vw), 462px));
+}
+
+.sub .secGreeting__imgBlock {
+	aspect-ratio: 524/640;
+	flex: 0 1 524px;
+}
+
+.sub .secGreeting__imgBlock img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .secPhilosophy-l {
+	margin-top: max(122px, min(calc(-7px + 33.0769230769vw), 509px));
+}
+
+.sub .secPhilosophy__title {
+	text-align: center;
+}
+
+.sub .secPhilosophy__body {
+	margin-top: max(25px, min(calc(-16.3333333333px + 10.5982905983vw), 149px));
+}
+
+.sub .secPhilosophy__text {
+	font-size: max(12px, min(calc(-1.3333333333px + 3.4188034188vw), 52px));
+	line-height: 2.0576923077;
+	text-align: center;
+}
+
+.sub .secCompanyView-l {
+	margin-top: max(122px, min(calc(-7px + 33.0769230769vw), 509px));
+}
+
+.sub .secCompanyView__inner {
+	--inner: 825px;
+}
+
+.sub .secCompanyView__title {
+	text-align: center;
+}
+
+.sub .secCompanyView__body {
+	margin-top: max(30px, min(calc(2.6666666667px + 7.0085470085vw), 112px));
+}
+
+.sub .secSdgs-l {
+	margin-top: max(122px, min(calc(-7px + 33.0769230769vw), 509px));
+}
+
+.sub .secSdgs__title {
+	text-align: center;
+}
+
+.sub .secSdgs__body {
+	margin-top: max(37px, min(calc(-13.6666666667px + 12.9914529915vw), 189px));
+}
+
+.sub .secSdgs__img {
+	aspect-ratio: 1920/584;
+	width: 100%;
+}
+
+.sub .secSdgs__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .secSdgs__text {
+	line-height: 4.652173913;
+	margin-top: max(53px, min(calc(-4px + 14.6153846154vw), 224px));
+	text-align: center;
+}
+
+.sub .secMap-l {
+	margin-top: max(122px, min(calc(-7px + 33.0769230769vw), 509px));
+}
+
+.sub .secMap__title {
+	text-align: center;
+}
+
+.sub .secMap__body {
+	margin-top: max(60px, min(calc(5.3333333333px + 14.0170940171vw), 224px));
+}
+
+.sub .map {
+	aspect-ratio: 1560/1159;
+	width: 100%;
+}
+
+.sub .map iframe {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
 }
 
 @media (any-hover: hover) {
@@ -935,6 +1067,10 @@ header {
 	padding-right: var(--padding-sp);
 }
 
+.sub .sp-only {
+	display: block;
+}
+
 .sub .subMv {
 	flex-direction: column;
 }
@@ -1047,6 +1183,35 @@ header {
 
 .sub .directory__title {
 	text-align: center;
+}
+
+.sub .secGreeting__contents {
+	align-items: initial;
+	flex-wrap: wrap;
+}
+
+.sub .secGreeting__textBlock {
+	display: contents;
+}
+
+.sub .secGreeting__textWrap {
+	width: 100%;
+}
+
+.sub .secGreeting__name {
+	margin-left: 0;
+	margin-left: initial;
+	margin-top: 0;
+	width: 50%;
+}
+
+.sub .secGreeting__imgBlock {
+	flex: initial;
+	width: 40%;
+}
+
+.sub .secSdgs__text {
+	line-height: 1.4166666667;
 }
 
 .sub .map {

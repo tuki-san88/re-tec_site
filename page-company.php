@@ -8,162 +8,148 @@
 <?php get_header(); ?>
 <main>
   <div class="sub">
-
     <!-- 下層MV mod = st_yellow st_pink st_green -->
     <?php
     $args = [
       'mod' => '',
-      'img' => 'sub/img_media_elect1',
+      'img' => 'sub/img_subMv_company',
       'title' => '会社案内',
-      'text' => '-Electrical construction-',
+      'text' => '',
     ];
     get_template_part('tmp/subMv', null, $args);
     ?>
-
-
-    <!-- メディアパーツ mod = st_yellow st_pink st_green reverse -->
-    <?php
-    $args = [
-      'mod' => 'st_yellow reverse',
-      [
-        'title' => '高圧電気設備<br>(新設・改修工事）',
-        'text' => '高圧電気設備の新設および改修工事を通じて、産業用の工場様向けに信頼性と効率性を提供します。私たちは、最新のテクノロジーと高度な技術を駆使し、電力インフラの確保と効率化に焦点を当てています。<br><br>新設工事においては、工場の特定のニーズに合わせたカスタム設計を行い、高圧電気設備を迅速に展開します。また、高度な制御システムを導入することで、設備の遠隔監視と効率的なエネルギー利用を実現します。<br><br>改修工事では、老朽化した設備のアップグレードや環境に配慮したアプローチを採用し、持続可能な電力供給を保証します。工場様との信頼を築くために、高圧電気設備の専門知識と安全性を最優先に考え、プロジェクトの成功と生産性向上を実現します。　',
-        'img' => 'sub/img_media_elect1',
-      ],
-      [
-        'title' => '低圧電気設備',
-        'text' => '低圧電気設備においても、工場様向けに高い信頼性と効率性を提供し、持続可能なエネルギー供給を実現します。私たちは最新のテクノロジーと専門的な技術を結集し、電力インフラの最適な管理に注力しています。<br><br>新設工事に際しては、工場の独自の要件に合わせてカスタムデザインを行い、低圧電気設備の迅速な展開をサポートします。高度な制御システムを統合することで、リアルタイムのモニタリングとエネルギー効率の最大化を実現します。<br><br>改修工事では、老朽化した設備のアップグレードを行い、エコフレンドリーなソリューションを提供します。私たちは低圧電気設備のスペシャリストとして、専門知識と安全対策を最優先に考慮し、工場様の要求を満たし、生産性向上に貢献します。低圧電気設備における信頼とパフォーマンス向上に、ReGroupがお手伝いいたします。',
-        'img' => 'sub/img_media_elect2',
-      ],
-      [
-        'title' => '電気土木工事',
-        'text' => '電気土木工事分野において、私たちは電力インフラの効率的な運用と安定供給を実現することに焦点を当てています。高度な技術と経験を駆使し、公共のプロジェクトにおける信頼性と品質を提供します。<br><br>新規プロジェクトでは、地域の特定要件に合わせた独自の設計を行い、電気土木工事を迅速かつ効果的に展開します。また、最新の監視技術とリモート管理システムを導入することで、プロジェクトの進捗状況をリアルタイムで確認し、エネルギー資源の最大活用を実現します。<br><br>既存プロジェクトの改修では、施設のアップデートと環境への配慮を重視し、持続可能な電力供給を確保します。私たちは電気土木工事の専門家として、安全性と効率性を常に最優先に考え、プロジェクトの成功と地域社会への貢献を実現します。信頼性と持続可能性に焦点を当てることで、ReSessionsが電気土木工事分野でのリーダーシップを発揮します。',
-        'img' => 'sub/img_media_elect3',
-      ],
-      [
-        'title' => '空調設備工事',
-        'text' => '空調設備工事において、私たちは快適な環境と効率的なエネルギー利用を実現します。高度な技術と経験を活かし、建物や施設の空調システムを最適化し、品質と信頼性を提供します。<br><br>新規プロジェクトでは、顧客のニーズに合致するカスタム設計を行い、最新の空調技術を組み込んでいます。さらに、エネルギー効率の向上と環境への配慮を念頭に、設備の効率的な運用を実現します。結果として、快適で持続可能な室内環境を提供し、エネルギーコストを削減します。<br><br>既存プロジェクトの改修においても、老朽化した設備のアップグレードと保守を行い、設備の寿命を延ばします。私たちは空調設備工事の専門家として、安全性と効率性に重点を置き、プロジェクトの成功と施設の運用効率向上を実現します。信頼性と環境への配慮に焦点を当てることで、ReGroupが空調設備工事分野でのリーダーシップを発揮します。',
-        'img' => 'sub/img_media_elect4',
-      ],
-      [
-        'title' => '計装工事',
-        'text' => '計装工事において、私たちは正確さと効率性を追求します。高度な計測技術と専門知識を活かし、プロセス制御システムや計測装置の設計、設置、保守を提供します。<br><br>新規プロジェクトにおいては、顧客のニーズに合わせた計測装置のカスタム設計を行い、生産プロセスを最適化します。また、遠隔監視とデータ収集のための高度な計測システムを導入することで、プロセスの効率化を図ります。<br><br>既存プロジェクトの改修においても、計測装置のアップグレードと保守を通じて、施設の長寿命化を実現します。私たちは計装工事のエキスパートとして、高精度と信頼性を提供し、プロジェクトの成功と生産性向上を実現します。計装工事の分野で、ReGroupは品質と安全性を確保し、顧客の期待に応えます。',
-        'img' => 'sub/img_media_elect5',
-      ],
-    ];
-    get_template_part('tmp/media', null, $args);
-    ?>
-
-
-    <!-- 職人名鑑 -->
-    <div class="inner artist__inner">
-      <?php
-      $args = [
-        [
-          'item1' => '氏　　名',
-          'description1' => '宮本　佳士',
-          'item2' => '年　　齢',
-          'description2' => '35',
-          'item3' => '資　　格',
-          'description3' => '第一種電気工事士<br>認定電気工事従事者<br>消防設備士甲種４種<br>高所作業車運転者<br>玉掛作業者',
-          'image' => get_template_directory_uri() . '/images/sub/img_artist1.png',
-          'alt' => 'ReGroup',
-          'title' => '大切にしている事',
-          'text' => 'ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります',
-        ],
-        [
-          'item1' => '氏　　名',
-          'description1' => '宮本　佳士',
-          'item2' => '年　　齢',
-          'description2' => '35',
-          'item3' => '資　　格',
-          'description3' => '第一種電気工事士<br>認定電気工事従事者<br>消防設備士甲種４種<br>高所作業車運転者<br>玉掛作業者',
-          'image' => get_template_directory_uri() . '/images/sub/img_artist1.png',
-          'alt' => 'ReGroup',
-          'title' => '大切にしている事',
-          'text' => 'ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります',
-        ],
-        [
-          'item1' => '氏　　名',
-          'description1' => '宮本　佳士',
-          'item2' => '年　　齢',
-          'description2' => '35',
-          'item3' => '資　　格',
-          'description3' => '第一種電気工事士<br>認定電気工事従事者<br>消防設備士甲種４種<br>高所作業車運転者<br>玉掛作業者',
-          'image' => get_template_directory_uri() . '/images/sub/img_artist1.png',
-          'alt' => 'ReGroup',
-          'title' => '大切にしている事',
-          'text' => 'ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります',
-        ],
-        [
-          'item1' => '氏　　名',
-          'description1' => '宮本　佳士',
-          'item2' => '年　　齢',
-          'description2' => '35',
-          'item3' => '資　　格',
-          'description3' => '第一種電気工事士<br>認定電気工事従事者<br>消防設備士甲種４種<br>高所作業車運転者<br>玉掛作業者',
-          'image' => get_template_directory_uri() . '/images/sub/img_artist1.png',
-          'alt' => 'ReGroup',
-          'title' => '大切にしている事',
-          'text' => 'ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります',
-        ],
-        [
-          'item1' => '氏　　名',
-          'description1' => '宮本　佳士',
-          'item2' => '年　　齢',
-          'description2' => '35',
-          'item3' => '資　　格',
-          'description3' => '第一種電気工事士<br>認定電気工事従事者<br>消防設備士甲種４種<br>高所作業車運転者<br>玉掛作業者',
-          'image' => get_template_directory_uri() . '/images/sub/img_artist1.png',
-          'alt' => 'ReGroup',
-          'title' => '大切にしている事',
-          'text' => 'ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります　ここにテキストが入ります',
-        ],
-      ];
-      get_template_part('tmp/directory', null, $args);
-      ?>
+    <!-- ReGroupの代表からのご挨拶 -->
+    <div class="secGreeting secGreeting-l">
+      <div class="secGreeting__inner inner">
+        <div class="secGreeting__contents">
+          <div class="secGreeting__textBlock">
+            <div class="secGreeting__textWrap">
+              <h3 class="secGreeting__title">ReGroupの代表からのご挨拶</h3>
+              <p class="secGreeting__text baseText">
+                「令和という新しい時代、若手を中心とした、進化する建設業の在り方で活気があり信用に満ちた事業を目指します。」<br>
+                <br>
+                ReGroupを代表して、皆様にご挨拶申し上げます。私たちは新たな時代、新たな価値観に向けて一歩前進し、多様性と革新を大切にしています。電気工事事業、アパレル事業、飲食事業、自動車販売事業の4つの異なる分野で活動し、建設業の進化と活気を推進することに力を注いでいます。<br>
+                <br>
+                私たちは「人生初」の体験を尊重し、それが未来への鍵であると信じています。驚き、興奮、感動。時代の変化と技術の進歩にもかかわらず、初めての瞬間と驚きは私たちの周りにいつも存在しています。<br>
+                <br>
+                ReGroupは未来への一歩、未知への挑戦、そして可能性の探求を象徴しています。私たちは時代の変化に前向きに対応し、新たな未来を築くお手伝いをすることを誇りに思っています。<br>
+                <br>
+                未来への一歩を踏み出しましょう。一緒に新しい時代を切り拓きましょう。
+              </p>
+            </div>
+            <p class="secGreeting__name"><img src="<?php echo get_template_directory_uri() ?>/images/sub/name_miyamoto.svg" width="462" height="94" alt="宮本 佳士"></p>
+          </div>
+          <div class="secGreeting__imgBlock">
+            <img src="<?php echo get_template_directory_uri() ?>/images/sub/img_president.png" width="462" height="94" alt="">
+          </div>
+        </div>
+      </div>
     </div>
-
-
-    <!-- 会社情報 'mod' => 'st_done'で現在募集は行なっておりませんの表示をする -->
-    <?php
-    $args = [
-      'mod' => 'st_done',
-      [
-        'item' => '会社名',
-        'description' => '株式会社Re-tec',
-      ],
-      [
-        'item' => '所在地',
-        'description' => '〒520-2277<br>滋賀県大津市関津3丁目5-6',
-      ],
-      [
-        'item' => '設立',
-        'description' => '2019年6月3日',
-      ],
-      [
-        'item' => '従業員数',
-        'description' => '20名',
-      ],
-      [
-        'item' => '事業内容',
-        'description' => '高圧電気設備(新設・改修工事）<br>低圧電気設備<br>電気土木工事<br>空調設備工事<br>計装工事<br>飲食<br>アパレル<br>自動車販売',
-      ],
-      [
-        'item' => '主な取引先銀行',
-        'description' => '京都銀行<br><br>滋賀銀行<br><br>滋賀中央信用金庫',
-      ],
-      [
-        'item' => '建設業番号',
-        'description' => '0000000000000<br><br>CCUS-　登録済み<br><br>グリーンサイト-　登録済み',
-      ],
-    ];
-    get_template_part('tmp/overview', null, $args);
-    ?>
-
-    <!-- 地図 -->
-    <?php get_template_part('tmp/map'); ?>
-
+    <!-- 理念 -->
+    <section class="secPhilosophy secPhilosophy-l">
+      <div class="secPhilosophy__inner inner">
+        <h3 class="secPhilosophy__title secTitle">理念</h3>
+        <div class="secPhilosophy__body">
+          <p class="secPhilosophy__text">
+            令和という新しい時代<br>
+            若手を中心とした、進化する建設業の在り方で<br>
+            活気があり信用に満ちた事業を目指します。
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- 会社概要 -->
+    <section class="secCompanyView secCompanyView-l">
+      <div class="secCompanyView__inner inner">
+        <h3 class="secCompanyView__title secTitle">会社概要</h3>
+        <div class="secCompanyView__body">
+          <!-- 会社情報、求人情報 'mod' => 'st_done'で「現在募集は行なっておりません」の表示をする -->
+          <?php
+          $args = [
+            'mod' => '',
+            [
+              'item' => '会社名',
+              'description' => '株式会社Re-tec',
+            ],
+            [
+              'item' => '所在地',
+              'description' => '〒520-2277<br>滋賀県大津市関津3丁目5-6',
+            ],
+            [
+              'item' => '設立',
+              'description' => '2019年6月3日',
+            ],
+            [
+              'item' => '従業員数',
+              'description' => '20名',
+            ],
+            [
+              'item' => '事業内容',
+              'description' => '高圧電気設備(新設・改修工事）<br>低圧電気設備<br>電気土木工事<br>空調設備工事<br>計装工事<br>飲食<br>アパレル<br>自動車販売',
+            ],
+            [
+              'item' => '主な取引先銀行',
+              'description' => '京都銀行<br><br>滋賀銀行<br><br>滋賀中央信用金庫',
+            ],
+            [
+              'item' => '建設業番号',
+              'description' => '0000000000000<br><br>CCUS-　登録済み<br><br>グリーンサイト-　登録済み',
+            ],
+          ];
+          get_template_part('tmp/overview', null, $args);
+          ?>
+        </div>
+      </div>
+    </section>
+    <!-- SDG'sの取り組みについて -->
+    <section class="secSdgs secSdgs-l">
+      <div class="secSdgs__inner">
+        <h3 class="secSdgs__title secTitle">SDG'sの取り組みについて</h3>
+        <div class="secSdgs__body">
+          <div class="secSdgs__img">
+            <?php
+            $args = [
+              'pictureImg' => 'sub/img_sdgs',
+              'spImg' => '',
+              'spImgName' => '',
+              'alt' => '',
+              'file' => '.jpg',
+              'webp' => 'true',
+              'pcWidth' => '',
+              'pcHeight' => '',
+              'spWidth' => '',
+              'spHeight' => '',
+              'async' => 'true',
+              'lazy' => 'true',
+            ];
+            get_template_part('tmp/picture', null, $args);
+            ?>
+          </div>
+          <p class="secSdgs__text baseText">
+            持続可能なエネルギーへの貢献や<br class="sp-only">
+            エネルギー効率の向上を通じて、<br>
+            環境への負荷を減らし、<br class="sp-only">
+            地域社会により良い未来を提供します。<br>
+            <br class="sp-only">
+            私たちは、再生可能エネルギーへのシフトや<br class="sp-only">
+            省エネルギーのプロジェクトをリードし、<br>
+            クリーンで持続可能な未来に向けて<br class="sp-only">
+            日々取り組んでおります。
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- アクセス -->
+    <div class="secMap secMap-l">
+      <div class="secMap__inner inner">
+        <h3 class="secMap__title secTitle">アクセス</h3>
+        <div class="secMap__body">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.093558756266!2d135.92017817631265!3d34.929190472839345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60016cbfde1f12ff%3A0x4b7c47bc2c97beab!2z44CSNTIwLTIyNzcg5ruL6LOA55yM5aSn5rSl5biC6Zai5rSl77yT5LiB55uu77yV4oiS77yW!5e0!3m2!1sja!2sjp!4v1718776143717!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- 関連情報 -->
     <div class="subInfo">
       <div class="inner">
@@ -175,20 +161,6 @@
             'title' => '採用について',
             'titleColor' => 'white',
             'position' => 'positionTop',
-          ],
-          [
-            'link' => $urls['offices'],
-            'img' => 'sub/img_related_office.jpg',
-            'title' => '事業所一覧',
-            'titleColor' => 'white',
-            'position' => 'positionTop',
-          ],
-          [
-            'link' => $urls['contact'],
-            'img' => 'sub/img_related_contact.jpg',
-            'title' => 'お問い合わせ',
-            'titleColor' => 'gray',
-            'position' => 'positionBottom',
           ],
         ];
         get_template_part('tmp/relatedInfo', null, $args);

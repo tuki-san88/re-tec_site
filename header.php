@@ -36,10 +36,10 @@
                     <nav id="site-navigation" class="main-navigation" role="navigation">
                         <ul class="menu">
                             <li><a href="/">トップ</a></li>
-                            <li><a href="#">会社案内</a></li>
-                            <li><a href="#">事業案内</a></li>
-                            <li><a href="#">事業所一覧</a></li>
-                            <li><a href="#">採用情報</a></li>
+                            <li><a href="<?php echo $urls['company']; ?>">会社案内</a></li>
+                            <li><a href="<?php echo $urls['business']; ?>">事業案内</a></li>
+                            <li><a href="<?php echo $urls['offices']; ?>">事業所一覧</a></li>
+                            <li><a href="<?php echo $urls['careers']; ?>">採用情報</a></li>
                         </ul>
                     </nav>
                     <!-- ハンバーガーメニューのトグルボタン -->
