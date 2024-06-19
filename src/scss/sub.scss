@@ -90,6 +90,10 @@ $minVw: 390;
   }
 }
 
+body {
+  scroll-behavior: smooth;
+}
+
 body:has(#mobile-menu-button[aria-expanded="true"]) {
   @include mq(tab) {
     overflow: hidden;
@@ -581,6 +585,21 @@ header {
     line-height: calc(33 / 23);
   }
 
+  .btnBase {
+    display: grid;
+    place-content: center;
+    background: var(--gray);
+    color: var(--white);
+    width: rfz(112, 224, $minVw, $maxVw);
+    height: rfz(40, 45, $minVw, $maxVw);
+    font-size: rfz(12, 29, $minVw, $maxVw);
+    font-weight: var(--medium);
+    font-family: var(--sans-family);
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
   //下層MV
   .subMv {
     display: flex;
@@ -647,6 +666,14 @@ header {
       height: 100%;
       object-fit: cover;
       object-position: center;
+    }
+  }
+
+  .subMv:has(.subMv__title.st_img_sp_none) {
+    .subMv__img {
+      @include mq(tab) {
+        display: none;
+      }
     }
   }
 
@@ -942,7 +969,6 @@ header {
     }
   }
 
-
   // 関連情報
   .subInfo {
     background: var(--white);
@@ -1026,16 +1052,15 @@ header {
 
   // 代表挨拶
   .secGreeting {
-
   }
 
   .secGreeting-l {
-    margin-block-start: rfz( 38, 457, $minVw, $maxVw);
+    margin-block-start: rfz(38, 457, $minVw, $maxVw);
   }
   .secGreeting__inner {
     --inner: 1640px;
   }
-  
+
   .secGreeting__contents {
     display: flex;
     align-items: flex-start;
@@ -1046,7 +1071,7 @@ header {
       align-items: initial;
     }
   }
-  
+
   .secGreeting__textBlock {
     flex: 0 1 1046px;
 
@@ -1054,21 +1079,21 @@ header {
       display: contents;
     }
   }
-  
+
   .secGreeting__textWrap {
     @include mq(tab) {
       width: 100%;
     }
   }
-  
+
   .secGreeting__title {
     font-size: rfz(18, 46, $minVw, $maxVw);
   }
-  
+
   .secGreeting__text {
     margin-block-start: rfz(10, 20, $minVw, $maxVw);
   }
-  
+
   .secGreeting__name {
     width: rfz(150, 462, $minVw, $maxVw);
     margin-block-start: rfz(10, 23, $minVw, $maxVw);
@@ -1080,7 +1105,7 @@ header {
       width: 50%;
     }
   }
-  
+
   .secGreeting__imgBlock {
     flex: 0 1 524px;
     aspect-ratio: 524 / 640;
@@ -1097,20 +1122,20 @@ header {
       width: 40%;
     }
   }
-  
+
   // 理念
   .secPhilosophy-l {
     margin-block-start: rfz(122, 509, $minVw, $maxVw);
   }
-  
+
   .secPhilosophy__title {
     text-align: center;
   }
-  
+
   .secPhilosophy__body {
     margin-block-start: rfz(25, 149, $minVw, $maxVw);
   }
-  
+
   .secPhilosophy__text {
     font-size: rfz(12, 52, $minVw, $maxVw);
     line-height: calc(107 / 52);
@@ -1121,32 +1146,32 @@ header {
   .secCompanyView-l {
     margin-block-start: rfz(122, 509, $minVw, $maxVw);
   }
-  
+
   .secCompanyView__inner {
     --inner: 825px;
   }
-  
+
   .secCompanyView__title {
     text-align: center;
   }
-  
+
   .secCompanyView__body {
     margin-block-start: rfz(30, 112, $minVw, $maxVw);
   }
-  
+
   // SDG'sの取り組みについて
   .secSdgs-l {
     margin-block-start: rfz(122, 509, $minVw, $maxVw);
   }
-  
+
   .secSdgs__title {
     text-align: center;
   }
-  
+
   .secSdgs__body {
     margin-block-start: rfz(37, 189, $minVw, $maxVw);
   }
-  
+
   .secSdgs__img {
     width: 100%;
     aspect-ratio: 1920 / 584;
@@ -1158,7 +1183,7 @@ header {
       object-position: center;
     }
   }
-  
+
   .secSdgs__text {
     margin-block-start: rfz(53, 224, $minVw, $maxVw);
     line-height: calc(107 / 23);
@@ -1168,16 +1193,16 @@ header {
       line-height: calc(17 / 12);
     }
   }
-  
+
   // アクセス
   .secMap-l {
     margin-block-start: rfz(122, 509, $minVw, $maxVw);
   }
-  
+
   .secMap__title {
     text-align: center;
   }
-  
+
   .secMap__body {
     margin-block-start: rfz(60, 224, $minVw, $maxVw);
   }
@@ -1198,8 +1223,115 @@ header {
       object-position: center;
     }
   }
-  
-  
-  
 
+  // 事業案内
+  .secBusiness {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .secBusiness__item {
+    display: block;
+    text-decoration: none;
+  }
+
+  .secBusiness__img {
+    display: block;
+    aspect-ratio: 480 / 756;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .secBusiness__text {
+    font-size: rfz(12, 30, $minVw, $maxVw);
+    margin-block-start: rfz(10, 15, $minVw, $maxVw);
+    color: var(--base-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rfz(10, 30, $minVw, $maxVw);
+
+    span {
+      position: relative;
+      transform: rotate(90deg);
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: rfz(6, 12, $minVw, $maxVw);
+        height: rfz(2, 3, $minVw, $maxVw);
+        background: currentColor;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center right;
+      }
+      &::before {
+        transform: translate(-50%, -49%) rotate(40deg);
+      }
+      &::after {
+        transform: translate(-50%, -49%) rotate(-40deg);
+      }
+    }
+  }
+
+  // 各事業詳細各セクション
+  .secBusinessDetail-l {
+    margin-block-start: rfz(160, 760, $minVw, $maxVw);
+  }
+  
+  .secBusinessDetail + .secBusinessDetail {
+    margin-block-start: rfz(80, 475, $minVw, $maxVw);
+  }
+  
+  .secBusinessDetail__title {
+    text-align: center;
+  }
+  
+  .secBusinessDetail__subTitle {
+    text-align: center;
+  }
+  
+  .secBusinessDetail__body {
+    margin-block-start: 30px;
+  }
+  
+  .secBusinessDetail__img {
+    width: 100%;
+    aspect-ratio: 1920 / 520;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .secBusinessDetail__text {
+    margin-block-start: rfz(36, 63, $minVw, $maxVw);
+    line-height: calc(53 / 23);
+    text-align: center;
+    padding-inline: var(--padding-pc);
+    
+    @include mq(tab) {
+      line-height: 1.5;
+      padding-inline: var(--padding-sp);
+      text-align: left
+    };
+  }
+  
+  .secBusinessDetail__btn {
+    margin-block-start: rfz(40, 60, $minVw, $maxVw);
+    display: flex;
+    justify-content: center;
+  }
+  
+  
 } // sub

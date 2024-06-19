@@ -24,14 +24,16 @@ add_action('wp_enqueue_scripts', 'register_scripts');
 function get_my_urls()
 {
 	return array(
-		// 会社案内
+        // トップ
         'home' => esc_url(home_url("/")),
-        // 事業案内
+		// 会社案内
         'company' => esc_url(home_url("/company/")),
-        // 電気工事事案
+        // 事業案内
         'business' => esc_url(home_url("/business/")),
-        // アパレル事案
+        // 電気工事事案
         'electrical' => esc_url(home_url("/electrical-construction/")),
+        // アパレル事案
+        'apparel' => esc_url(home_url("/apparel/")),
         // スイーツ事業
         'sweets' => esc_url(home_url("/sweets/")),
         // 自動車工事事案

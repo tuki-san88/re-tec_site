@@ -29,6 +29,10 @@
 	transition: opacity var(--duration);
 }
 
+body {
+	scroll-behavior: smooth;
+}
+
 header {
 	height: 118px;
 	height: var(--header-height-pc);
@@ -420,6 +424,28 @@ header .header-content {
 .sub .baseText {
 	font-size: max(14px, min(calc(11px + 0.7692307692vw), 23px));
 	line-height: 1.4347826087;
+}
+
+.sub .btnBase {
+	-webkit-text-decoration: none;
+	align-content: center;
+	background: #707070;
+	background: var(--gray);
+	color: #ffffff;
+	color: var(--white);
+	display: grid;
+	font-family: "Noto Sans JP", sans-serif;
+	font-family: var(--sans-family);
+	font-size: max(12px, min(calc(6.3333333333px + 1.452991453vw), 29px));
+	font-weight: 500;
+	font-weight: var(--medium);
+	height: max(40px, min(calc(38.3333333333px + 0.4273504274vw), 45px));
+	justify-content: center;
+	line-height: 1;
+	place-content: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	width: max(112px, min(calc(74.6666666667px + 9.5726495726vw), 224px));
 }
 
 .sub .subMv {
@@ -935,6 +961,119 @@ header .header-content {
 	width: 100%;
 }
 
+.sub .secBusiness {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.sub .secBusiness__item {
+	-webkit-text-decoration: none;
+	display: block;
+	text-decoration: none;
+}
+
+.sub .secBusiness__img {
+	aspect-ratio: 480/756;
+	display: block;
+}
+
+.sub .secBusiness__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .secBusiness__text {
+	align-items: center;
+	color: #3b3b3b;
+	color: var(--base-color);
+	display: flex;
+	font-size: max(12px, min(calc(6px + 1.5384615385vw), 30px));
+	gap: max(10px, min(calc(3.3333333333px + 1.7094017094vw), 30px));
+	justify-content: center;
+	margin-top: max(10px, min(calc(8.3333333333px + 0.4273504274vw), 15px));
+}
+
+.sub .secBusiness__text span {
+	position: relative;
+	transform: rotate(90deg);
+}
+
+.sub .secBusiness__text span::before,
+.sub .secBusiness__text span::after {
+	background: currentColor;
+	border-radius: 10px;
+	content: "";
+	display: block;
+	height: max(2px, min(calc(1.6666666667px + 0.0854700855vw), 3px));
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform-origin: center right;
+	width: max(6px, min(calc(4px + 0.5128205128vw), 12px));
+}
+
+.sub .secBusiness__text span::before {
+	transform: translate(-50%, -49%) rotate(40deg);
+}
+
+.sub .secBusiness__text span::after {
+	transform: translate(-50%, -49%) rotate(-40deg);
+}
+
+.sub .secBusinessDetail-l {
+	margin-top: max(160px, min(calc(-40px + 51.2820512821vw), 760px));
+}
+
+.sub .secBusinessDetail + .secBusinessDetail {
+	margin-top: max(80px, min(calc(-51.6666666667px + 33.7606837607vw), 475px));
+}
+
+.sub .secBusinessDetail__title {
+	text-align: center;
+}
+
+.sub .secBusinessDetail__subTitle {
+	text-align: center;
+}
+
+.sub .secBusinessDetail__body {
+	margin-top: 30px;
+}
+
+.sub .secBusinessDetail__img {
+	aspect-ratio: 1920/520;
+	width: 100%;
+}
+
+.sub .secBusinessDetail__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .secBusinessDetail__text {
+	line-height: 2.3043478261;
+	margin-top: max(36px, min(calc(27px + 2.3076923077vw), 63px));
+	padding-left: 40px;
+	padding-left: var(--padding-pc);
+	padding-right: 40px;
+	padding-right: var(--padding-pc);
+	text-align: center;
+}
+
+.sub .secBusinessDetail__btn {
+	display: flex;
+	justify-content: center;
+	margin-top: max(40px, min(calc(33.3333333333px + 1.7094017094vw), 60px));
+}
+
 @media (any-hover: hover) {
 
 .hoverOpacity:hover {
@@ -1103,6 +1242,10 @@ header {
 	background: initial;
 }
 
+.sub .subMv:has(.subMv__title.st_img_sp_none) .subMv__img {
+	display: none;
+}
+
 .sub .media__content {
 	flex: initial;
 }
@@ -1216,6 +1359,15 @@ header {
 
 .sub .map {
 	aspect-ratio: 390/290;
+}
+
+.sub .secBusinessDetail__text {
+	line-height: 1.5;
+	padding-left: 35px;
+	padding-left: var(--padding-sp);
+	padding-right: 35px;
+	padding-right: var(--padding-sp);
+	text-align: left;
 }
 
 }

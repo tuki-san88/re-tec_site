@@ -57,7 +57,7 @@
                         <li class="drawer-menu__list"><a href="<?php echo $urls['home']; ?>" class="hoverOpacity">トップ<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['company']; ?>" class="hoverOpacity">会社案内<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['business']; ?>" class="hoverOpacity">事業案内<span></span></a></li>
-                        <li class="drawer-menu__list"><a href="<?php echo $urls['electrical']; ?>" class="hoverOpacity">アパレル部門<span></span></a></li>
+                        <li class="drawer-menu__list"><a href="<?php echo $urls['apparel']; ?>" class="hoverOpacity">アパレル部門<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['sweets']; ?>" class="hoverOpacity">スィーツ部門<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['electrical']; ?>" class="hoverOpacity">電気工事部門<span></span></a></li>
                         <li class="drawer-menu__list"><a href="<?php echo $urls['automotive']; ?>" class="hoverOpacity">自動車部門<span></span></a></li>
