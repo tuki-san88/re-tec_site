@@ -650,6 +650,64 @@ header .header-content {
 	margin-top: max(5px, min(calc(0px + 1.2820512821vw), 20px));
 }
 
+.sub .overview {
+	position: relative;
+}
+
+.sub .overview__row {
+	border-bottom: 1px solid #707070;
+	border-bottom: 1px solid var(--gray);
+	display: grid;
+	grid-template-columns: 40% 60%;
+}
+
+.sub .overview__dt {
+	text-align: center;
+}
+
+.sub .overview__dt,
+.sub .overview__dd {
+	padding: max(8px, min(calc(4px + 1.0256410256vw), 20px)) max(10px, min(calc(-6.6666666667px + 4.2735042735vw), 60px));
+}
+
+.sub .overview__done {
+	display: none;
+}
+
+.sub .overview.st_done .overview__done {
+	background: rgba(0, 0, 0, 0.54);
+	display: block;
+	height: 100%;
+	left: 0;
+	padding-top: 20%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.sub .overview.st_done .overview__done p {
+	color: #ffffff;
+	color: var(--white);
+	font-size: max(20px, min(calc(1.6666666667px + 4.7008547009vw), 75px));
+	line-height: 1.4266666667;
+	text-align: center;
+}
+
+.sub .map {
+	aspect-ratio: 1560/1159;
+	width: 100%;
+}
+
+.sub .map iframe {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
 .sub .subInfo {
 	background: #ffffff;
 	background: var(--white);
@@ -989,6 +1047,10 @@ header {
 
 .sub .directory__title {
 	text-align: center;
+}
+
+.sub .map {
+	aspect-ratio: 390/290;
 }
 
 }

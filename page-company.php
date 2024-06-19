@@ -125,6 +125,45 @@
     </div>
 
 
+    <!-- 会社情報 'mod' => 'st_done'で現在募集は行なっておりませんの表示をする -->
+    <?php
+    $args = [
+      'mod' => 'st_done',
+      [
+        'item' => '会社名',
+        'description' => '株式会社Re-tec',
+      ],
+      [
+        'item' => '所在地',
+        'description' => '〒520-2277<br>滋賀県大津市関津3丁目5-6',
+      ],
+      [
+        'item' => '設立',
+        'description' => '2019年6月3日',
+      ],
+      [
+        'item' => '従業員数',
+        'description' => '20名',
+      ],
+      [
+        'item' => '事業内容',
+        'description' => '高圧電気設備(新設・改修工事）<br>低圧電気設備<br>電気土木工事<br>空調設備工事<br>計装工事<br>飲食<br>アパレル<br>自動車販売',
+      ],
+      [
+        'item' => '主な取引先銀行',
+        'description' => '京都銀行<br><br>滋賀銀行<br><br>滋賀中央信用金庫',
+      ],
+      [
+        'item' => '建設業番号',
+        'description' => '0000000000000<br><br>CCUS-　登録済み<br><br>グリーンサイト-　登録済み',
+      ],
+    ];
+    get_template_part('tmp/overview', null, $args);
+    ?>
+
+    <!-- 地図 -->
+    <?php get_template_part('tmp/map'); ?>
+
     <!-- 関連情報 -->
     <div class="subInfo">
       <div class="inner">
