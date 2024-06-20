@@ -501,6 +501,11 @@ header .header-content {
 	width: 100%;
 }
 
+.sub .subMv:has(.subMv__title.st_green) {
+	color: #ffffff;
+	color: var(--white);
+}
+
 .sub .media__item {
 	display: flex;
 }
@@ -1518,6 +1523,14 @@ header {
 .sub .subMv:has(.subMv__title.st_green-light) {
 	background: #b1f19e;
 	background: var(--green-light);
+	padding-bottom: max(12px, min(calc(-7.3333333333px + 4.9572649573vw), 70px));
+}
+
+.sub .subMv:has(.subMv__title.st_green) {
+	background: #0ba500;
+	background: var(--green);
+	color: #3b3b3b;
+	color: var(--base-color);
 	padding-bottom: max(12px, min(calc(-7.3333333333px + 4.9572649573vw), 70px));
 }
 

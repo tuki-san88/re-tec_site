@@ -697,6 +697,16 @@ header {
     }
   }
 
+  .subMv:has(.subMv__title.st_green) {
+      color: var(--white);
+      
+    @include mq(tab) {
+      color: var(--base-color);
+      padding-block-end: rfz(12, 70, $minVw, $maxVw);
+      background: var(--green);
+    }
+  }
+
   // メディアパーツ
   .media {
   }
