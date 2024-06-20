@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 if (document.querySelector(".js-accordion__btn")) {
   document.querySelectorAll(".js-accordion__btn").forEach(function (button) {
     button.addEventListener("click", function () {
+      this.classList.toggle("is-open");
       var expanded = this.getAttribute("aria-expanded") === "true" || false;
       this.setAttribute("aria-expanded", !expanded);
       var body = this.nextElementSibling;

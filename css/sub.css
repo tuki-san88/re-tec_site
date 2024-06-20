@@ -60,8 +60,12 @@ header .header-content {
 	height: inherit;
 }
 
+.header-right .header-shop-menu a {
+	display: inline-block;
+}
+
 .header-right .header-shop-menu img {
-	width: max(150px, min(calc(90px + 15.3846153846vw), 330px));
+	width: max(110px, min(calc(36.6666666667px + 18.8034188034vw), 330px));
 }
 
 .header-right .mobile-menu-toggle button {
@@ -169,7 +173,8 @@ header .header-content {
 	border-bottom: 1px solid var(--base-color);
 }
 
-.drawer-menu__list a {
+.drawer-menu__list .drawer-menu__link {
+	-webkit-text-decoration: none;
 	align-items: center;
 	color: #3b3b3b;
 	color: var(--base-color);
@@ -178,14 +183,15 @@ header .header-content {
 	font-size: 16px;
 	gap: 20px;
 	height: 100%;
-	padding: 20px 10px;
+	padding: 15px 10px;
 	position: relative;
 	text-align: center;
 	text-align: left;
+	text-decoration: none;
 	width: 100%;
 }
 
-.drawer-menu__list a span {
+.drawer-menu__list .drawer-menu__link span {
 	color: #3b3b3b;
 	color: var(--base-color);
 	display: block;
@@ -193,14 +199,14 @@ header .header-content {
 	position: absolute;
 	right: 10px;
 	top: 50%;
-	transform: translate(0%, -50%) rotate(90deg);
+	transform: translate(0%, -50%);
 	transition: transform 0.3s ease;
 	transition: transform var(--duration);
 	width: 10px;
 }
 
-.drawer-menu__list a span::before,
-.drawer-menu__list a span::after {
+.drawer-menu__list .drawer-menu__link span::before,
+.drawer-menu__list .drawer-menu__link span::after {
 	background: currentColor;
 	border-radius: 10px;
 	content: "";
@@ -213,16 +219,106 @@ header .header-content {
 	width: inherit;
 }
 
-.drawer-menu__list a span::before {
+.drawer-menu__list .drawer-menu__link span::before {
 	transform: translate(0%, -50%) rotate(45deg);
 }
 
-.drawer-menu__list a span::after {
+.drawer-menu__list .drawer-menu__link span::after {
 	transform: translate(0%, -50%) rotate(-45deg);
+}
+
+.drawer-menu__list .drawer-menu__link.st_accordion span {
+	transform: translate(0%, -50%) rotate(90deg);
+}
+
+.drawer-menu__list .drawer-menu__link.st_accordion.is-open span {
+	transform: translate(0%, -50%) rotate(90deg) scale(-1, 1);
 }
 
 .drawer-menu__list.is_active a span {
 	transform: translate(0%, -50%) rotate(90deg) scale(-1, 1);
+}
+
+.drawer-menu__subLists {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: 250ms grid-template-rows ease, 250ms padding-top ease, 250ms padding-bottom ease;
+}
+
+.drawer-menu__subLists > div {
+	overflow: hidden;
+}
+
+.drawer-menu__subLists[aria-hidden=false] {
+	grid-template-rows: 1fr;
+	padding-bottom: 20px;
+	padding-top: 0;
+}
+
+.drawer-menu__subList {
+	position: relative;
+}
+
+.drawer-menu__subList .drawer-menu__subLink {
+	-webkit-text-decoration: none;
+	align-items: center;
+	background: #ffffff;
+	background: var(--white);
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+	color: #3b3b3b;
+	color: var(--base-color);
+	display: block;
+	display: flex;
+	font-size: 16px;
+	padding: 15px 10px;
+	text-align: center;
+	text-align: left;
+	text-decoration: none;
+	width: 100%;
+}
+
+.drawer-menu__subList .drawer-menu__subLink span {
+	color: #3b3b3b;
+	color: var(--base-color);
+	display: block;
+	height: 10px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translate(0%, -50%);
+	transition: transform 0.3s ease;
+	transition: transform var(--duration);
+	width: 10px;
+}
+
+.drawer-menu__subList .drawer-menu__subLink span::before,
+.drawer-menu__subList .drawer-menu__subLink span::after {
+	background: currentColor;
+	border-radius: 10px;
+	content: "";
+	display: block;
+	height: 2px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform-origin: center right;
+	width: inherit;
+}
+
+.drawer-menu__subList .drawer-menu__subLink span::before {
+	transform: translate(0%, -50%) rotate(45deg);
+}
+
+.drawer-menu__subList .drawer-menu__subLink span::after {
+	transform: translate(0%, -50%) rotate(-45deg);
+}
+
+.drawer-menu__subList .drawer-menu__subLink.is-open span {
+	transform: translate(0%, -50%) rotate(90deg) scale(-1, 1);
+}
+
+.drawer-menu__subList + .drawer-menu__subList {
+	margin-top: 10px;
 }
 
 .footer {
@@ -1707,12 +1803,26 @@ body:has(#mobile-menu-button[aria-expanded=true]) {
 header {
 	height: 60px;
 	height: var(--header-height-sp);
+	padding-bottom: 0;
 }
 
 .header-right {
 	align-items: center;
 	display: flex;
 	gap: 10px;
+	height: inherit;
+}
+
+.header-right .header-shop-menu {
+	height: inherit;
+}
+
+.header-right .header-shop-menu a {
+	height: inherit;
+}
+
+.header-right .header-shop-menu img {
+	height: 100%;
 }
 
 .header-right .main-navigation {
@@ -1720,7 +1830,8 @@ header {
 }
 
 .header-right .mobile-menu-toggle {
-	display: block;
+	align-items: center;
+	display: flex;
 	height: 100%;
 }
 
