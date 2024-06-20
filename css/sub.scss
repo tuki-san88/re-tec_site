@@ -1751,7 +1751,7 @@ body:has(.secWelfare) .footer {
   .secWelfare__bottom {
     margin-block-start: rfz(40, 150, $minVw, $maxVw);
   }
-  
+
   // アコーディオン
   .accordion + .accordion {
     margin-block-start: rfz(30, 100, $minVw, $maxVw);
@@ -1812,15 +1812,15 @@ body:has(.secWelfare) .footer {
   }
   .secOfficeContents-l {
     margin-block-start: rfz(145, 700, $minVw, $maxVw);
-  }  
+  }
   .secOfficeContents__item + .secOfficeContents__item {
     margin-block-start: rfz(108, 550, $minVw, $maxVw);
   }
-  
+
   .secOfficeContents__head {
     text-align: center;
   }
-  
+
   .secOfficeContents__body {
     margin-block-start: rfz(30, 122, $minVw, $maxVw);
     display: grid;
@@ -1838,15 +1838,15 @@ body:has(.secWelfare) .footer {
       padding-inline: var(--padding-sp);
     }
   }
-  
+
   .secOfficeContents__img {
     // aspect-ratio: 992 / 608;
   }
-  
+
   .secOfficeContents__bottom {
     margin-block-start: rfz(30, 122, $minVw, $maxVw);
   }
-  
+
   .secOfficeContents__map {
     aspect-ratio: 1920 / 603;
 
@@ -1858,6 +1858,9 @@ body:has(.secWelfare) .footer {
       object-position: center;
     }
   }
-  
-  
+
+  // 職人一覧ページ
+  .artist-l {
+    margin-block-start: rfz(78, 300, $minVw, $maxVw);
+  }
 } // sub

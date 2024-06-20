@@ -1561,6 +1561,10 @@ body:has(.secWelfare) .footer {
 	width: 100%;
 }
 
+.sub .artist-l {
+	margin-top: max(78px, min(calc(4px + 18.9743589744vw), 300px));
+}
+
 @media (any-hover: hover) {
 
 .hoverOpacity:hover {
