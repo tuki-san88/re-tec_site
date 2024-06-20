@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 <main>
   <div class="sub">
-    <!-- 下層MV mod = st_img_sp_none st_yellow st_pink st_green st_green-light -->
+   <!-- 下層MV mod = img_sp_none(SP時は画像がない) st_yellow st_pink st_green st_green-light -->
     <?php
     $args = [
       'mod' => 'st_green',
@@ -20,12 +20,12 @@
     ?>
     <!-- 自動車事業詳細 -->
     <div class="secAutomobileContent1 secContent1-l">
-      <!-- メディアパーツ mod = st_yellow st_pink st_green st_green-light reverse -->
+      <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->
       <?php
       $args = [
-        'mod' => 'st_green',
+        'mod' => 'st_green ver2',
         [
-          'title' => '厳選された品質と信頼性の中古車をご提供します！',
+          'title' => '厳選された品質と信頼性の<br class="sp-only">中古車をご提供します！',
           'text' => '当社の中古車販売サービスでは、厳しい基準に基づいて選りすぐられた高品質な中古車をご用意しています。<br><br>お客様のニーズに合わせて幅広いラインナップを取り揃え、安心してお乗りいただける車を提供しています。<br><br>万全の点検とメンテナンスを施し、信頼性の高い中古車をお届けします。',
           'img' => 'sub/img_media_automotive1',
         ],

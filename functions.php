@@ -23,6 +23,20 @@ function register_scripts() {
 add_action('wp_enqueue_scripts', 'register_scripts');
 
 
+function my_setup()
+{
+	add_theme_support('post-thumbnails'); // アイキャッチ画像を有効化
+	add_theme_support('automatic-feed-links'); // 投稿とコメントのRSSフィードのリンクを有効化
+	add_theme_support('html5', array( // HTML5による出力
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	));
+}
+add_action('after_setup_theme', 'my_setup');
+
 
 // 各ページへのリンク
 function get_my_urls()

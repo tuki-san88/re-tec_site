@@ -2,13 +2,13 @@
   <?php foreach ($args as $key => $arg) : ?>
     <?php if ($key !== 'mod') : ?>
       <div class="media__item">
-        <div class="media__content">
+        <div class="media__content media__content--1">
           <div class="media__textWrap">
             <p class="media__title"><?php echo $arg['title'] ?></p>
             <p class="media__text baseText"><?php echo $arg['text'] ?></p>
           </div>
         </div>
-        <div class="media__content">
+        <div class="media__content media__content--2">
           <div class="media__imgWrap">
             <div class="media__img">
               <?php

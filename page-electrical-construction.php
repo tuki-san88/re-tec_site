@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 <main>
   <div class="sub">
-    <!-- 下層MV mod = st_img_sp_none st_yellow st_pink st_green -->
+    <!-- 下層MV mod = img_sp_none(SP時は画像がない) st_yellow st_pink st_green st_green-light -->
     <?php
     $args = [
       'mod' => 'st_yellow',
@@ -55,10 +55,10 @@
         <h2 class="secTitle">取扱工事内容</h2>
       </div>
       <div class="secElectricalWrap__body">
-        <!-- メディアパーツ mod = st_yellow st_pink st_green reverse -->
+        <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->
         <?php
         $args = [
-          'mod' => 'st_yellow reverse',
+          'mod' => 'st_yellow',
           [
             'title' => '高圧電気設備<br>(新設・改修工事）',
             'text' => '高圧電気設備の新設および改修工事を通じて、産業用の工場様向けに信頼性と効率性を提供します。私たちは、最新のテクノロジーと高度な技術を駆使し、電力インフラの確保と効率化に焦点を当てています。<br><br>新設工事においては、工場の特定のニーズに合わせたカスタム設計を行い、高圧電気設備を迅速に展開します。また、高度な制御システムを導入することで、設備の遠隔監視と効率的なエネルギー利用を実現します。<br><br>改修工事では、老朽化した設備のアップグレードや環境に配慮したアプローチを採用し、持続可能な電力供給を保証します。工場様との信頼を築くために、高圧電気設備の専門知識と安全性を最優先に考え、プロジェクトの成功と生産性向上を実現します。　',

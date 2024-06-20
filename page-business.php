@@ -8,10 +8,10 @@
 <?php get_header(); ?>
 <main>
   <div class="sub">
-    <!-- 下層MV mod = st_img_sp_none st_yellow st_pink st_green -->
+    <!-- 下層MV mod = img_sp_none(SP時は画像がない) st_yellow st_pink st_green st_green-light -->
     <?php
     $args = [
-      'mod' => 'st_img_sp_none',
+      'mod' => 'img_sp_none',
       'img' => 'sub/img_subMv_business',
       'title' => '事業案内',
       'text' => '',

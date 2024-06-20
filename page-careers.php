@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 <main>
   <div class="sub">
-    <!-- 下層MV mod = st_img_sp_none st_yellow st_pink st_green st_green-light -->
+    <!-- 下層MV mod = img_sp_none(SP時は画像がない) st_yellow st_pink st_green st_green-light -->
     <?php
     $args = [
       'mod' => '',
@@ -70,10 +70,10 @@
         <h2 class="secCareerContent2__title secTitle">募集職種!</h2>
       </div>
       <div class="secCareerContent2__body1">
-        <!-- メディアパーツ mod = st_yellow st_pink st_green reverse -->
+        <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->
         <?php
         $args = [
-          'mod' => 'st_yellow',
+          'mod' => 'st_yellow ver2',
           [
             'title' => '電気設備工事職',
             'text' => '
@@ -88,7 +88,8 @@
             工事エリア★大津～野洲～八日市・京都・大阪<br>
             <br>
             ★１人１台社用車支給！<br>
-            ★入社後、業務に必要な資格取得制度あり（規定による）☆増員の為、3名募集
+            ★入社後、業務に必要な資格取得制度あり（規定による）<br><br>
+            ☆増員の為、3名募集
             ',
             'img' => 'sub/img_media_elect1',
           ],
@@ -153,10 +154,10 @@
         </div>
       </div>
       <div class="secCareerContent2__body3">
-        <!-- メディアパーツ mod = st_yellow st_pink st_green reverse -->
+        <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->
         <?php
         $args = [
-          'mod' => 'st_pink reverse',
+          'mod' => 'st_pink reverse ver2',
           [
             'title' => 'スィーツ販売スタッフ',
             'text' => '

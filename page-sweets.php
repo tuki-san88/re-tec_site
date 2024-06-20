@@ -8,7 +8,7 @@
 <?php get_header(); ?>
 <main>
   <div class="sub">
-    <!-- 下層MV mod = st_img_sp_none st_yellow st_pink st_green -->
+    <!-- 下層MV mod = img_sp_none(SP時は画像がない) st_yellow st_pink st_green st_green-light -->
     <?php
     $args = [
       'mod' => 'st_pink',
@@ -37,12 +37,12 @@
     </div>
     <!-- スイーツ詳細 -->
     <div class="secSweetsContent1 secContent1-l">
-      <!-- メディアパーツ mod = st_yellow st_pink st_green reverse -->
+     <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->
       <?php
       $args = [
-        'mod' => 'st_pink',
+        'mod' => 'st_pink ver2',
         [
-          'title' => '滋賀県内県内<br>唯一のフルーツサンド<br>専門店',
+          'title' => '滋賀県内県内<br>唯一のフルーツサンド<br class="pc-only">専門店',
           'text' => '当店は滋賀県内唯一のフルーツサンド専門店です。<br><br>地元で採れた新鮮なフルーツを厳選し、独自のレシピで手作りしています。豊富な種類のフルーツを使ったサンドイッチは、見た目も華やかでありながら、口にするとフルーツの甘みと香りが広がります。<br><br>【こんなシーンにピッタリ】<br>お見舞いの手土産や、ママ友会のスィーツ、休日のおやつ、仕事帰りのご褒美等、日々の生活の中で活躍するスィーツとして、幅広いシーンでご利用いただけます。<br>滋賀の自然を感じながら、贅沢なフルーツサンドをお楽しみください。',
           'img' => 'sub/img_media_sweets1',
         ],
