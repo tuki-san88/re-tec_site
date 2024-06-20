@@ -36,7 +36,7 @@
       </div>
     </div>
     <!-- スイーツ詳細 -->
-    <div class="secSweetsContent1 secSweetsContent1-l">
+    <div class="secSweetsContent1 secContent1-l">
       <!-- メディアパーツ mod = st_yellow st_pink st_green reverse -->
       <?php
       $args = [
@@ -57,10 +57,10 @@
       ?>
     </div>
     <!-- image -->
-    <section class="secSweetsContent2 secSweetsContent2-l">
-      <div class="secSweetsContent2__inner inner">
-        <h2 class="secSweetsContent2__title secTitleSub">image</h2>
-        <div class="secSweetsContent2__body">
+    <section class="secSlideContent secSlideContent-l">
+      <div class="secSlideContent__inner inner">
+        <h2 class="secSlideContent__title secTitleSub">image</h2>
+        <div class="secSlideContent__body">
           <?php
           $args = [
             [
@@ -76,8 +76,8 @@
           get_template_part('tmp/imgSlide', null, $args);
           ?>
         </div>
-        <div class="secSweetsContent2__bottom">
-          <div class="secSweetsContent2__bnr">
+        <div class="secSlideContent__bottom">
+          <div class="secSlideContent__bnr">
             <a href="" class="hoverOpacity">
               <?php
               $args = [
