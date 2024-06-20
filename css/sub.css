@@ -1509,6 +1509,58 @@ body:has(.secWelfare) .footer {
 	text-align: center;
 }
 
+.sub .secOfficeMap-l {
+	margin-top: max(40px, min(calc(-0.3333333333px + 10.3418803419vw), 161px));
+}
+
+.sub .secOfficeMap__inner {
+	--inner: 1372px;
+}
+
+.sub .secOfficeContents-l {
+	margin-top: max(145px, min(calc(-40px + 47.4358974359vw), 700px));
+}
+
+.sub .secOfficeContents__item + .secOfficeContents__item {
+	margin-top: max(108px, min(calc(-39.3333333333px + 37.7777777778vw), 550px));
+}
+
+.sub .secOfficeContents__head {
+	text-align: center;
+}
+
+.sub .secOfficeContents__body {
+	grid-gap: max(25px, min(calc(17.6666666667px + 1.8803418803vw), 47px));
+	display: grid;
+	gap: max(25px, min(calc(17.6666666667px + 1.8803418803vw), 47px));
+	grid-template-columns: repeat(2, 1fr);
+	margin-top: max(30px, min(calc(-0.6666666667px + 7.8632478632vw), 122px));
+}
+
+.sub .secOfficeContents__text {
+	padding-left: 0;
+	padding-right: 40px;
+	padding-right: var(--padding-pc);
+}
+
+.sub .secOfficeContents__bottom {
+	margin-top: max(30px, min(calc(-0.6666666667px + 7.8632478632vw), 122px));
+}
+
+.sub .secOfficeContents__map {
+	aspect-ratio: 1920/603;
+}
+
+.sub .secOfficeContents__map iframe {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
 @media (any-hover: hover) {
 
 .hoverOpacity:hover {
@@ -1867,6 +1919,17 @@ header {
 .sub .secCareerContent2__body1,
 .sub .secCareerContent2__body2 {
 	background: rgba(112, 112, 112, 0.12);
+}
+
+.sub .secOfficeContents__body {
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.sub .secOfficeContents__text {
+	padding-left: 35px;
+	padding-left: var(--padding-sp);
+	padding-right: 35px;
+	padding-right: var(--padding-sp);
 }
 
 }
