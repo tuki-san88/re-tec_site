@@ -29,7 +29,7 @@
 	transition: opacity var(--duration);
 }
 
-body {
+html {
 	scroll-behavior: smooth;
 }
 
@@ -943,6 +943,10 @@ header .header-content {
 	margin-top: max(122px, min(calc(-7px + 33.0769230769vw), 509px));
 }
 
+.sub .secMap-l2 {
+	margin-top: max(70px, min(calc(-24.6666666667px + 24.2735042735vw), 354px));
+}
+
 .sub .secMap__title {
 	text-align: center;
 }
@@ -1132,6 +1136,117 @@ header .header-content {
 	margin-top: max(20px, min(calc(-54.6666666667px + 19.1452991453vw), 244px));
 }
 
+.sub .secSweetsContent1-l {
+	margin-top: max(27px, min(calc(2px + 6.4102564103vw), 102px));
+}
+
+.sub .secSweetsContent2-l {
+	margin-top: max(100px, min(calc(14.3333333333px + 21.9658119658vw), 357px));
+}
+
+.sub .secSweetsContent2__inner {
+	--inner: 1160px;
+}
+
+.sub .secSweetsContent2__title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.sub .secSweetsContent2__body {
+	margin-top: max(40px, min(calc(-16.6666666667px + 14.5299145299vw), 210px));
+}
+
+.sub .secSweetsContent2__bottom {
+	margin-top: max(50px, min(calc(-16.6666666667px + 17.094017094vw), 250px));
+	text-align: center;
+}
+
+.sub .secSweetsContent2__bnr {
+	aspect-ratio: 812/246;
+	display: inline-block;
+	width: max(154px, min(calc(-65.3333333333px + 56.2393162393vw), 812px));
+}
+
+.sub .secSweetsContent2__bnr a {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.sub .imgSlide img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	aspect-ratio: 1160/800;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .newsBlock {
+	position: relative;
+}
+
+.sub .newsBlock__contents {
+	bottom: 0;
+	height: max(66px, min(calc(-0.3333333333px + 17.0085470085vw), 265px));
+	left: 50%;
+	max-width: calc(1277px + 40px * 2);
+	max-width: calc(1277px + var(--padding-pc) * 2);
+	padding-left: 40px;
+	padding-left: var(--padding-pc);
+	padding-right: 40px;
+	padding-right: var(--padding-pc);
+	position: absolute;
+	transform: translate(-50%, 20%);
+	width: 100%;
+}
+
+.sub .newsBlock__content {
+	background: #ffffff;
+	background: var(--white);
+	border: 1px solid #707070;
+	border: 1px solid var(--gray);
+	height: inherit;
+	overflow-y: scroll;
+	padding: max(5px, min(calc(-6.6666666667px + 2.9914529915vw), 40px)) max(13px, min(calc(0.6666666667px + 3.1623931624vw), 50px));
+}
+
+.sub .newsBlock__content::-webkit-scrollbar {
+	width: max(13px, min(calc(4px + 2.3076923077vw), 40px));
+}
+
+.sub .newsBlock__content::-webkit-scrollbar-track {
+	background: #ffffff;
+	background: var(--white);
+}
+
+.sub .newsBlock__content::-webkit-scrollbar-thumb {
+	background: #efb9b9;
+	background: var(--pink);
+	border-radius: max(8px, min(calc(6.6666666667px + 0.3418803419vw), 12px));
+}
+
+.sub .newsBlock__list + .newsBlock__list {
+	margin-top: max(3px, min(calc(2.3333333333px + 0.1709401709vw), 5px));
+}
+
+.sub .newsBlock__list a {
+	grid-gap: max(30px, min(calc(14px + 4.1025641026vw), 78px));
+	-webkit-text-decoration: none;
+	color: #3b3b3b;
+	color: var(--base-color);
+	display: grid;
+	gap: max(30px, min(calc(14px + 4.1025641026vw), 78px));
+	grid-template-columns: max-content 1fr;
+	text-decoration: none;
+}
+
+.sub .newsBlock__date,
+.sub .newsBlock__title {
+	display: block;
+}
+
 @media (any-hover: hover) {
 
 .hoverOpacity:hover {
@@ -1291,8 +1406,8 @@ header {
 }
 
 .sub .subMv__title.st_pink {
-	background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
-	background: initial;
+	background: #ffffff;
+	background: var(--white);
 }
 
 .sub .subMv__title.st_green {
@@ -1302,6 +1417,12 @@ header {
 
 .sub .subMv:has(.subMv__title.st_img_sp_none) .subMv__img {
 	display: none;
+}
+
+.sub .subMv:has(.subMv__title.st_pink) {
+	background: #efb9b9;
+	background: var(--pink);
+	padding-bottom: max(102px, min(calc(-97.3333333333px + 51.1111111111vw), 700px));
 }
 
 .sub .media__content {
@@ -1433,6 +1554,12 @@ header {
 	background: var(--yellow-light);
 	margin-bottom: max(17px, min(calc(-14px + 7.9487179487vw), 110px));
 	padding-bottom: 30px;
+}
+
+.sub .newsBlock__contents {
+	bottom: max(20px, min(calc(-40px + 15.3846153846vw), 200px));
+	max-width: max(400px, min(calc(107.6666666667px + 74.9572649573vw), 1277px));
+	transform: translate(-50%, 0);
 }
 
 }

@@ -28,3 +28,25 @@ if (hamburger) {
     }
   });
 }
+// ----------------------
+//スライド
+// ----------------------
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.querySelector(".js-img-swiper")) {
+    var swiper1 = new Swiper(".js-img-swiper", {
+      slidesPerView: 1,
+      // コンテナ内に表示させるスライド数（CSSでサイズ指定する場合は 'auto'）
+      spaceBetween: 0,
+      // スライド間の余白（px）
+      loop: true,
+      // 無限ループさせる
+      loopAdditionalSlides: 1,
+      // 無限ループさせる場合に複製するスライド数
+      speed: 3000,
+      // スライドアニメーションのスピード（ミリ秒）
+      autoplay: {
+        delay: 3000
+      }
+    });
+  }
+});

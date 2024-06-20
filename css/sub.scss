@@ -90,7 +90,7 @@ $minVw: 390;
   }
 }
 
-body {
+html {
   scroll-behavior: smooth;
 }
 
@@ -641,7 +641,7 @@ header {
       background: var(--pink);
 
       @include mq(tab) {
-        background: initial;
+        background: var(--white);
       }
     }
     &.st_green {
@@ -674,6 +674,12 @@ header {
       @include mq(tab) {
         display: none;
       }
+    }
+  }
+  .subMv:has(.subMv__title.st_pink) {
+    @include mq(tab) {
+      padding-block-end: rfz(102, 700, $minVw, $maxVw);
+      background: var(--pink);
     }
   }
 
@@ -973,7 +979,7 @@ header {
   .subInfo {
     background: var(--white);
     margin-block-start: rfz(147, 680, $minVw, $maxVw);
-    
+
     &.subInfo-1 {
       margin-block-start: rfz(147, 480, $minVw, $maxVw);
     }
@@ -1202,6 +1208,9 @@ header {
   .secMap-l {
     margin-block-start: rfz(122, 509, $minVw, $maxVw);
   }
+  .secMap-l2 {
+    margin-block-start: rfz(70, 354, $minVw, $maxVw);
+  }
 
   .secMap__title {
     text-align: center;
@@ -1377,15 +1386,122 @@ header {
   .secElectricalWrap-l {
     margin-block-start: rfz(35, 263, $minVw, $maxVw);
   }
-  
+
   .secElectricalWrap__head {
     text-align: center;
   }
-  
+
   .secElectricalWrap__body {
     margin-block-start: rfz(20, 244, $minVw, $maxVw);
   }
-  
-  
 
+  .secSweetsContent1-l {
+    margin-block-start: rfz(27, 102, $minVw, $maxVw);
+  }
+
+  .secSweetsContent2-l {
+    margin-block-start: rfz(100, 357, $minVw, $maxVw);
+  }
+
+  .secSweetsContent2__inner {
+    --inner: 1160px;
+  }
+
+  .secSweetsContent2__title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .secSweetsContent2__body {
+    margin-block-start: rfz(40, 210, $minVw, $maxVw);
+  }
+
+  .secSweetsContent2__bottom {
+    margin-block-start: rfz(50, 250, $minVw, $maxVw);
+    text-align: center;
+  }
+
+  .secSweetsContent2__bnr {
+    width: rfz(154, 812, $minVw, $maxVw);
+    aspect-ratio: 812 / 246;
+    display: inline-block;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // スライド画像
+  .imgSlide {
+    img {
+      aspect-ratio: 1160 / 800;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // お知らせ
+  .newsBlock {
+    position: relative;
+  }
+
+  .newsBlock__contents {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 20%);
+    width: 100%;
+    max-width: calc(1277px + var(--padding-pc) * 2);
+    height: rfz(66, 265, $minVw, $maxVw);
+    padding-inline: var(--padding-pc);
+
+    @include mq(tab) {
+      max-width: rfz(400, 1277, $minVw, $maxVw);
+      bottom: rfz(20, 200, $minVw, $maxVw);
+      transform: translate(-50%, 0);
+    }
+  }
+
+  .newsBlock__content {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    overflow-y: scroll;
+    padding: rfz(5, 40, $minVw, $maxVw) rfz(13, 50, $minVw, $maxVw);
+    height: inherit;
+
+    // スクロールバーのスタイル設定
+    &::-webkit-scrollbar {
+      width: rfz(13, 40, $minVw, $maxVw); // スクロールバーの幅
+    }
+    &::-webkit-scrollbar-track {
+      background: var(--white); // スクロールバーのトラックの色
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--pink); // スクロールバーのサムの色
+      border-radius: rfz(8, 12, $minVw, $maxVw); // サムの角の丸み
+    }
+  }
+
+  .newsBlock__lists {
+  }
+
+  .newsBlock__list + .newsBlock__list {
+    margin-block-start: rfz(3, 5, $minVw, $maxVw);
+  }
+
+  .newsBlock__list a {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: rfz(30, 78, $minVw, $maxVw);
+    color: var(--base-color);
+    text-decoration: none;
+  }
+
+  .newsBlock__date,
+  .newsBlock__title {
+    display: block;
+  }
 } // sub
