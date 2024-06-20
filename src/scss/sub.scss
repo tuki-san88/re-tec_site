@@ -322,6 +322,10 @@ header {
   }
 }
 
+body:has(.secWelfare) .footer {
+  margin-block-start: 0;
+}
+
 .footer__inner {
   max-width: calc(var(--inner) + var(--padding-pc) * 2);
   margin-inline: auto;
@@ -698,8 +702,8 @@ header {
   }
 
   .subMv:has(.subMv__title.st_green) {
-      color: var(--white);
-      
+    color: var(--white);
+
     @include mq(tab) {
       color: var(--base-color);
       padding-block-end: rfz(12, 70, $minVw, $maxVw);
@@ -977,6 +981,7 @@ header {
   .overview__dt,
   .overview__dd {
     padding: rfz(8, 20, $minVw, $maxVw) rfz(10, 60, $minVw, $maxVw);
+    min-height: rfz(36, 75, $minVw, $maxVw);
   }
   .overview__done {
     display: none;
@@ -1566,7 +1571,6 @@ header {
   }
 
   .secBland__item {
-
     img {
       display: block;
       width: 100%;
@@ -1578,26 +1582,24 @@ header {
 
   // 撮影
   .secPhoto {
-
   }
 
   .secPhoto-l {
     margin-block-start: rfz(50, 150, $minVw, $maxVw);
   }
-  
+
   .secPhoto__head {
     text-align: center;
   }
-  
+
   .secPhoto__body {
     margin-block-start: rfz(40, 143, $minVw, $maxVw);
   }
-  
+
   .secPhoto__bottom {
     margin-block-start: rfz(75, 233, $minVw, $maxVw);
-  
   }
-  
+
   .secPhoto__bnr {
     width: 100%;
     max-width: rfz(318, 812, $minVw, $maxVw);
@@ -1611,12 +1613,193 @@ header {
       object-fit: cover;
       object-position: center;
     }
-  
+  }
+  // 採用情報
+  .secCareerHead {
+    margin-block-start: rfz(38, 137, $minVw, $maxVw);
+  }
+
+  .secCareerHead__text {
+    font-size: rfz(14, 60, $minVw, $maxVw);
+    line-height: calc(107 / 60);
+    text-align: center;
+    @include mq(tab) {
+      line-height: calc(17 / 10);
+    }
+  }
+
+  .secCareerContent1 {
+    overflow: hidden;
+  }
+
+  .secCareerContent1-l {
+    margin-block-start: rfz(70, 200, $minVw, $maxVw);
+  }
+
+  .secCareerContent1__title {
+    text-align: center;
+  }
+
+  .secCareerContent1__img {
+    margin-block-start: rfz(40, 137, $minVw, $maxVw);
+    aspect-ratio: 1920 / 846;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .secCareerContent1__body {
+    margin-block-start: rfz(40, 130, $minVw, $maxVw);
+  }
+
+  .secCareerContent1__text {
+    font-size: rfz(14, 40, $minVw, $maxVw);
+    line-height: calc(83 / 40);
+    text-align: center;
+
+    @include mq(tab) {
+      line-height: calc(15 / 10);
+    }
+  }
+
+  .secCareerContent2 {
+  }
+
+  .secCareerContent2-l {
+    margin-block-start: rfz(56, 362, $minVw, $maxVw);
+  }
+
+  .secCareerContent2__head {
+    @include mq(tab) {
+      padding-block-start: rfz(15, 150, $minVw, $maxVw);
+    }
+  }
+
+  .secCareerContent2__title {
+    text-align: center;
+  }
+
+  .secCareerContent2__body1 {
+    padding-block-start: rfz(20, 224, $minVw, $maxVw);
+  }
+
+  .secCareerContent2__body2 {
+    padding-block-start: rfz(43, 181, $minVw, $maxVw);
+
+    @include mq(tab) {
+      padding-block-end: rfz(23, 224, $minVw, $maxVw);
+    }
+  }
+  .secCareerContent2__list {
+    --inner: 1080px;
+  }
+  .secCareerContent2__body3 {
+    padding-block-start: rfz(74, 334, $minVw, $maxVw);
+  }
+
+  .secCareerContent2__body4 {
+    padding-block-start: rfz(30, 100, $minVw, $maxVw);
+  }
+
+  .secCareerContent2__head,
+  .secCareerContent2__body1,
+  .secCareerContent2__body2 {
+    @include mq(tab) {
+      background: color-mix(in srgb, var(--gray) 12%, transparent);
+    }
+  }
+  // 福利厚生
+  .secWelfare {
+    overflow: hidden;
+  }
+
+  .secWelfare-l {
+    margin-block-start: rfz(88, 291, $minVw, $maxVw);
+  }
+
+  .secWelfare__title {
+    text-align: center;
+  }
+
+  .secWelfare__img {
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    aspect-ratio: 1920 / 1060;
+    margin-block-start: rfz(25, 252, $minVw, $maxVw);
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .secWelfare__body {
+    margin-block-start: rfz(86, 209, $minVw, $maxVw);
+    --inner: 1170px;
+  }
+
+  .secWelfare__bottom {
+    margin-block-start: rfz(40, 150, $minVw, $maxVw);
   }
   
-  .hoverOpacity {
-  
+  // アコーディオン
+  .accordion + .accordion {
+    margin-block-start: rfz(30, 100, $minVw, $maxVw);
   }
-  
-  
+
+  .accordion__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rfz(5, 10, $minVw, $maxVw);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    position: relative;
+    font-family: "Noto Serif JP", serif;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      display: block;
+      width: rfz(15, 45, $minVw, $maxVw);
+      aspect-ratio: 11 / 10;
+      background: var(--base-color);
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+
+    &[aria-expanded="true"] {
+    }
+  }
+
+  .accordion__body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 250ms grid-template-rows ease, 250ms padding-block ease;
+
+    > div {
+      overflow: hidden;
+    }
+
+    &[aria-hidden="false"] {
+      grid-template-rows: 1fr;
+      padding-block: rfz(20, 69, $minVw, $maxVw) 0;
+    }
+  }
+
+  .accordion__text {
+    text-align: center;
+  }
 } // sub

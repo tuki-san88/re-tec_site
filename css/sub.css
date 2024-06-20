@@ -238,6 +238,10 @@ header .header-content {
 	box-sizing: border-box;
 }
 
+body:has(.secWelfare) .footer {
+	margin-top: 0;
+}
+
 .footer__inner {
 	margin-left: auto;
 	margin-right: auto;
@@ -716,6 +720,7 @@ header .header-content {
 
 .sub .overview__dt,
 .sub .overview__dd {
+	min-height: max(36px, min(calc(23px + 3.3333333333vw), 75px));
 	padding: max(8px, min(calc(4px + 1.0256410256vw), 20px)) max(10px, min(calc(-6.6666666667px + 4.2735042735vw), 60px));
 }
 
@@ -1337,6 +1342,173 @@ header .header-content {
 	width: 100%;
 }
 
+.sub .secCareerHead {
+	margin-top: max(38px, min(calc(5px + 8.4615384615vw), 137px));
+}
+
+.sub .secCareerHead__text {
+	font-size: max(14px, min(calc(-1.3333333333px + 3.9316239316vw), 60px));
+	line-height: 1.7833333333;
+	text-align: center;
+}
+
+.sub .secCareerContent1 {
+	overflow: hidden;
+}
+
+.sub .secCareerContent1-l {
+	margin-top: max(70px, min(calc(26.6666666667px + 11.1111111111vw), 200px));
+}
+
+.sub .secCareerContent1__title {
+	text-align: center;
+}
+
+.sub .secCareerContent1__img {
+	aspect-ratio: 1920/846;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	margin-top: max(40px, min(calc(7.6666666667px + 8.2905982906vw), 137px));
+	width: 100vw;
+}
+
+.sub .secCareerContent1__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .secCareerContent1__body {
+	margin-top: max(40px, min(calc(10px + 7.6923076923vw), 130px));
+}
+
+.sub .secCareerContent1__text {
+	font-size: max(14px, min(calc(5.3333333333px + 2.2222222222vw), 40px));
+	line-height: 2.075;
+	text-align: center;
+}
+
+.sub .secCareerContent2-l {
+	margin-top: max(56px, min(calc(-46px + 26.1538461538vw), 362px));
+}
+
+.sub .secCareerContent2__title {
+	text-align: center;
+}
+
+.sub .secCareerContent2__body1 {
+	padding-top: max(20px, min(calc(-48px + 17.4358974359vw), 224px));
+}
+
+.sub .secCareerContent2__body2 {
+	padding-top: max(43px, min(calc(-3px + 11.7948717949vw), 181px));
+}
+
+.sub .secCareerContent2__list {
+	--inner: 1080px;
+}
+
+.sub .secCareerContent2__body3 {
+	padding-top: max(74px, min(calc(-12.6666666667px + 22.2222222222vw), 334px));
+}
+
+.sub .secCareerContent2__body4 {
+	padding-top: max(30px, min(calc(6.6666666667px + 5.9829059829vw), 100px));
+}
+
+.sub .secWelfare {
+	overflow: hidden;
+}
+
+.sub .secWelfare-l {
+	margin-top: max(88px, min(calc(20.3333333333px + 17.3504273504vw), 291px));
+}
+
+.sub .secWelfare__title {
+	text-align: center;
+}
+
+.sub .secWelfare__img {
+	aspect-ratio: 1920/1060;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+	margin-top: max(25px, min(calc(-50.6666666667px + 19.4017094017vw), 252px));
+	width: 100vw;
+}
+
+.sub .secWelfare__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+.sub .secWelfare__body {
+	--inner: 1170px;
+	margin-top: max(86px, min(calc(45px + 10.5128205128vw), 209px));
+}
+
+.sub .secWelfare__bottom {
+	margin-top: max(40px, min(calc(3.3333333333px + 9.4017094017vw), 150px));
+}
+
+.sub .accordion + .accordion {
+	margin-top: max(30px, min(calc(6.6666666667px + 5.9829059829vw), 100px));
+}
+
+.sub .accordion__btn {
+	align-items: center;
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	display: flex;
+	font-family: "Noto Serif JP", serif;
+	gap: max(5px, min(calc(3.3333333333px + 0.4273504274vw), 10px));
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+.sub .accordion__btn::after {
+	-webkit-clip-path: polygon(50% 100%, 0 0, 100% 0);
+	aspect-ratio: 11/10;
+	background: #3b3b3b;
+	background: var(--base-color);
+	clip-path: polygon(50% 100%, 0 0, 100% 0);
+	content: "";
+	display: block;
+	width: max(15px, min(calc(5px + 2.5641025641vw), 45px));
+}
+
+.sub .accordion__body {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: 250ms grid-template-rows ease, 250ms padding-top ease, 250ms padding-bottom ease;
+}
+
+.sub .accordion__body > div {
+	overflow: hidden;
+}
+
+.sub .accordion__body[aria-hidden=false] {
+	grid-template-rows: 1fr;
+	padding-bottom: 0;
+	padding-top: max(20px, min(calc(3.6666666667px + 4.188034188vw), 69px));
+}
+
+.sub .accordion__text {
+	text-align: center;
+}
+
 @media (any-hover: hover) {
 
 .hoverOpacity:hover {
@@ -1673,6 +1845,28 @@ header {
 	bottom: max(20px, min(calc(-40px + 15.3846153846vw), 200px));
 	max-width: max(400px, min(calc(107.6666666667px + 74.9572649573vw), 1277px));
 	transform: translate(-50%, 0);
+}
+
+.sub .secCareerHead__text {
+	line-height: 1.7;
+}
+
+.sub .secCareerContent1__text {
+	line-height: 1.5;
+}
+
+.sub .secCareerContent2__head {
+	padding-top: max(15px, min(calc(-30px + 11.5384615385vw), 150px));
+}
+
+.sub .secCareerContent2__body2 {
+	padding-bottom: max(23px, min(calc(-44px + 17.1794871795vw), 224px));
+}
+
+.sub .secCareerContent2__head,
+.sub .secCareerContent2__body1,
+.sub .secCareerContent2__body2 {
+	background: rgba(112, 112, 112, 0.12);
 }
 
 }
