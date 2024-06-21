@@ -67,3 +67,66 @@ function get_my_urls()
 各リンクでの設置例
 <a href="<?php echo $urls['company']; ?>">会社案内</a>
 ```
+- 各ページで構築効率化のため以下のような配列やテンプレートパーツを多用しています。
+```
+ <?php
+    $args = [
+      [
+        'item1' => '氏　　名',
+        'description1' => $name,
+        'item2' => '年　　齢',
+        'description2' => '35',
+        'item3' => '資　　格',
+        'description3' => '第一種電気工事士',
+        'image' => $img,
+        'alt' => 'ReGroup',
+        'title' => '大切にしている事',
+      ],
+    ];
+  get_template_part('tmp/directory', null, $args);
+  ?>
+```  
+以下のように複数配列を使っている箇所は[]を増やせばコンテンツを増やせます。
+``` 
+<?php
+    $args = [
+      [
+        'item1' => '氏　　名',
+        'description1' => $name,
+        'item2' => '年　　齢',
+        'description2' => '35',
+        'item3' => '資　　格',
+        'description3' => '第一種電気工事士',
+        'image' => $img,
+        'alt' => 'ReGroup',
+        'title' => '大切にしている事',
+      ],
+      [
+        'item1' => '氏　　名',
+        'description1' => $name,
+        'item2' => '年　　齢',
+        'description2' => '35',
+        'item3' => '資　　格',
+        'description3' => '第一種電気工事士',
+        'image' => $img,
+        'alt' => 'ReGroup',
+        'title' => '大切にしている事',
+      ],
+    ];
+  get_template_part('tmp/directory', null, $args);
+  ?>
+``` 
+カスタムフィールドなどを組み込む場合は以下のように記載すれば可能です（例はACFの場合） 
+``` 
+ <?php $img = get_field('img'); ?>
+
+ <?php
+    $args = [
+      [
+        'description1' => $name,
+        'image' => $img,
+      ],
+    ];
+  get_template_part('tmp/directory', null, $args);
+  ?>
+```

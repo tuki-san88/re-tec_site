@@ -791,6 +791,15 @@ body:has(.secWelfare) .footer {
 	width: max(179px, min(calc(108.6666666667px + 18.0341880342vw), 390px));
 }
 
+.sub .directory__img img {
+	-o-object-fit: cover;
+	-o-object-position: center;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
 .sub .directory__title {
 	font-size: max(14px, min(calc(10px + 1.0256410256vw), 26px));
 }
