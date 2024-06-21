@@ -127,7 +127,6 @@ function get_my_urls()
  <?php
     $args = [
       [
-        'description1' => $name,
         'image' => $img,
       ],
     ];
