@@ -15,10 +15,10 @@ add_action('wp_enqueue_scripts', 'register_styles');
 /* JavaScriptの読み込み */
 function register_scripts() {
     wp_enqueue_script('jquery');
-    wp_enqueue_script('swiper-js', '//unpkg.com/swiper@11/swiper-bundle.min.js' );
+    wp_enqueue_script('swiper-js', '//unpkg.com/swiper@11/swiper-bundle.min.js', array(), null, true );
     wp_enqueue_script('main-slider', get_template_directory_uri() . '/js/main-slider.js', array('jquery'), null, true);
     wp_enqueue_script('custom-slider', get_template_directory_uri() . '/js/custom-slider.js', array('jquery'), null, true);
-    wp_enqueue_script('sub', get_template_directory_uri() . '/js/sub.js', array('jquery'), null, true);
+    wp_enqueue_script('sub', get_template_directory_uri() . '/js/sub.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'register_scripts');
 
@@ -38,7 +38,7 @@ function my_setup()
 add_action('after_setup_theme', 'my_setup');
 
 
-// 各ページへのリンク
+/* 各ページへのリンク */
 function get_my_urls()
 {
 	return array(

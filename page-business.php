@@ -66,8 +66,8 @@
             ?>
           </div>
           <p class="secBusiness__text"><?php echo $businessList["text"]; ?><span></span></p>
-        <?php } ?>
         </a>
+      <?php } ?>
     </div>
     <!-- 各事業詳細 -->
     <div class="secBusinessDetail-l">
@@ -133,7 +133,7 @@
       <?php foreach ($businessDescLists as $businessDescList) { ?>
         <section id="<?php echo $businessDescList["id"]; ?>" class="secBusinessDetail">
           <hgroup>
-            <h3 class="secBusinessDetail__title secTitle"><?php echo $businessDescList["title"]; ?></h3>
+            <h2 class="secBusinessDetail__title secTitle"><?php echo $businessDescList["title"]; ?></h2>
             <p class="secBusinessDetail__subTitle secTitleSub"><?php echo $businessDescList["subTitle"]; ?></p>
           </hgroup>
           <div class="secBusinessDetail__body"></div>

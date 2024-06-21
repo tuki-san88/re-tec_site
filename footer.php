@@ -82,7 +82,7 @@
             <li class="footer__list"><a href="<?php echo $urls['artisans']; ?>" class="hoverOpacity">職人名鑑</a></li>
             <li class="footer__list"><a href="<?php echo $urls['Archive']; ?>" class="hoverOpacity">施工実績（一覧）</a>
               <ul class="footer__subLists">
-                <li class="footer__subList"><a href="<?php echo $urls['details']; ?>" class="hoverOpacity">施工実績（詳細）</a></li>
+                <li class="footer__subList"><a href="" class="hoverOpacity">施工実績（詳細）</a></li>
               </ul>
             </li>
             <li class="footer__list"><a href="<?php echo $urls['privacy']; ?>" class="hoverOpacity">プライバシーポリシー</a></li>

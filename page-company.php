@@ -24,7 +24,7 @@
         <div class="secGreeting__contents">
           <div class="secGreeting__textBlock">
             <div class="secGreeting__textWrap">
-              <h3 class="secGreeting__title">ReGroupの代表からのご挨拶</h3>
+              <h2 class="secGreeting__title">ReGroupの代表からのご挨拶</h2>
               <p class="secGreeting__text baseText">
                 「令和という新しい時代、若手を中心とした、進化する建設業の在り方で活気があり信用に満ちた事業を目指します。」<br>
                 <br>
@@ -48,7 +48,7 @@
     <!-- 理念 -->
     <section class="secPhilosophy secPhilosophy-l">
       <div class="secPhilosophy__inner inner">
-        <h3 class="secPhilosophy__title secTitle">理念</h3>
+        <h2 class="secPhilosophy__title secTitle">理念</h2>
         <div class="secPhilosophy__body">
           <p class="secPhilosophy__text">
             令和という新しい時代<br>
@@ -61,7 +61,7 @@
     <!-- 会社概要 -->
     <section class="secCompanyView secCompanyView-l">
       <div class="secCompanyView__inner inner">
-        <h3 class="secCompanyView__title secTitle">会社概要</h3>
+        <h2 class="secCompanyView__title secTitle">会社概要</h2>
         <div class="secCompanyView__body">
           <!-- 会社情報、求人情報 'mod' => 'st_done'で「現在募集は行なっておりません」の表示をする -->
           <?php
@@ -104,7 +104,7 @@
     <!-- SDG'sの取り組みについて -->
     <section class="secSdgs secSdgs-l">
       <div class="secSdgs__inner">
-        <h3 class="secSdgs__title secTitle">SDG'sの取り組みについて</h3>
+        <h2 class="secSdgs__title secTitle">SDG'sの取り組みについて</h2>
         <div class="secSdgs__body">
           <div class="secSdgs__img">
             <?php
@@ -142,7 +142,7 @@
     <!-- アクセス -->
     <div class="secMap secMap-l">
       <div class="secMap__inner inner">
-        <h3 class="secMap__title secTitle">アクセス</h3>
+        <h2 class="secMap__title secTitle">アクセス</h2>
         <div class="secMap__body">
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.093558756266!2d135.92017817631265!3d34.929190472839345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60016cbfde1f12ff%3A0x4b7c47bc2c97beab!2z44CSNTIwLTIyNzcg5ruL6LOA55yM5aSn5rSl5biC6Zai5rSl77yT5LiB55uu77yV4oiS77yW!5e0!3m2!1sja!2sjp!4v1718776143717!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
