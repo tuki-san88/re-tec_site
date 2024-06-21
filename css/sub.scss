@@ -168,7 +168,7 @@ header {
       padding: 0;
       border: none;
       background: none;
-      width: 40px;
+      width: 35px;
       aspect-ratio: 1 / 1;
       position: relative;
 
@@ -214,6 +214,7 @@ header {
       font-size: 10px;
       margin-left: initial;
       width: 100%;
+      text-transform: uppercase;
     }
   }
 }
@@ -1084,7 +1085,7 @@ body:has(.secWelfare) .footer {
 
   .directory__dt {
     text-align: center;
-    width: rfz(70, 235, $minVw, $maxVw);
+    width: rfz(90, 235, $minVw, $maxVw);
     flex-shrink: 0;
   }
 
@@ -1109,7 +1110,7 @@ body:has(.secWelfare) .footer {
 
   .directory__body {
     @include mq(tab) {
-      margin-block-start: 10px;
+      margin-block-start: 30px;
     }
   }
 
@@ -1404,6 +1405,9 @@ body:has(.secWelfare) .footer {
   }
 
   // アクセス
+  .secMap {
+    overflow-x: hidden;
+  }
   .secMap-l {
     margin-block-start: rfz(122, 509, $minVw, $maxVw);
   }
@@ -1417,6 +1421,11 @@ body:has(.secWelfare) .footer {
 
   .secMap__body {
     margin-block-start: rfz(60, 224, $minVw, $maxVw);
+
+    @include mq(tab) {
+      width: 100vw;
+      margin-inline: calc(50% - 50vw);
+    }
   }
 
   // 地図
@@ -1535,7 +1544,6 @@ body:has(.secWelfare) .footer {
     @include mq(tab) {
       line-height: 1.5;
       padding-inline: var(--padding-sp);
-      text-align: left;
     }
   }
 
@@ -1566,7 +1574,12 @@ body:has(.secWelfare) .footer {
     }
     span {
       display: inline-block;
-      text-decoration: double;
+      text-decoration: underline double;
+      text-underline-offset: 5px;
+
+      @include mq(tab) {
+        text-underline-offset: 2px;
+      }
     }
   }
 
@@ -1625,7 +1638,8 @@ body:has(.secWelfare) .footer {
   }
 
   .secSlideContent__bnr {
-    width: rfz(154, 812, $minVw, $maxVw);
+    width: rfz(300, 812, $minVw, $maxVw);
+    max-width: 100%;
     aspect-ratio: 812 / 246;
     display: inline-block;
 

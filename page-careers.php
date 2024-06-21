@@ -67,7 +67,7 @@
     </section>
     <section class="secCareerContent2 secCareerContent2-l">
       <div class="secCareerContent2__head">
-        <h2 class="secCareerContent2__title secTitle">募集職種!</h2>
+        <h2 class="secCareerContent2__title secTitle">募集職種</h2>
       </div>
       <div class="secCareerContent2__body1">
         <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->

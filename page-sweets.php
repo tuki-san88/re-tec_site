@@ -124,13 +124,6 @@
             'titleColor' => 'gray',
             'position' => 'positionBottom',
           ],
-          [
-            'link' => $urls['careers'],
-            'img' => 'sub/img_related_recruit.jpg',
-            'title' => '採用について',
-            'titleColor' => 'white',
-            'position' => 'positionTop',
-          ],
         ];
         get_template_part('tmp/relatedInfo', null, $args);
         ?>

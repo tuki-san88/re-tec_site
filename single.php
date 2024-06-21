@@ -119,7 +119,7 @@
             <?php previous_post_link('%link', '前の記事'); ?>
           </div>
           <div class="actualResult__paginationItem">
-            <a href="">一覧</a>
+            <a href="<?php echo $urls['Archive']; ?>">一覧</a>
           </div>
           <div class="actualResult__paginationItem">
             <?php next_post_link('%link', '次の記事'); ?>

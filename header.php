@@ -52,7 +52,7 @@
                     <button id="mobile-menu-button" aria-controls="site-sp-navigation" aria-expanded="false" popoverTarget="site-sp-navigation">
                         <span class="menu-toggle-icon"></span>
                         <span class="menu-toggle-icon"></span>
-                        <span class="menu-toggle-text">メニュー</span>
+                        <span class="menu-toggle-text">menu</span>
                     </button>
                 </div>
             </div>

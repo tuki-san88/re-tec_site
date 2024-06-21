@@ -64,8 +64,6 @@ function get_my_urls()
         'offices' => esc_url(home_url("/offices/")),
         // 施工実績（一覧）
         'Archive' => esc_url(home_url("/")),
-        // 施工実績（詳細）
-        'details' => esc_url(home_url("/")),
         // プライバシーポリシー
         'privacy' => esc_url(home_url("/")),
         // お問い合わせ

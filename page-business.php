@@ -79,10 +79,10 @@
           "subTitle" => "-Electrical construction-",
           "img" => "sub/img_business_desc1",
           "text" => "
-          私たちは、新時代の建設業において活気に満ち、進化し続ける電気工事業です。<br>
-          若手中心のチームが常に向上心を持ち、確実かつ丁寧な工事を提供します。<br>
+          私たちは、新時代の建設業において活気に満ち、<br class='sp-only'>進化し続ける電気工事業です。<br>
+          若手中心のチームが常に向上心を持ち、<br class='sp-only'>確実かつ丁寧な工事を提供します。<br><br class='sp-only'>
           地域の発展にも貢献し、琵琶湖総合保全設備計画や<br>
-          MLGs(Mother Lake Goals)に賛同し、実践しています。<br>
+          MLGs(Mother Lake Goals)に賛同し、<br class='sp-only'>実践しています。<br>
           今後は、ワンストップ工事を提供することでお客様のニーズに応える信頼ある企業を目指します。
           ",
           "link" => $urls['electrical'],
@@ -95,7 +95,7 @@
           "text" => "
           自然とフルーツサンドの美味しさを組み合わせ、<br>
           心地よい空間を提供しています。<br>
-          季節のフルーツや地元の素材を活かし、SNS映えする商品を提供。<br>
+          季節のフルーツや地元の素材を活かし、<br class='sp-only'>SNS映えする商品を提供。<br>
           ナチュラルな雰囲気とアットホームな接客で、<br>
           誰もが気軽に立ち寄れる場所を目指します。
           ",
@@ -104,13 +104,13 @@
         array(
           "id" => "apparel",
           "title" => "アパレル",
-          "subTitle" => "-Electrical construction-",
+          "subTitle" => "-Apparel shop-",
           "img" => "sub/img_business_desc3",
           "text" => "
           カジュアルなアイテムからオリジナルブランドまで、幅広いアイテムを展開。<br>
-          インフルエンサーとのコラボレーションや新しいブランド展開で、<br>
+          インフルエンサーとのコラボレーションや<br class='sp-only'>新しいブランド展開で、<br>
           お客様に特別な体験を提供。<br>
-          心と体を満たすナチュラルな雰囲気の中で、お客様の笑顔をお届けします。
+          心と体を満たすナチュラルな雰囲気の中で、<br class='sp-only'>お客様の笑顔をお届けします。
           ",
           "link" => $urls['apparel'],
         ),
@@ -121,9 +121,9 @@
           "img" => "sub/img_business_desc4",
           "text" => "
           中古車販売から損害保険、板金、カーコーティングまで、幅広いサービスを提供しています。<br>
-          高品質な中古車の販売だけでなく、万が一の事故に備えた損害保険や、<br>
-          車体の傷やへこみの修理を行う板金サービスもご利用いただけます。<br>
-          さらに、車体の保護や美観を保つためのカーコーティングも行っています。<br>
+          高品質な中古車の販売だけでなく、<br class='sp-only'>万が一の事故に備えた損害保険や、<br>
+          車体の傷やへこみの修理を行う板金サービスも<br class='sp-only'>ご利用いただけます。<br>
+          さらに、車体の保護や美観を保つための<br class='sp-only'>カーコーティングも行っています。<br>
           安心して快適なカーライフをサポートします。
           ",
           "link" => $urls['automotive'],
@@ -169,16 +169,16 @@
         <?php
         $args = [
           [
-            'link' => $urls['offices'],
-            'img' => 'sub/img_related_office.jpg',
-            'title' => '事業所一覧',
+            'link' => $urls['careers'],
+            'img' => 'sub/img_related_recruit.jpg',
+            'title' => '採用について',
             'titleColor' => 'white',
             'position' => 'positionTop',
           ],
           [
-            'link' => $urls['careers'],
-            'img' => 'sub/img_related_recruit.jpg',
-            'title' => '採用について',
+            'link' => $urls['offices'],
+            'img' => 'sub/img_related_office.jpg',
+            'title' => '事業所一覧',
             'titleColor' => 'white',
             'position' => 'positionTop',
           ],
