@@ -89,6 +89,163 @@ get_header(); ?>
             </div>
         </article>
 
+        <!-- 施行実績 -->
+        <article>
+            <section class="topResultWrapper">
+                <div class="resultLeft gothic-font">
+                    CONSTRUCTION RESULTS
+                </div>
+                <div class="resultRight gothic-font">
+                    <h2>電気工事事業での施工実績をご紹介</h2>
+                    <ul class="resultNav">
+                        <li class="resultNaviItem">
+                            <a href="#" class="resultNaviLink">
+                                <span class="resultNaviImage"><img src="<?php echo get_template_directory_uri(); ?>/images/topResultThamn.png" alt=""></span>
+                                <span class="resultNaviTitle">土木電気工事</span>
+                                <span class="resultNaviDate">2024.04.10</span>
+                                <p class="resultNaviDescription">
+                                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                </p>
+                            </a>
+                        </li>
+                        <li class="resultNaviItem">
+                            <a href="#" class="resultNaviLink">
+                                <span class="resultNaviImage"><img src="<?php echo get_template_directory_uri(); ?>/images/topResultThamn.png" alt=""></span>
+                                <span class="resultNaviTitle">電気設備工事</span>
+                                <span class="resultNaviDate">2024.04.11</span>
+                                <p class="resultNaviDescription">
+                                    このテキストは別の内容です。このテキストは別の内容です。このテキストは別の内容です。このテキストは別の内容です。このテキストは別の内容です。このテキストは別の内容です。
+                                </p>
+                            </a>
+                        </li>
+                        <li class="resultNaviItem">
+                            <a href="#" class="resultNaviLink">
+                                <span class="resultNaviImage"><img src="<?php echo get_template_directory_uri(); ?>/images/topResultThamn.png" alt=""></span>
+                                <span class="resultNaviTitle">通信工事</span>
+                                <span class="resultNaviDate">2024.04.12</span>
+                                <p class="resultNaviDescription">
+                                    また異なるテキストが入ります。また異なるテキストが入ります。また異なるテキストが入ります。また異なるテキストが入ります。また異なるテキストが入ります。また異なるテキストが入ります。
+                                </p>
+                            </a>
+                        </li>
+                        <li class="resultNaviItem">
+                            <a href="#" class="resultNaviLink">
+                                <span class="resultNaviImage"><img src="<?php echo get_template_directory_uri(); ?>/images/topResultThamn.png" alt=""></span>
+                                <span class="resultNaviTitle">配線工事</span>
+                                <span class="resultNaviDate">2024.04.13</span>
+                                <p class="resultNaviDescription">
+                                    異なるテキストがここに入ります。異なるテキストがここに入ります。異なるテキストがここに入ります。異なるテキストがここに入ります。異なるテキストがここに入ります。異なるテキストがここに入ります。
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="ResultButton">
+                        <a href="#">MORE</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
+    <!-- メインラッパー終 -->
+
+    <!-- 会社概要 -->
+    <article>
+        <section class="topCompanyWrapper">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/topBusinessImg.png" alt="">
+                            <span>電気工事の種類について　→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/topContactImg.png" alt="">
+                            <span>個人情報の取扱いについて　→</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/topSdgsImg.png" alt="">
+                            <span>SDG'sの取り組みについて　→</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </article>
+    <!-- メインラッパー -->
+    <div class="mainWrapper">
+
+        <!-- 採用バナー -->
+        <article>
+            <section class="topRecruitBanner">
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topRecruitBanner.png" alt=""></a>
+            </section>
+        </article>
+
+        <!-- 取扱い商品バナー -->
+        <article>
+            <section class="topAparelWrapper">
+                <h2>取扱い商品</h2>
+                <div class="flexWrapper">
+                    <div>
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/topSweetBanner.png" alt="">
+                            <span>フルーツサンド</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/topAparelBanner.png" alt="">
+                            <span>ファッション</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="shopingBtn">
+                    <a href="#">ファッションショッピングサイトへ</a>
+                </div>
+                <div class="notification-container">
+                    <div class="notification-list">
+                        <ul>
+                            <li>
+                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加ここにお知らせ（リンク）のシステム追加ここにお知らせ（リンク）のシステム追加ここにお知らせ（リンク）のシステム追加</a>
+                            </li>
+                            <li>
+                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
+                            </li>
+                            <li>
+                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
+                            </li>
+                            <li>
+                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
+                            </li>
+                            <li>
+                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <!-- PICK UP -->
+        <article>
+            <section class="topPickupWrapper">
+                <div class=" gothic-font pickupLeft">
+                    PICK UP
+                </div>
+                <div class=" pickupRight">
+                    <ul class=" pickupNav">
+                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topPickupListImg.png" alt="職人名鑑"><br>職人名鑑</a>
+                        </li>
+                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topPickupBusinessImg.png" alt="会社概要"><br>「アットホーム」よりも<br>
+                                ファミリーと言われる企業へ</a></li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
     </div>
     <!-- メインラッパー終 -->
 

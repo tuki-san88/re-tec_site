@@ -57,10 +57,16 @@ table {
 body {
   font-family: "Noto Serif JP", serif;
   line-height: 1.5;
+  color: #3B3B3B;
 }
 
 a:hover {
   color: #ff7f50;
+}
+
+a:visited,
+a span:visited {
+  text-decoration: none;
 }
 
 a img:hover {
@@ -336,6 +342,13 @@ header .header-content {
 }
 .topResultWrapper .resultRight .resultNav .resultNaviItem {
   display: inline-block;
+  border: 1px solid #707070;
+  margin: 0 35px;
+  border: 1px solid #707070;
+  margin: 0 35px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1;
 }
 .topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink {
   display: block;
@@ -344,22 +357,33 @@ header .header-content {
 .topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviImage {
   display: block;
   margin-bottom: 10px;
+  border-bottom: #707070;
+}
+.topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviImage img {
+  border: 0;
 }
 .topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviTitle {
-  display: block;
-  font-size: 14px;
+  display: inline-block;
   font-weight: bold;
   margin-bottom: 5px;
+  padding: 4px 8px;
+  margin-left: 8px;
+  background: #FEF30B;
+  color: #ffffff;
+  line-height: 1;
 }
 .topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviDate {
   display: block;
   font-size: 12px;
   color: #707070;
-  margin-bottom: 10px;
+  margin: 10px;
+  margin-left: 8px;
 }
 .topResultWrapper .resultRight .resultNav .resultNaviItem .resultNaviLink .resultNaviDescription {
   font-size: 12px;
   color: #707070;
+  margin-left: 8px;
+  line-height: 1.5;
 }
 .topResultWrapper .resultRight .ResultButton {
   margin: 40px auto;
@@ -370,6 +394,127 @@ header .header-content {
   padding: 5px 30px;
   background-color: #707070;
   color: #ffffff;
+}
+
+/*トップ会社概要*/
+.topCompanyWrapper {
+  background: #EEEEEE;
+  padding: 90px 0;
+}
+.topCompanyWrapper ul {
+  display: flex;
+  justify-content: center;
+}
+.topCompanyWrapper ul li {
+  display: inline-block;
+  margin: 0 48px;
+}
+.topCompanyWrapper ul li span {
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+}
+
+/*トップ採用バナー*/
+.topRecruitBanner {
+  margin: 210px auto 110px;
+  text-align: center;
+}
+
+/*トップアパレルバナー*/
+.topAparelWrapper {
+  text-align: center;
+}
+.topAparelWrapper h2 {
+  font-size: 50px;
+}
+.topAparelWrapper .flexWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.topAparelWrapper .flexWrapper a span {
+  display: block;
+  text-align: center;
+}
+.topAparelWrapper .shopingBtn a {
+  padding: 5px 30px;
+  margin: 20px auto;
+  background: #707070;
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+}
+.topAparelWrapper .notification-container {
+  width: 1200px; /* コンテナの幅 */
+  border: 1px solid #ccc; /* コンテナの枠線 */
+  padding: 10px; /* コンテナ内の余白 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* コンテナの影 */
+  margin: 20px auto;
+  text-align: left;
+}
+.topAparelWrapper .notification-list {
+  max-height: 260px; /* リストの最大高さ */
+  overflow-y: auto; /* 垂直スクロールを有効に */
+}
+.topAparelWrapper .notification-list ul {
+  list-style: none; /* リストのマーカーを消す */
+  padding: 0; /* リストの内側の余白を消す */
+  margin: 0; /* リストの外側の余白を消す */
+}
+.topAparelWrapper .notification-list li {
+  padding: 5px 0; /* 各リストアイテムの上下の余白 */
+  border-bottom: 1px solid #eaeaea; /* 各リストアイテムの下部に線を追加 */
+}
+.topAparelWrapper .notification-list li:last-child {
+  border-bottom: none; /* 最後のリストアイテムの下部の線を消す */
+}
+.topAparelWrapper .notification-list a {
+  text-decoration: none; /* リンクの下線を消す */
+  color: #000; /* リンクの色を黒にする */
+  font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: flex-start; /* 内容を左に配置 */
+}
+.topAparelWrapper .notification-list span {
+  color: #999; /* 日付の色をグレーにする */
+  margin-right: 10px; /* 日付の右の余白 */
+}
+
+/*トップ｜ピックアップ*/
+.topPickupWrapper {
+  display: flex;
+  width: 1364px;
+  margin: 100px auto;
+}
+.topPickupWrapper .pickupLeft {
+  width: 60px;
+  max-width: 60px;
+  border-right: #707070 1px solid;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  margin-right: 34px;
+  line-height: 3;
+  font-weight: bold;
+}
+.topPickupWrapper .pickupRight {
+  flex: 1;
+}
+.topPickupWrapper .pickupRight .pickupNav {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  text-align: center;
+  line-height: 2;
+}
+.topPickupWrapper .pickupRight .pickupNav li {
+  display: inline-block;
+}
+.topPickupWrapper .pickupRight .pickupNavDescription {
+  margin: 40px auto;
+  text-align: center;
+  line-height: 2;
 }
 
 /*sp.scssの読み込み*/
