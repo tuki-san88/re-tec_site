@@ -58,7 +58,6 @@ function get_my_urls()
         'contact' => esc_url(home_url("/")),
 	);
 }
-?>
 
 
 /*お知らせのカスタム投稿定義*/
