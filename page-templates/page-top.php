@@ -206,7 +206,42 @@ get_header(); ?>
                 <div class="shopingBtn">
                     <a href="#">ファッションショッピングサイトへ</a>
                 </div>
+
                 <div class="notification-container">
+    <div class="notification-list">
+        <ul>
+            <?php
+            // カスタム投稿タイプ 'news_sessions' の最新の 30 件を取得
+            $args = array(
+                'post_type' => 'news_sessions',
+                'posts_per_page' => 30,
+            );
+            $news_query = new WP_Query($args);
+
+            // 投稿が存在する場合
+            if ($news_query->have_posts()) :
+                while ($news_query->have_posts()) : $news_query->the_post();
+                    $post_date = get_the_date('Y.m.d');
+                    $link_url = get_post_meta(get_the_ID(), 'link_url', true);
+                    ?>
+                    <li>
+                        <a href="<?php echo esc_url($link_url); ?>">
+                            <span><?php echo esc_html($post_date); ?></span>
+                            <?php the_title(); ?>
+                        </a>
+                    </li>
+                <?php endwhile;
+                wp_reset_postdata(); // クエリをリセット
+            else : ?>
+                <li>お知らせはありません。</li>
+            <?php endif; ?>
+        </ul>
+    </div>
+</div>
+
+
+
+                <!-- <div class="notification-container">
                     <div class="notification-list">
                         <ul>
                             <li>
@@ -226,7 +261,7 @@ get_header(); ?>
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </section>
         </article>
         <!-- PICK UP -->
