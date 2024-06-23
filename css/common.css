@@ -296,7 +296,7 @@ header .header-content {
 }
 .topTortalSupportBanner .supportBanner {
   width: 530px;
-  margin: 0 auto;
+  margin: 80px auto;
 }
 .topTortalSupportBanner .supportBanner a {
   display: flex;
@@ -315,7 +315,7 @@ header .header-content {
 .topResultWrapper {
   display: flex;
   width: 1364px;
-  margin: 400px auto;
+  margin: 200px auto;
 }
 .topResultWrapper .resultLeft {
   text-align: left;

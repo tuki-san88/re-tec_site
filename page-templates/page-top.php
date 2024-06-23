@@ -14,7 +14,9 @@ get_header(); ?>
             $images = array(
                 'topMainSlide01.png',
                 'topMainSlide02.jpg',
-                'topMainSlide03.jpg'
+                'topMainSlide03.jpg',
+                'topMainSlide04.jpg',
+                'topMainSlide05.jpg'                
             );
             foreach ($images as $image) {
                 echo '<div class="slide"><img src="' . get_template_directory_uri() . '/images/' . $image . '" alt="Slide"></div>';
@@ -79,8 +81,13 @@ get_header(); ?>
             <div class="custom-slider">
                 <?php
                 $custom_images = array(
-                    'custom_slide1.png',
-                    'custom_slide2.png'
+                    'custom_slide1.jpg',
+                    'custom_slide2.jpg',
+                    'custom_slide3.jpg',
+                    'custom_slide4.jpg',
+                    'custom_slide5.jpg',
+                    'custom_slide6.jpg',
+                    'custom_slide7.jpg'
                 );
                 foreach ($custom_images as $custom_image) {
                     echo '<div class="custom-slide"><img src="' . get_template_directory_uri() . '/images/' . $custom_image . '" alt="Custom Slide"></div>';
