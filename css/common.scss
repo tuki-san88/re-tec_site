@@ -263,6 +263,7 @@ header {
     width: 1364px;
     margin: 0 auto;
     .supportLeft {
+        text-align: left;
         width: 60px;
         max-width: 60px;
         border-right: #707070 1px solid;
@@ -323,6 +324,7 @@ header {
     margin: 400px auto;
 
     .resultLeft {
+        text-align: left;
         width: 60px;
         max-width: 60px;
         border-right: #707070 1px solid;
@@ -528,6 +530,7 @@ text-align: center;
     width: 1364px;
     margin: 100px auto;
     .pickupLeft {
+        text-align: left;
         width: 60px;
         max-width: 60px;
         border-right: #707070 1px solid;

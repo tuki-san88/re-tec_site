@@ -261,6 +261,7 @@ header .header-content {
   margin: 0 auto;
 }
 .topTortalSupportWrapper .supportLeft {
+  text-align: left;
   width: 60px;
   max-width: 60px;
   border-right: #707070 1px solid;
@@ -317,6 +318,7 @@ header .header-content {
   margin: 400px auto;
 }
 .topResultWrapper .resultLeft {
+  text-align: left;
   width: 60px;
   max-width: 60px;
   border-right: #707070 1px solid;
@@ -489,6 +491,7 @@ header .header-content {
   margin: 100px auto;
 }
 .topPickupWrapper .pickupLeft {
+  text-align: left;
   width: 60px;
   max-width: 60px;
   border-right: #707070 1px solid;
