@@ -21,20 +21,38 @@ $breakpoints: (
 }
 
 @import "reset";
+
+//よく使うカラーの定義
+
+$black-color: #3B3B3B;//ベースフォントカラー
+$grey-color: #707070;//ボーダーカラー
+$yellow-color: #FEF30B;//アクセントカラー
+$light-grey-color: #EEEEEE;//背景カラー
+
+
+
+
 /*共通*/
 
 body {
     font-family: "Noto Serif JP", serif;
     line-height: 1.5;
+    color: $black-color;
 }
 
 a:hover {
     color: #ff7f50;
 }
 
+a:visited,
+a span:visited{
+    text-decoration: none;
+}
+
 a img:hover {
     opacity: 0.7; /*リンクの透過処理*/
 }
+
 
 /* ゴシック体のフォントを設定するクラス */
 .gothic-font {
@@ -245,6 +263,7 @@ header {
     width: 1364px;
     margin: 0 auto;
     .supportLeft {
+        text-align: left;
         width: 60px;
         max-width: 60px;
         border-right: #707070 1px solid;
@@ -279,7 +298,7 @@ header {
     margin: 0 auto;
     .supportBanner {
         width: 530px;
-        margin: 0 auto;
+        margin: 80px auto;
         a {
             display: flex;
             border: #707070 1px solid;
@@ -302,9 +321,10 @@ header {
 .topResultWrapper {
     display: flex;
     width: 1364px;
-    margin: 400px auto;
+    margin: 200px auto;
 
     .resultLeft {
+        text-align: left;
         width: 60px;
         max-width: 60px;
         border-right: #707070 1px solid;
@@ -333,6 +353,13 @@ header {
 
             .resultNaviItem {
                 display: inline-block;
+                border: 1px solid #707070;
+                margin: 0 35px;    border: 1px solid #707070;
+                margin: 0 35px;
+                text-align: left;
+                font-size: 16px;
+                line-height: 1;
+
 
                 .resultNaviLink {
                     display: block;
@@ -341,25 +368,38 @@ header {
                     .resultNaviImage {
                         display: block;
                         margin-bottom: 10px;
+                        border-bottom: $grey-color;
+                        img{
+                            border: 0;
+                        }
                     }
 
                     .resultNaviTitle {
-                        display: block;
-                        font-size: 14px;
+                        display: inline-block;
                         font-weight: bold;
                         margin-bottom: 5px;
+                        padding: 4px 8px;
+                        margin-left: 8px;
+                        background: $yellow-color;
+                        color: #ffffff;
+                        line-height: 1;
                     }
 
                     .resultNaviDate {
                         display: block;
                         font-size: 12px;
                         color: #707070;
-                        margin-bottom: 10px;
+                        margin: 10px;
+                        margin-left: 8px;
+
                     }
 
                     .resultNaviDescription {
                         font-size: 12px;
                         color: #707070;
+                        margin-left: 8px;
+                        line-height: 1.5;
+
                     }
                 }
             }
@@ -378,7 +418,149 @@ header {
     }
 }
 
+/*トップ会社概要*/
+.topCompanyWrapper{
+    background: $light-grey-color;
+    padding: 90px 0;
+    ul{
+        display: flex;
+        justify-content: center;
+        li{
+            display: inline-block;
+            margin: 0 48px;
+            span{
+display: block;
+text-align: center;
+                margin: 30px auto;
+            }
+        }
+    }
+}
 
+
+/*トップ採用バナー*/
+
+.topRecruitBanner{
+    margin: 210px auto 110px;
+    text-align: center;
+}
+
+/*トップアパレルバナー*/
+
+.topAparelWrapper{
+    text-align: center;
+    h2{
+        font-size: 50px;
+    }
+    .flexWrapper{
+        display: flex;
+        justify-content: center; 
+        margin-top: 60px;
+        a{
+            span{
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    .shopingBtn{
+
+        a{
+            padding: 5px 30px;
+            margin: 20px auto;
+            background: $grey-color
+            ;
+            text-align: center;
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            }
+    }
+    .notification-container {
+        width: 1200px; /* コンテナの幅 */
+        border: 1px solid #ccc; /* コンテナの枠線 */
+        padding: 10px; /* コンテナ内の余白 */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* コンテナの影 */
+        margin: 20px auto;
+        text-align: left;
+
+
+    }
+    
+    .notification-list {
+        max-height: 260px; /* リストの最大高さ */
+        overflow-y: auto; /* 垂直スクロールを有効に */
+    }
+    
+    .notification-list ul {
+        list-style: none; /* リストのマーカーを消す */
+        padding: 0; /* リストの内側の余白を消す */
+        margin: 0; /* リストの外側の余白を消す */
+    }
+    
+    .notification-list li {
+        padding: 5px 0; /* 各リストアイテムの上下の余白 */
+        border-bottom: 1px solid #eaeaea; /* 各リストアイテムの下部に線を追加 */
+    }
+    
+    .notification-list li:last-child {
+        border-bottom: none; /* 最後のリストアイテムの下部の線を消す */
+    }
+    
+    .notification-list a {
+        text-decoration: none; /* リンクの下線を消す */
+        color: #000; /* リンクの色を黒にする */
+        font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+        display: flex; /* フレックスボックスを使用 */
+        justify-content: flex-start; /* 内容を左に配置 */
+    }
+    
+    .notification-list span {
+        color: #999; /* 日付の色をグレーにする */
+        margin-right: 10px; /* 日付の右の余白 */
+    }
+    
+}
+
+
+/*トップ｜ピックアップ*/
+
+.topPickupWrapper {
+    display: flex;
+    width: 1364px;
+    margin: 100px auto;
+    .pickupLeft {
+        text-align: left;
+        width: 60px;
+        max-width: 60px;
+        border-right: #707070 1px solid;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        margin-right: 34px;
+        line-height: 3;
+        font-weight: bold;
+    }
+    .pickupRight {
+        flex: 1;
+        .pickupNav {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            text-align: center;
+            line-height: 2;
+            li {
+                display: inline-block;
+            }
+        }
+        .pickupNavDescription {
+            margin: 40px auto;
+            text-align: center;
+            line-height: 2;
+        }
+    }
+
+}
 
 
 /*sp.scssの読み込み*/
