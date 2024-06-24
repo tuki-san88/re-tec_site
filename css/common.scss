@@ -563,5 +563,141 @@ text-align: center;
 }
 
 
+
+/* プライバシーポリシーページ */
+.privacy-policy-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    background: #ffffff;
+
+    h1 {
+        font-size: 2.5em;
+        color: $black-color;
+        margin-bottom: 70px;
+        border-bottom: 2px solid $grey-color;
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        color: $black-color;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $grey-color;
+        padding-bottom: 5px;
+    }
+
+    p {
+        margin-bottom: 70px;
+        line-height: 1.8;
+    }
+
+    ul {
+        margin-bottom: 70px;
+        padding-left: 20px;
+
+        li {
+            list-style-type: disc;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+    }
+}
+
+@include mq("sp") {
+    .privacy-policy-wrapper {
+        padding: 10px;
+
+        h1 {
+            font-size: 1em;
+        }
+
+        h2 {
+            font-size: 1.2em;
+        }
+
+        p,
+        ul {
+            font-size: 0.9em;
+        }
+    }
+}
+.contact-page {
+    .contact-form {
+      background-color: #fff9d4;
+      padding: 20px;
+      border-radius: 5px;
+      width: 1100px;
+      margin: 0 auto;
+
+      h2 {
+        text-align: center;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+
+      input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      input[type="submit"] {
+        background-color: #ffeb3b;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #fdd835;
+        }
+      }
+    }
+}
+
+@include mq("sp") {
+    .contact-page {
+        .contact-form {
+            padding: 10px;
+            width: 100%;
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea {
+                padding: 8px;
+            }
+
+            input[type="submit"] {
+                padding: 8px 16px;
+            }
+
+            .wpcf7-list-item{
+                display: block;
+            }
+        }
+    }
+}
+
+  
+
 /*sp.scssの読み込み*/
 @import "sp";
