@@ -86,6 +86,7 @@ $minVw: 390;
   @media (any-hover: hover) {
     &:hover {
       opacity: 0.7;
+      color: #ff7f50;
     }
   }
 }
@@ -413,7 +414,7 @@ header {
   box-sizing: border-box;
   font-family: var(--sans-family);
   text-align: left;
-  padding-block-end: rfz(38, 156, $minVw, $maxVw);
+  padding-block-end: rfz(38, 40, $minVw, $maxVw);
   margin-block-start: rfz(85, 265, $minVw, $maxVw);
   @include mq(tab) {
     background-color: color-mix(in srgb, var(--gray) 12%, transparent);
@@ -636,7 +637,7 @@ body:has(.secWelfare) .footer {
   font-size: rfz(12, 20, $minVw, $maxVw);
   line-height: calc(29 / 20);
   text-align: center;
-  margin-block-start: rfz(30, 269, $minVw, $maxVw);
+  margin-block-start: rfz(30, 120, $minVw, $maxVw);
 }
 
 // ---------------------
@@ -683,8 +684,8 @@ body:has(.secWelfare) .footer {
   }
 
   .secTitle {
-    font-size: rfz(19, 75, $minVw, $maxVw);
-    line-height: calc(107 / 75);
+    font-size: rfz(19, 50, $minVw, $maxVw);
+    line-height: calc(107 / 50);
   }
 
   .secTitleSub {
@@ -1178,10 +1179,10 @@ body:has(.secWelfare) .footer {
   // 関連情報
   .subInfo {
     background: var(--white);
-    margin-block-start: rfz(147, 680, $minVw, $maxVw);
+    margin-block-start: rfz(147, 400, $minVw, $maxVw);
 
     &.subInfo-1 {
-      margin-block-start: rfz(147, 480, $minVw, $maxVw);
+      margin-block-start: rfz(147, 240, $minVw, $maxVw);
     }
     &.subInfo-2 {
       margin-block-start: rfz(100, 259, $minVw, $maxVw);
@@ -1195,7 +1196,7 @@ body:has(.secWelfare) .footer {
     }
   }
   .relatedInfo__body {
-    margin-block-start: rfz(33, 268, $minVw, $maxVw);
+    margin-block-start: rfz(33, 120, $minVw, $maxVw);
   }
 
   .relatedInfo__items {
@@ -1272,7 +1273,7 @@ body:has(.secWelfare) .footer {
   }
 
   .secGreeting-l {
-    margin-block-start: rfz(38, 457, $minVw, $maxVw);
+    margin-block-start: rfz(38, 250, $minVw, $maxVw);
   }
   .secGreeting__inner {
     --inner: 1640px;
@@ -1324,7 +1325,7 @@ body:has(.secWelfare) .footer {
   }
 
   .secGreeting__imgBlock {
-    flex: 0 1 524px;
+    flex: 0 1 400px;
     aspect-ratio: 524 / 640;
 
     img {
@@ -1342,7 +1343,7 @@ body:has(.secWelfare) .footer {
 
   // 理念
   .secPhilosophy-l {
-    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+    margin-block-start: rfz(122, 400, $minVw, $maxVw);
   }
 
   .secPhilosophy__title {
@@ -1361,7 +1362,7 @@ body:has(.secWelfare) .footer {
 
   // 会社概要(会社案内ページ)
   .secCompanyView-l {
-    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+    margin-block-start: rfz(122, 400, $minVw, $maxVw);
   }
 
   .secCompanyView__inner {
@@ -1378,7 +1379,7 @@ body:has(.secWelfare) .footer {
 
   // SDG'sの取り組みについて
   .secSdgs-l {
-    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+    margin-block-start: rfz(122, 400, $minVw, $maxVw);
   }
 
   .secSdgs__title {
@@ -1386,7 +1387,7 @@ body:has(.secWelfare) .footer {
   }
 
   .secSdgs__body {
-    margin-block-start: rfz(37, 189, $minVw, $maxVw);
+    margin-block-start: rfz(37, 90, $minVw, $maxVw);
   }
 
   .secSdgs__img {
@@ -1402,7 +1403,7 @@ body:has(.secWelfare) .footer {
   }
 
   .secSdgs__text {
-    margin-block-start: rfz(53, 224, $minVw, $maxVw);
+    margin-block-start: rfz(53, 120, $minVw, $maxVw);
     line-height: calc(107 / 23);
     text-align: center;
 
@@ -1416,7 +1417,7 @@ body:has(.secWelfare) .footer {
     overflow-x: hidden;
   }
   .secMap-l {
-    margin-block-start: rfz(122, 509, $minVw, $maxVw);
+    margin-block-start: rfz(122, 400, $minVw, $maxVw);
   }
   .secMap-l2 {
     margin-block-start: rfz(70, 354, $minVw, $maxVw);
@@ -1427,7 +1428,7 @@ body:has(.secWelfare) .footer {
   }
 
   .secMap__body {
-    margin-block-start: rfz(60, 224, $minVw, $maxVw);
+    margin-block-start: rfz(60, 120, $minVw, $maxVw);
 
     @include mq(tab) {
       width: 100vw;
@@ -1438,7 +1439,7 @@ body:has(.secWelfare) .footer {
   // 地図
   .map {
     width: 100%;
-    aspect-ratio: 1560 / 1159;
+    aspect-ratio: 1560 / 400;
 
     @include mq(tab) {
       aspect-ratio: 390 / 290;
@@ -1573,10 +1574,10 @@ body:has(.secWelfare) .footer {
   .secElectricalTop__head {
     text-align: center;
     padding-inline: var(--padding-sp);
-    font-size: rfz(17, 75, $minVw, $maxVw);
-    line-height: calc(107 / 75);
+    font-size: rfz(17, 50, $minVw, $maxVw);
+    line-height: calc(107 / 50);
     small {
-      font-size: rfz(14, 52, $minVw, $maxVw);
+      font-size: rfz(14, 40, $minVw, $maxVw);
       display: block;
     }
     span {

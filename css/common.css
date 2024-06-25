@@ -60,11 +60,19 @@ body {
   color: #3b3b3b;
 }
 
+/* リンクの基本スタイル */
+a {
+  color: #707070;
+  text-decoration: none;
+}
 a:hover {
-  color: #ff7f50;
+  color: #ff7f50; /* ホバー時の色を設定 */
+}
+a:visited {
+  color: #707070;
+  text-decoration: none;
 }
 
-a:visited,
 a span:visited {
   text-decoration: none;
 }
@@ -402,6 +410,10 @@ header .header-content {
   background-color: #707070;
   color: #ffffff;
 }
+.topResultWrapper .resultRight .ResultButton a:hover {
+  color: #ff7f50;
+  text-decoration: none;
+}
 
 /*トップ会社概要*/
 .topCompanyWrapper {
@@ -453,6 +465,10 @@ header .header-content {
   color: #ffffff;
   text-decoration: none;
 }
+.topAparelWrapper .shopingBtn a:hover {
+  color: #ff7f50;
+  text-decoration: none;
+}
 .topAparelWrapper .notification-container {
   width: 1200px; /* コンテナの幅 */
   border: 1px solid #ccc; /* コンテナの枠線 */
@@ -483,6 +499,10 @@ header .header-content {
   font-family: Arial, sans-serif; /* フォントファミリーを指定 */
   display: flex; /* フレックスボックスを使用 */
   justify-content: flex-start; /* 内容を左に配置 */
+}
+.topAparelWrapper .notification-list a:hover {
+  color: #ff7f50;
+  text-decoration: none;
 }
 .topAparelWrapper .notification-list span {
   color: #999; /* 日付の色をグレーにする */

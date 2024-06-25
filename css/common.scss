@@ -29,6 +29,14 @@ $grey-color: #707070; //ボーダーカラー
 $yellow-color: #fef30b; //アクセントカラー
 $light-grey-color: #eeeeee; //背景カラー
 
+// ホバースタイルのミックスイン
+@mixin hover-style($text-color: #ff7f50, $text-decoration: none) {
+    &:hover {
+        color: $text-color;
+        text-decoration: $text-decoration;
+    }
+}
+
 /*共通*/
 
 body {
@@ -36,12 +44,21 @@ body {
     line-height: 1.5;
     color: $black-color;
 }
+/* リンクの基本スタイル */
+a {
+    color: #707070;
+    text-decoration: none;
 
-a:hover {
-    color: #ff7f50;
+    &:hover {
+        color: #ff7f50; /* ホバー時の色を設定 */
+    }
+
+    &:visited {
+        color: #707070;
+        text-decoration: none;
+    }
 }
 
-a:visited,
 a span:visited {
     text-decoration: none;
 }
@@ -411,6 +428,7 @@ header {
                 padding: 5px 30px;
                 background-color: #707070;
                 color: #ffffff;
+                @include hover-style(); // ミックスインをデフォルト引数で使用
             }
         }
     }
@@ -469,6 +487,7 @@ header {
             display: inline-block;
             color: #ffffff;
             text-decoration: none;
+            @include hover-style(); // ミックスインをデフォルト引数で使用
         }
     }
     .notification-container {
@@ -506,6 +525,7 @@ header {
         font-family: Arial, sans-serif; /* フォントファミリーを指定 */
         display: flex; /* フレックスボックスを使用 */
         justify-content: flex-start; /* 内容を左に配置 */
+        @include hover-style(); // ミックスインをデフォルト引数で使用
     }
 
     .notification-list span {
