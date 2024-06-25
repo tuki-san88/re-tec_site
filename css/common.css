@@ -57,7 +57,7 @@ table {
 body {
   font-family: "Noto Serif JP", serif;
   line-height: 1.5;
-  color: #3B3B3B;
+  color: #3b3b3b;
 }
 
 a:hover {
@@ -84,10 +84,15 @@ body {
   font-size: 23px;
 }
 
+main {
+  background: #ffffff;
+}
+
 /*共通ラッパー*/
 .mainWrapper {
   max-width: 1640px;
   margin: 0 auto;
+  background: #ffffff;
 }
 
 /* ヘッダー */
@@ -370,7 +375,7 @@ header .header-content {
   margin-bottom: 5px;
   padding: 4px 8px;
   margin-left: 8px;
-  background: #FEF30B;
+  background: #fef30b;
   color: #ffffff;
   line-height: 1;
 }
@@ -400,7 +405,7 @@ header .header-content {
 
 /*トップ会社概要*/
 .topCompanyWrapper {
-  background: #EEEEEE;
+  background: #eeeeee;
   padding: 90px 0;
 }
 .topCompanyWrapper ul {
@@ -530,14 +535,14 @@ header .header-content {
 }
 .privacy-policy-wrapper h1 {
   font-size: 2.5em;
-  color: #3B3B3B;
+  color: #3b3b3b;
   margin-bottom: 70px;
   border-bottom: 2px solid #707070;
   padding-bottom: 10px;
 }
 .privacy-policy-wrapper h2 {
   font-size: 1.5em;
-  color: #3B3B3B;
+  color: #3b3b3b;
   margin-bottom: 15px;
   border-bottom: 1px solid #707070;
   padding-bottom: 5px;
@@ -639,5 +644,190 @@ header .header-content {
   }
   .header-right .mobile-menu-toggle {
     display: block;
+  }
+}
+@media screen and (max-width:480px) {
+  body {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mainWrapper {
+    padding: 0 36px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .mainSliderWrapper .main-slider {
+    width: 100%;
+    height: 190px;
+  }
+  .mainSliderWrapper .main-slider .slide img {
+    width: 100%;
+    height: auto;
+  }
+  .mainSliderWrapper .slideOnMesseage {
+    position: relative;
+    font-size: 1.2em;
+    top: initial;
+    margin: 30px auto;
+    left: initial;
+    color: #3b3b3b;
+  }
+  .mainSliderWrapper .slideOnMesseage span {
+    display: block;
+    font-size: 1.4em;
+  }
+  .topMessageWrapper {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .topMessageWrapper h2 {
+    font-size: 1.5em;
+  }
+  .topMessageWrapper section {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: left;
+  }
+  .topTortalSupportWrapper {
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+  }
+  .topTortalSupportWrapper .supportLeft {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    writing-mode: initial;
+    width: 100%;
+    max-width: 100%;
+    border: initial;
+    border-bottom: 1px solid #3b3b3b;
+    line-height: 1.2;
+  }
+  .topTortalSupportWrapper .supportRight .supportNav {
+    display: flex;
+    flex-direction: column;
+  }
+  .topTortalSupportWrapper .supportRight .supportNav li {
+    margin-bottom: 10px;
+  }
+  .topTortalSupportWrapper .supportRight .supportNav li a {
+    font-size: 1em;
+    position: relative;
+  }
+  .topTortalSupportWrapper .supportRight .supportNav li a img {
+    height: 82px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .topTortalSupportWrapper .supportRight .supportNav li a span {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #fff;
+  }
+  .topTortalSupportWrapper .supportRight .supportNavDescription {
+    text-align: left;
+  }
+  .topTortalSupportWrapper .supportRight .supportNavDescription br {
+    display: none;
+  }
+  .topTortalSupportBanner {
+    width: 100%;
+  }
+  .topTortalSupportBanner .supportBanner {
+    width: 100%;
+  }
+  .topTortalSupportBanner .supportBanner img {
+    width: 50%;
+  }
+  .topTortalSupportBanner .supportBanner span {
+    font-size: 13px;
+    padding-left: 10px;
+  }
+  .topSubSlideWrapper {
+    height: 300px; /* 高さを調整 */
+  }
+  .topSubSlideWrapper h2 {
+    margin: 40px; /* マージンを調整 */
+    font-size: 1.5em; /* フォントサイズを調整 */
+  }
+  .custom-slider .custom-slide img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .topResultWrapper {
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+  }
+  .topResultWrapper .resultLeft {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    writing-mode: initial;
+    width: 100%;
+    max-width: 100%;
+    border: initial;
+    border-bottom: 1px solid #3b3b3b;
+    line-height: 1.2;
+  }
+  .topResultWrapper .resultRight .resultNav {
+    display: block;
+  }
+  .topResultWrapper .resultRight .resultNav .resultNaviItem {
+    margin: 0 auto;
+  }
+  .topResultWrapper .resultRight .resultNav .resultNaviItem img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .topCompanyWrapper ul {
+    display: block;
+  }
+  .topCompanyWrapper ul li {
+    margin: 0 auto;
+    display: block;
+  }
+  .topCompanyWrapper ul li img {
+    width: 100%;
+    height: 115px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .topRecruitBanner {
+    margin: 100px auto;
+  }
+  .topAparelWrapper h2 {
+    font-size: 19px;
+  }
+  .topAparelWrapper .flexWrapper {
+    display: block;
+  }
+  .topAparelWrapper .notification-container {
+    width: 100%;
+    padding: 0;
+  }
+  .topPickupWrapper {
+    padding: 20px 0;
+    width: 100%;
+    display: block;
+  }
+  .topPickupWrapper .pickupLeft {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    writing-mode: initial;
+    width: 100%;
+    max-width: 100%;
+    border: initial;
+    border-bottom: 1px solid #3b3b3b;
+    line-height: 1.2;
   }
 }/*# sourceMappingURL=common.css.map */

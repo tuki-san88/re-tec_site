@@ -102,7 +102,7 @@
       </div>
     </section>
     <!-- SDG'sの取り組みについて -->
-    <section class="secSdgs secSdgs-l">
+    <section class="secSdgs secSdgs-l" id="sdgs">
       <div class="secSdgs__inner">
         <h2 class="secSdgs__title secTitle">SDG'sの取り組みについて</h2>
         <div class="secSdgs__body">

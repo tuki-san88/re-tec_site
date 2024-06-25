@@ -24,13 +24,10 @@ $breakpoints: (
 
 //よく使うカラーの定義
 
-$black-color: #3B3B3B;//ベースフォントカラー
-$grey-color: #707070;//ボーダーカラー
-$yellow-color: #FEF30B;//アクセントカラー
-$light-grey-color: #EEEEEE;//背景カラー
-
-
-
+$black-color: #3b3b3b; //ベースフォントカラー
+$grey-color: #707070; //ボーダーカラー
+$yellow-color: #fef30b; //アクセントカラー
+$light-grey-color: #eeeeee; //背景カラー
 
 /*共通*/
 
@@ -45,14 +42,13 @@ a:hover {
 }
 
 a:visited,
-a span:visited{
+a span:visited {
     text-decoration: none;
 }
 
 a img:hover {
     opacity: 0.7; /*リンクの透過処理*/
 }
-
 
 /* ゴシック体のフォントを設定するクラス */
 .gothic-font {
@@ -69,10 +65,15 @@ body {
     font-size: 23px;
 }
 
+main{
+    background: #ffffff;
+}
+
 /*共通ラッパー*/
 .mainWrapper {
     max-width: 1640px;
     margin: 0 auto;
+    background: #ffffff;
 }
 
 /* ヘッダー */
@@ -316,7 +317,6 @@ header {
     }
 }
 
-
 /* トップ｜施行実績 */
 .topResultWrapper {
     display: flex;
@@ -354,12 +354,12 @@ header {
             .resultNaviItem {
                 display: inline-block;
                 border: 1px solid #707070;
-                margin: 0 35px;    border: 1px solid #707070;
+                margin: 0 35px;
+                border: 1px solid #707070;
                 margin: 0 35px;
                 text-align: left;
                 font-size: 16px;
                 line-height: 1;
-
 
                 .resultNaviLink {
                     display: block;
@@ -369,7 +369,7 @@ header {
                         display: block;
                         margin-bottom: 10px;
                         border-bottom: $grey-color;
-                        img{
+                        img {
                             border: 0;
                         }
                     }
@@ -391,7 +391,6 @@ header {
                         color: #707070;
                         margin: 10px;
                         margin-left: 8px;
-
                     }
 
                     .resultNaviDescription {
@@ -399,7 +398,6 @@ header {
                         color: #707070;
                         margin-left: 8px;
                         line-height: 1.5;
-
                     }
                 }
             }
@@ -409,72 +407,69 @@ header {
             margin: 40px auto;
             text-align: center;
             line-height: 2;
-            a{
+            a {
                 padding: 5px 30px;
                 background-color: #707070;
                 color: #ffffff;
-                }
+            }
         }
     }
 }
 
 /*トップ会社概要*/
-.topCompanyWrapper{
+.topCompanyWrapper {
     background: $light-grey-color;
     padding: 90px 0;
-    ul{
+    ul {
         display: flex;
         justify-content: center;
-        li{
+        li {
             display: inline-block;
             margin: 0 48px;
-            span{
-display: block;
-text-align: center;
+            span {
+                display: block;
+                text-align: center;
                 margin: 30px auto;
             }
         }
     }
 }
 
-
 /*トップ採用バナー*/
 
-.topRecruitBanner{
+.topRecruitBanner {
     margin: 210px auto 110px;
     text-align: center;
 }
 
 /*トップアパレルバナー*/
 
-.topAparelWrapper{
+.topAparelWrapper {
     text-align: center;
-    h2{
+    h2 {
         font-size: 50px;
     }
-    .flexWrapper{
+    .flexWrapper {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         margin-top: 60px;
-        a{
-            span{
+        a {
+            span {
                 display: block;
                 text-align: center;
             }
         }
     }
-    .shopingBtn{
-
-        a{
+    .shopingBtn {
+        a {
             padding: 5px 30px;
             margin: 20px auto;
-            background: $grey-color
-            ;
+            background: $grey-color;
             text-align: center;
             display: inline-block;
             color: #ffffff;
             text-decoration: none;
-            }
+        }
     }
     .notification-container {
         width: 1200px; /* コンテナの幅 */
@@ -483,30 +478,28 @@ text-align: center;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* コンテナの影 */
         margin: 20px auto;
         text-align: left;
-
-
     }
-    
+
     .notification-list {
         max-height: 260px; /* リストの最大高さ */
         overflow-y: auto; /* 垂直スクロールを有効に */
     }
-    
+
     .notification-list ul {
         list-style: none; /* リストのマーカーを消す */
         padding: 0; /* リストの内側の余白を消す */
         margin: 0; /* リストの外側の余白を消す */
     }
-    
+
     .notification-list li {
         padding: 5px 0; /* 各リストアイテムの上下の余白 */
         border-bottom: 1px solid #eaeaea; /* 各リストアイテムの下部に線を追加 */
     }
-    
+
     .notification-list li:last-child {
         border-bottom: none; /* 最後のリストアイテムの下部の線を消す */
     }
-    
+
     .notification-list a {
         text-decoration: none; /* リンクの下線を消す */
         color: #000; /* リンクの色を黒にする */
@@ -514,14 +507,12 @@ text-align: center;
         display: flex; /* フレックスボックスを使用 */
         justify-content: flex-start; /* 内容を左に配置 */
     }
-    
+
     .notification-list span {
         color: #999; /* 日付の色をグレーにする */
         margin-right: 10px; /* 日付の右の余白 */
     }
-    
 }
-
 
 /*トップ｜ピックアップ*/
 
@@ -559,10 +550,7 @@ text-align: center;
             line-height: 2;
         }
     }
-
 }
-
-
 
 /* プライバシーポリシーページ */
 .privacy-policy-wrapper {
@@ -625,47 +613,47 @@ text-align: center;
 }
 .contact-page {
     .contact-form {
-      background-color: #fff9d4;
-      padding: 20px;
-      border-radius: 5px;
-      width: 1100px;
-      margin: 0 auto;
-
-      h2 {
-        text-align: center;
-      }
-
-      input[type="text"],
-      input[type="email"],
-      input[type="tel"],
-      textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
+        background-color: #fff9d4;
+        padding: 20px;
         border-radius: 5px;
-        margin-bottom: 15px;
-      }
+        width: 1100px;
+        margin: 0 auto;
 
-      input[type="radio"] {
-        margin-right: 10px;
-      }
-
-      input[type="checkbox"] {
-        margin-right: 10px;
-      }
-
-      input[type="submit"] {
-        background-color: #ffeb3b;
-        color: #333;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &:hover {
-          background-color: #fdd835;
+        h2 {
+            text-align: center;
         }
-      }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #ffeb3b;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fdd835;
+            }
+        }
     }
 }
 
@@ -690,14 +678,227 @@ text-align: center;
                 padding: 8px 16px;
             }
 
-            .wpcf7-list-item{
+            .wpcf7-list-item {
                 display: block;
             }
         }
     }
 }
 
-  
-
 /*sp.scssの読み込み*/
 @import "sp";
+
+@include mq(sp) {
+    body {
+        font-size: 16px; // フォントサイズを調整
+        line-height: 1.4;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .mainWrapper {
+        padding: 0 36px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .mainSliderWrapper {
+        .main-slider {
+            width: 100%;
+            height: 190px;
+            .slide {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .slideOnMesseage {
+            position: relative;
+            font-size: 1.2em;
+            top: initial;
+            margin: 30px auto;
+            left: initial;
+            color: $black-color;
+            span {
+                display: block;
+                font-size: 1.4em;
+            }
+        }
+    }
+
+    .topMessageWrapper {
+        width: 100%;
+        padding: 20px 0;
+        h2 {
+            font-size: 1.5em; // 見出しのフォントサイズを調整
+        }
+        section {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: left;
+        }
+    }
+
+    .topTortalSupportWrapper {
+        padding: 20px 0;
+        width: 100%;
+        display: block;
+
+        .supportLeft {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            writing-mode: initial;
+            width: 100%;
+            max-width: 100%;
+            border: initial;
+            border-bottom: 1px solid $black-color;
+            line-height: 1.2;
+        }
+        .supportRight {
+            .supportNav {
+                display: flex;
+                flex-direction: column;
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        font-size: 1em;
+                        position: relative;
+                        img {
+                            height: 82px;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        span {
+                            position: absolute;
+                            bottom: 2px;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .supportNavDescription {
+                text-align: left;
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .topTortalSupportBanner {
+        width: 100%;
+        .supportBanner {
+            width: 100%;
+            img {
+                width: 50%;
+            }
+            span {
+                font-size: 13px;
+                padding-left: 10px;
+            }
+        }
+    }
+
+    //サブスライダー
+    .topSubSlideWrapper {
+        height: 300px; /* 高さを調整 */
+
+        h2 {
+            margin: 40px; /* マージンを調整 */
+            font-size: 1.5em; /* フォントサイズを調整 */
+        }
+    }
+
+    .custom-slider {
+        .custom-slide {
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .topResultWrapper {
+        padding: 20px 0;
+        width: 100%;
+        display: block;
+        .resultLeft {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            writing-mode: initial;
+            width: 100%;
+            max-width: 100%;
+            border: initial;
+            border-bottom: 1px solid $black-color;
+            line-height: 1.2;
+        }
+        .resultRight {
+            .resultNav {
+                display: block;
+                .resultNaviItem {
+                    margin: 0 auto;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .topCompanyWrapper {
+        ul {
+            display: block;
+            li {
+                margin: 0 auto;
+                display: block;
+                img {
+                    width: 100%;
+                    height: 115px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .topRecruitBanner {
+        margin: 100px auto;
+    }
+
+    .topAparelWrapper {
+        h2 {
+            font-size: 19px;
+        }
+        .flexWrapper {
+            display: block;
+        }
+        .notification-container {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .topPickupWrapper {
+        padding: 20px 0;
+        width: 100%;
+        display: block;
+        .pickupLeft {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            writing-mode: initial;
+            width: 100%;
+            max-width: 100%;
+            border: initial;
+            border-bottom: 1px solid $black-color;
+            line-height: 1.2;
+        }
+        .pickupRight {
+        }
+    }
+}

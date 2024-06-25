@@ -53,33 +53,13 @@ function get_my_urls()
         // 施工実績（一覧）
         'Archive' => esc_url(home_url("/")),
         // プライバシーポリシー
-        'privacy' => esc_url(home_url("/")),
+        'privacy' => esc_url(home_url("/privacy-policy/")),
         // お問い合わせ
-        'contact' => esc_url(home_url("/")),
+        'contact' => esc_url(home_url("/contact/")),
 	);
 }
 
 
-/*お知らせのカスタム投稿定義*/
-/*
-function create_post_type()
-{
-    $exampleSupports = [  // supports のパラメータを設定する配列（初期値だと title と editor のみ投稿画面で使える）
-        'title',  // 記事タイトル
-        'custom-fields'  // カスタムフィールド
-    ];
-    register_post_type(
-        'news_sessions',  // カスタム投稿ID
-        array(
-            'label' => 'セッションズお知らせ',  // カスタム投稿名(管理画面の左メニューに表示されるテキスト)
-            'public' => true,  // 投稿タイプをパブリックにするか否か
-            'has_archive' => true,  // アーカイブ(一覧表示)を有効にするか否か
-            'menu_position' => 5,  // 管理画面上でどこに配置するか今回の場合は「投稿」の下に配置
-            'supports' => $exampleSupports  // 投稿画面でどのmoduleを使うか的な設定
-        )
-    );
-}
-add_action('init', 'create_post_type'); // アクションに上記関数をフックします */
 
 /* お知らせのカスタム投稿定義 */
 function create_post_type() {

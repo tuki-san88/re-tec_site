@@ -4,6 +4,7 @@ $pageId = "top";
  * Template Name: Top Page
  */
 get_header(); ?>
+<?php $urls = get_my_urls(); ?>
 
 <main id="<?php echo $pageId; ?>">
 
@@ -16,7 +17,7 @@ get_header(); ?>
                 'topMainSlide02.jpg',
                 'topMainSlide03.jpg',
                 'topMainSlide04.jpg',
-                'topMainSlide05.jpg'                
+                'topMainSlide05.jpg'
             );
             foreach ($images as $image) {
                 echo '<div class="slide"><img src="' . get_template_directory_uri() . '/images/' . $image . '" alt="Slide"></div>';
@@ -51,12 +52,12 @@ get_header(); ?>
                 </div>
                 <div class="supportRight">
                     <ul class="supportNav">
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink01.png" alt="電気工事全般のサポート"><br>電気工事全般</a>
+                        <li><a href="<?php echo $urls['electrical']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink01.png" alt="電気工事全般のサポート"><br><span>電気工事全般</span></a>
                         </li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink02.png" alt="スィーツ製品のサポート"><br>スィーツ</a></li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink03.png" alt="ファッション業界のサポート"><br>ファッション</a>
+                        <li><a href="<?php echo $urls['sweets']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink02.png" alt="スィーツ製品のサポート"><br><span>スィーツ</span></a></li>
+                        <li><a href="<?php echo $urls['apparel']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink03.png" alt="ファッション業界のサポート"><br><span>ファッション</span></a>
                         </li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink04.png" alt="自動車販売のサポート"><br>自動車販売</a></li>
+                        <li><a href="<?php echo $urls['automotive']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topTortalSupportLink04.png" alt="自動車販売のサポート"><br><span>自動車販売</span></a></li>
                     </ul>
                     <div class="supportNavDescription">
                         理想的なライフスタイルを叶えるためのトータルサポート。<br>
@@ -69,7 +70,7 @@ get_header(); ?>
             </section>
             <section class="topTortalSupportBanner">
                 <div class="supportBanner">
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topSupportBanner.png" alt="ReGroupの事業内容をもっと見る"><span>ReGroupの事業内容を<br>
+                <a href="<?php echo $urls['business']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topSupportBanner.png" alt="ReGroupの事業内容をもっと見る"><span>ReGroupの事業内容を<br>
                             もっと見る　　→</span></a><!-- 矢印　要修正 -->
                 </div>
             </section>
@@ -105,7 +106,7 @@ get_header(); ?>
                 <div class="resultRight gothic-font">
                     <h2>電気工事事業での施工実績をご紹介</h2>
                     <ul class="resultNav">
-                        <li class="resultNaviItem">
+                        <li class="resultNaviItem"><a href="">
                             <a href="#" class="resultNaviLink">
                                 <span class="resultNaviImage"><img src="<?php echo get_template_directory_uri(); ?>/images/topResultThamn.png" alt=""></span>
                                 <span class="resultNaviTitle">土木電気工事</span>
@@ -161,21 +162,22 @@ get_header(); ?>
             <div>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo $urls['company']; ?>#sdgs">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/topSdgsImg.png" alt="">
+                            <span>SDG'sの取り組みについて　→</span>
+                        </a>
+                    </li>
+
+                    <li>
+                    <a href="<?php echo $urls['electrical']; ?>#sdgs">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/topBusinessImg.png" alt="">
                             <span>電気工事の種類について　→</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                    <a href="<?php echo $urls['privacy']; ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/topContactImg.png" alt="">
                             <span>個人情報の取扱いについて　→</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/topSdgsImg.png" alt="">
-                            <span>SDG'sの取り組みについて　→</span>
                         </a>
                     </li>
                 </ul>
@@ -188,7 +190,7 @@ get_header(); ?>
         <!-- 採用バナー -->
         <article>
             <section class="topRecruitBanner">
-                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topRecruitBanner.png" alt=""></a>
+            <a href="<?php echo $urls['careers']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topRecruitBanner.png" alt=""></a>
             </section>
         </article>
 
@@ -198,77 +200,55 @@ get_header(); ?>
                 <h2>取扱い商品</h2>
                 <div class="flexWrapper">
                     <div>
-                        <a href="#">
+                        <a href="https://www.instagram.com/sessions_sweets_niwatasu" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/topSweetBanner.png" alt="">
                             <span>フルーツサンド</span>
                         </a>
                     </div>
                     <div>
-                        <a href="#">
+                        <a href="https://www.instagram.com/sessions_garden_niwatasu" target="_blank">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/topAparelBanner.png" alt="">
                             <span>ファッション</span>
                         </a>
                     </div>
                 </div>
                 <div class="shopingBtn">
-                    <a href="#">ファッションショッピングサイトへ</a>
+                    <a href="https://sessions-japan.com/" target="_blank">ファッションショッピングサイトへ</a>
                 </div>
 
                 <div class="notification-container">
-    <div class="notification-list">
-        <ul>
-            <?php
-            // カスタム投稿タイプ 'news_sessions' の最新の 30 件を取得
-            $args = array(
-                'post_type' => 'news_sessions',
-                'posts_per_page' => 30,
-            );
-            $news_query = new WP_Query($args);
-
-            // 投稿が存在する場合
-            if ($news_query->have_posts()) :
-                while ($news_query->have_posts()) : $news_query->the_post();
-                    $post_date = get_the_date('Y.m.d');
-                    $link_url = get_post_meta(get_the_ID(), 'link_url', true);
-                    ?>
-                    <li>
-                        <a href="<?php echo esc_url($link_url); ?>">
-                            <span><?php echo esc_html($post_date); ?></span>
-                            <?php the_title(); ?>
-                        </a>
-                    </li>
-                <?php endwhile;
-                wp_reset_postdata(); // クエリをリセット
-            else : ?>
-                <li>お知らせはありません。</li>
-            <?php endif; ?>
-        </ul>
-    </div>
-</div>
-
-
-
-                <!-- <div class="notification-container">
                     <div class="notification-list">
                         <ul>
-                            <li>
-                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加ここにお知らせ（リンク）のシステム追加ここにお知らせ（リンク）のシステム追加ここにお知らせ（リンク）のシステム追加</a>
-                            </li>
-                            <li>
-                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
-                            </li>
-                            <li>
-                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
-                            </li>
-                            <li>
-                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
-                            </li>
-                            <li>
-                                <a href="#"><span>2024.05.03</span>ここにお知らせ（リンク）のシステム追加</a>
-                            </li>
+                            <?php
+                            // カスタム投稿タイプ 'news_sessions' の最新の 30 件を取得
+                            $args = array(
+                                'post_type' => 'news_sessions',
+                                'posts_per_page' => 30,
+                            );
+                            $news_query = new WP_Query($args);
+
+                            // 投稿が存在する場合
+                            if ($news_query->have_posts()) :
+                                while ($news_query->have_posts()) : $news_query->the_post();
+                                    $post_date = get_the_date('Y.m.d');
+                                    $link_url = get_post_meta(get_the_ID(), 'link_url', true);
+                            ?>
+                                    <li>
+                                        <a href="<?php echo esc_url($link_url); ?>" target="_blank">
+                                            <span><?php echo esc_html($post_date); ?></span>
+                                            <?php the_title(); ?>
+                                        </a>
+                                    </li>
+                                <?php endwhile;
+                                wp_reset_postdata(); // クエリをリセット
+                            else : ?>
+                                <li>お知らせはありません。</li>
+                            <?php endif; ?>
                         </ul>
                     </div>
-                </div> -->
+                </div>
+
+
             </section>
         </article>
         <!-- PICK UP -->
@@ -279,9 +259,9 @@ get_header(); ?>
                 </div>
                 <div class=" pickupRight">
                     <ul class=" pickupNav">
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topPickupListImg.png" alt="職人名鑑"><br>職人名鑑</a>
+                        <li><a href="<?php echo $urls['artisans']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topPickupListImg.png" alt="職人名鑑"><br>職人名鑑</a>
                         </li>
-                        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/topPickupBusinessImg.png" alt="会社概要"><br>「アットホーム」よりも<br>
+                        <li><a href="<?php echo $urls['careers']; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/topPickupBusinessImg.png" alt="会社概要"><br>「アットホーム」よりも<br>
                                 ファミリーと言われる企業へ</a></li>
                     </ul>
                 </div>
