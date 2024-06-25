@@ -23,7 +23,7 @@
                 <p class="footer__adText">滋賀県大津市関津3丁目5-6</p>
               </div>
               <div class="footer__adBlock">
-                <p class="footer__adTel">077-536-6594</p>
+                <p class="footer__adTel"><a href="tel:077-536-6594" class="hoverOpacity">077-536-6594</a></p>
                 <p class="footer__adText">事務所　平日9：00～15：00</p>
               </div>
             </address>
@@ -37,17 +37,17 @@
               $snsLists = array(
                 array(
                   "title" => "Re-tec株式会社",
-                  "link" => "",
+                  "link" => "https://www.instagram.com/re_tec.co.ltd/",
                   "image" => "sub/icon_instagram.png",
                 ),
                 array(
                   "title" => "SessionsGarden",
-                  "link" => "",
+                  "link" => "https://www.instagram.com/sessions_garden_niwatasu",
                   "image" => "sub/icon_instagram.png",
                 ),
                 array(
                   "title" => "Sessions",
-                  "link" => "",
+                  "link" => "https://www.instagram.com/sessions_sweets_niwatasu",
                   "image" => "sub/icon_instagram.png",
                 ),
               );

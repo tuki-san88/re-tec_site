@@ -36,12 +36,7 @@
             <div class="header-right">
                 <!-- ヘッダー上部に公式オンラインショップへのリンクを配置 -->
                 <div class="header-shop-menu">
-                    <a href="#">
-                        <picture>
-                            <source srcset="<?php echo get_template_directory_uri(); ?>/images/sub/headerShopBanner_sp.png" media="(max-width:834px)">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/headerShopBanner.png" alt="公式オンラインショップのURL">
-                        </picture>
-                    </a>
+                    <a href="#" class="shoppingBtn hoverOpacity" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/sub/icon_cart.svg" alt=""><span>公式ショッピングサイト</span></a>
                 </div>
                 <!-- メインナビゲーションメニューを配置 -->
                 <nav id="site-navigation" class="main-navigation" role="navigation">
@@ -55,7 +50,7 @@
                 </nav>
                 <!-- ハンバーガーメニューのトグルボタン -->
                 <div class="mobile-menu-toggle">
-                    <button id="mobile-menu-button" aria-controls="site-sp-navigation" aria-expanded="false" popoverTarget="site-sp-navigation">
+                    <button id="mobile-menu-button" aria-controls="site-sp-navigation" aria-expanded="false">
                         <span class="menu-toggle-icon"></span>
                         <span class="menu-toggle-icon"></span>
                         <span class="menu-toggle-text">menu</span>
@@ -63,7 +58,7 @@
                 </div>
             </div>
             <!-- ドロワーメニュー -->
-            <nav class="drawer-menu js-drawer-menu" id="site-sp-navigation" aria-hidden="true" popover>
+            <nav class="drawer-menu js-drawer-menu" id="site-sp-navigation" aria-hidden="true">
                 <ul class="drawer-menu__lists">
                     <li class="drawer-menu__list"><a href="<?php echo $urls['home']; ?>" class="drawer-menu__link hoverOpacity">トップ<span></span></a></li>
                     <li class="drawer-menu__list"><a href="<?php echo $urls['company']; ?>" class="drawer-menu__link hoverOpacity">会社案内<span></span></a></li>
