@@ -31,7 +31,7 @@ function get_my_urls()
 {
 	return array(
         // トップ
-        'home' => esc_url(home_url("/")),
+        'home' => esc_url(home_url("/top/")), //仮アドレス
 		// 会社案内
         'company' => esc_url(home_url("/company/")),
         // 事業案内

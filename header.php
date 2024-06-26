@@ -44,7 +44,8 @@
                 <!-- メインナビゲーションメニューを配置 -->
                 <nav id="site-navigation" class="main-navigation" role="navigation">
                     <ul class="menu">
-                        <li><a href="/">トップ</a></li>
+                        <li><a href="<?php echo $urls['home']; ?>">トップ</a></li><!-- テスト用 -->
+                        <!-- <li><a href="/">トップ</a></li>本番用 -->
                         <li><a href="<?php echo $urls['company']; ?>">会社案内</a></li>
                         <li><a href="<?php echo $urls['business']; ?>">事業案内</a></li>
                         <li><a href="<?php echo $urls['offices']; ?>">事業所一覧</a></li>
