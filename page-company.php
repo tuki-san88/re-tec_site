@@ -93,7 +93,7 @@
             ],
             [
               'item' => '建設業番号',
-              'description' => '0000000000000<br><br>CCUS-　登録済み<br><br>グリーンサイト-　登録済み',
+              'description' => '電気工事業 一般 般-3第 13577号<br><br>CCUS-　登録済み<br><br>グリーンサイト-　登録済み',
             ],
           ];
           get_template_part('tmp/overview', null, $args);
