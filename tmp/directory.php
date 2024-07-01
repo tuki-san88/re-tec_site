@@ -6,12 +6,10 @@
           <dt class="directory__dt"><?php echo $arg['item1'] ?></dt>
           <dd class="directory__dd"><?php echo $arg['description1'] ?></dd>
         </div>
-        <?php /*
         <div class="directory__list">
           <dt class="directory__dt"><?php echo $arg['item2'] ?></dt>
           <dd class="directory__dd"><?php echo $arg['description2'] ?></dd>
         </div>
-        */?>
         <div class="directory__list">
           <dt class="directory__dt"><?php echo $arg['item3'] ?></dt>
           <dd class="directory__dd"><?php echo $arg['description3'] ?></dd>
