@@ -73,16 +73,13 @@ header .header-content {
 
 .header-left {
   height: inherit;
-  height: 100%;
 }
 .header-left a {
   display: block;
   height: inherit;
-  height: 100%;
 }
 .header-left img {
   height: inherit;
-  height: 100%;
 }
 
 @media screen and (max-width:834px) {
