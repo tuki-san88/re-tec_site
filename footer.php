@@ -41,12 +41,12 @@
                   "image" => "sub/icon_instagram.png",
                 ),
                 array(
-                  "title" => "SessionsGarden",
+                  "title" => "Sessions(アパレル)",
                   "link" => "https://www.instagram.com/sessions_garden_niwatasu",
                   "image" => "sub/icon_instagram.png",
                 ),
                 array(
-                  "title" => "Sessions",
+                  "title" => "Sessions(フルーツサンド)",
                   "link" => "https://www.instagram.com/sessions_sweets_niwatasu",
                   "image" => "sub/icon_instagram.png",
                 ),

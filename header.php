@@ -39,7 +39,7 @@
             <div class="header-right">
                 <!-- ヘッダー上部に公式オンラインショップへのリンクを配置 -->
                 <div class="header-shop-menu">
-                    <a href="#" class="shoppingBtn hoverOpacity" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/sub/icon_cart.svg" alt=""><span>公式ショッピングサイト</span></a>
+                    <a href="https://sessions-japan.com/" class="shoppingBtn hoverOpacity" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/sub/icon_cart.svg" alt=""><span>公式ショッピングサイト</span></a>
                 </div>
                 <!-- メインナビゲーションメニューを配置 -->
                 <nav id="site-navigation" class="main-navigation" role="navigation">

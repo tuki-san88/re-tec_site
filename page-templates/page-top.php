@@ -1,11 +1,11 @@
 <?php
 $pageId = "top";
+$urls = get_my_urls();
+
 /*
  * Template Name: Top Page
  */
 get_header(); ?>
-<?php $urls = get_my_urls(); ?>
-
 <main id="<?php echo $pageId; ?>">
 
     <!-- メインキャッチのスライドショー -->
@@ -13,7 +13,7 @@ get_header(); ?>
         <div class="main-slider">
             <?php
             $images = array(
-                'topMainSlide01.png',
+                /*'topMainSlide01.png',*/
                 'topMainSlide02.jpg',
                 'topMainSlide03.jpg',
                 'topMainSlide04.jpg',
@@ -169,7 +169,7 @@ get_header(); ?>
                     </li>
 
                     <li>
-                    <a href="<?php echo $urls['electrical']; ?>#sdgs">
+                    <a href="<?php echo $urls['electrical']; ?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/images/topBusinessImg.png" alt="">
                             <span>電気工事の種類について　→</span>
                         </a>

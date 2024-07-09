@@ -4,11 +4,11 @@ jQuery(document).ready(function($) {
     var customCurrentIndex = 0;
 
     function showNextCustomSlide() {
-        customSlides.eq(customCurrentIndex).fadeOut(1000).removeClass('active');
+        customSlides.eq(customCurrentIndex).fadeOut(2000).removeClass('active');
         customCurrentIndex = (customCurrentIndex + 1) % customSlides.length;
-        customSlides.eq(customCurrentIndex).fadeIn(1000).addClass('active');
+        customSlides.eq(customCurrentIndex).fadeIn(2000).addClass('active');
     }
 
     customSlides.hide().eq(customCurrentIndex).show().addClass('active');
-    setInterval(showNextCustomSlide, 3000);
+    setInterval(showNextCustomSlide, 6000);
 });

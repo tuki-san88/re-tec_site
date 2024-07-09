@@ -240,7 +240,7 @@ header {
 .topSubSlideWrapper {
     width: 100%;
     max-width: 900px;
-    height: 600px;
+    /* height: 600px; */
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -252,8 +252,8 @@ header {
 }
 
 .custom-slider {
-    width: 100%;
-    height: 100%;
+    width: 900px;
+    height: 600px;
     position: relative;
 
     .custom-slide {
@@ -371,9 +371,7 @@ header {
             .resultNaviItem {
                 display: inline-block;
                 border: 1px solid #707070;
-                margin: 0 35px;
-                border: 1px solid #707070;
-                margin: 0 35px;
+                margin: 0 15px;
                 text-align: left;
                 font-size: 16px;
                 line-height: 1;
@@ -677,6 +675,8 @@ header {
     }
 }
 
+
+
 @include mq("sp") {
     .contact-page {
         .contact-form {
@@ -704,6 +704,91 @@ header {
         }
     }
 }
+
+
+
+/*実績詳細一覧*/
+
+
+.mainWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: $black-color;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .actual-results {
+        
+    }
+
+    .actual-result {
+        background-color: rgba($color: #FEF30B, $alpha: 0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid $grey-color;
+        display: flex;
+        
+        
+        .actual-result-thumbnail {
+            flex: 1;
+            img {
+                width: 100%;
+                height: 240px;
+                object-fit: cover;
+
+            }
+        }
+
+        .actual-result-content {
+            flex: 2;
+            padding-left: 20px;
+            text-align: left;
+
+            h2 {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .pagination {
+        text-align: center;
+        margin-top: 20px;
+        a, span {
+            padding: 10px;
+            margin: 5px;
+            background-color: $yellow-color;
+            color: $black-color;
+            text-decoration: none;
+        }
+    }
+}
+
+
+@include mq(tab) {
+    .actual-result {
+        width: calc(50% - 20px);
+    }
+}
+
+@include mq(sp) {
+    .actual-results {
+        flex-direction: column;
+    }
+
+    .actual-result {
+        width: 100%;
+    }
+}
+
 
 /*sp.scssの読み込み*/
 @import "sp";
@@ -828,7 +913,7 @@ header {
 
     //サブスライダー
     .topSubSlideWrapper {
-        height: 300px; /* 高さを調整 */
+        /* height: 300px; */ /* 高さを調整 */
 
         h2 {
             margin: 40px; /* マージンを調整 */
