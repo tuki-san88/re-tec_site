@@ -58,7 +58,8 @@ $minVw: 390;
   --base-color: #3b3b3b;
   --white: #ffffff;
   --black: #000000;
-  --yellow: #fef30b;
+  --yellow: #e6dc0a;
+  /* --yellow: #fef30b; */
   --yellow-light: #fff982;
   --pink: #efb9b9;
   --green: #0ba500;
@@ -183,6 +184,7 @@ header {
 
       span {
         display: inline-block;
+        font-weight: bold;
         &::after {
           content: "";
           display: inline-block;

@@ -107,13 +107,28 @@
           <?php
           $args = [
             [
-              'img' => get_template_directory_uri() . '/images/sub/img_apparel_content1.jpg',
-            ],
-            [
               'img' => get_template_directory_uri() . '/images/sub/img_media_apparel1.jpg',
             ],
             [
               'img' => get_template_directory_uri() . '/images/sub/img_media_apparel2.jpg',
+            ],
+            [
+              'img' => get_template_directory_uri() . '/images/sub/img_media_apparel3.jpg',
+            ],
+            [
+              'img' => get_template_directory_uri() . '/images/sub/img_media_apparel4.jpg',
+            ],
+            [
+              'img' => get_template_directory_uri() . '/images/sub/img_media_apparel5.jpg',
+            ],
+            [
+              'img' => get_template_directory_uri() . '/images/sub/img_media_apparel6.jpg',
+            ],
+            [
+              'img' => get_template_directory_uri() . '/images/sub/img_media_apparel7.jpg',
+            ],
+            [
+              'img' => get_template_directory_uri() . '/images/sub/img_media_apparel8.jpg',
             ],
           ];
           get_template_part('tmp/imgSlide', null, $args);
@@ -144,7 +159,7 @@
       </div>
       <div class="secPhoto__bottom">
         <div class="secPhoto__bnr">
-          <a href="" class="hoverOpacity">
+          <a href="https://www.instagram.com/sessions_garden_niwatasu" class="hoverOpacity" target="_blank">
             <?php
             $args = [
               'pictureImg' => 'sub/bnr_sessions2',
@@ -172,7 +187,8 @@
         <h2 class="secMap__title secTitle">アクセス</h2>
         <div class="secMap__body">
           <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.093558756266!2d135.92017817631265!3d34.929190472839345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60016cbfde1f12ff%3A0x4b7c47bc2c97beab!2z44CSNTIwLTIyNzcg5ruL6LOA55yM5aSn5rSl5biC6Zai5rSl77yT5LiB55uu77yV4oiS77yW!5e0!3m2!1sja!2sjp!4v1718776143717!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1542.0180643879623!2d135.96139483789335!3d35.02115927093762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600173202e5c437f%3A0x9836d36413f2574!2sSessions%20Niwatasu!5e0!3m2!1sja!2sjp!4v1720217465229!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.093558756266!2d135.92017817631265!3d34.929190472839345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60016cbfde1f12ff%3A0x4b7c47bc2c97beab!2z44CSNTIwLTIyNzcg5ruL6LOA55yM5aSn5rSl5biC6Zai5rSl77yT5LiB55uu77yV4oiS77yW!5e0!3m2!1sja!2sjp!4v1718776143717!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
           </div>
         </div>
       </div>
@@ -186,7 +202,7 @@
             'link' => $urls['contact'],
             'img' => 'sub/img_related_contact.jpg',
             'title' => 'お問い合わせ',
-            'titleColor' => 'gray',
+            'titleColor' => 'white',
             'position' => 'positionBottom',
           ],
         ];

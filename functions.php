@@ -31,7 +31,7 @@ function get_my_urls()
 {
 	return array(
         // トップ
-        'home' => esc_url(home_url("/")),
+        'home' => esc_url(home_url("/top/")), //仮アドレス
 		// 会社案内
         'company' => esc_url(home_url("/company/")),
         // 事業案内
@@ -51,7 +51,7 @@ function get_my_urls()
         // 事業所一覧
         'offices' => esc_url(home_url("/offices/")),
         // 施工実績（一覧）
-        'Archive' => esc_url(home_url("/")),
+        'Archive' => esc_url(home_url("/actual_result/")),
         // プライバシーポリシー
         'privacy' => esc_url(home_url("/privacy-policy/")),
         // お問い合わせ
@@ -108,5 +108,31 @@ function save_custom_meta_box($post_id) {
     }
 }
 add_action('save_post', 'save_custom_meta_box'); // 投稿が保存されるときにメタボックスの値も保存するアクションフック
+
+/* 実績詳細のカスタム投稿タイプ定義 */
+function create_actual_result_post_type() {
+    register_post_type('actual_result',
+        array(
+            'labels' => array(
+                'name' => __('実績詳細'),
+                'singular_name' => __('実績詳細')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'actual_result'), // ここがURLに影響します
+            'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+            'menu_position' => 5,
+            'show_in_rest' => true, // Gutenbergエディター対応
+        )
+    );
+}
+add_action('init', 'create_actual_result_post_type');
+
+
+//アイキャッチ表示
+function setup_theme() {
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'setup_theme');
 
 ?>

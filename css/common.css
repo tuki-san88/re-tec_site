@@ -236,7 +236,7 @@ header .header-content {
 .topSubSlideWrapper {
   width: 100%;
   max-width: 900px;
-  height: 600px;
+  /* height: 600px; */
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -247,8 +247,8 @@ header .header-content {
 }
 
 .custom-slider {
-  width: 100%;
-  height: 100%;
+  width: 900px;
+  height: 600px;
   position: relative;
 }
 .custom-slider .custom-slide {
@@ -358,9 +358,7 @@ header .header-content {
 .topResultWrapper .resultRight .resultNav .resultNaviItem {
   display: inline-block;
   border: 1px solid #707070;
-  margin: 0 35px;
-  border: 1px solid #707070;
-  margin: 0 35px;
+  margin: 0 15px;
   text-align: left;
   font-size: 16px;
   line-height: 1;
@@ -655,6 +653,70 @@ header .header-content {
     display: block;
   }
 }
+/*実績詳細一覧*/
+.mainWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #3b3b3b;
+}
+.mainWrapper h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.mainWrapper .actual-result {
+  background-color: rgba(254, 243, 11, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #707070;
+  display: flex;
+}
+.mainWrapper .actual-result .actual-result-thumbnail {
+  flex: 1;
+}
+.mainWrapper .actual-result .actual-result-thumbnail img {
+  width: 100%;
+  height: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mainWrapper .actual-result .actual-result-content {
+  flex: 2;
+  padding-left: 20px;
+  text-align: left;
+}
+.mainWrapper .actual-result .actual-result-content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.mainWrapper .actual-result .actual-result-content p {
+  font-size: 20px;
+}
+.mainWrapper .pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+.mainWrapper .pagination a, .mainWrapper .pagination span {
+  padding: 10px;
+  margin: 5px;
+  background-color: #fef30b;
+  color: #3b3b3b;
+  text-decoration: none;
+}
+
+@media screen and (max-width:834px) {
+  .actual-result {
+    width: calc(50% - 20px);
+  }
+}
+@media screen and (max-width:480px) {
+  .actual-results {
+    flex-direction: column;
+  }
+  .actual-result {
+    width: 100%;
+  }
+}
 /*sp.scssの読み込み*/
 /*sp.scss*/
 /* スマホ用メニュー */
@@ -773,7 +835,7 @@ header .header-content {
     padding-left: 10px;
   }
   .topSubSlideWrapper {
-    height: 300px; /* 高さを調整 */
+    /* height: 300px; */ /* 高さを調整 */
   }
   .topSubSlideWrapper h2 {
     margin: 40px; /* マージンを調整 */

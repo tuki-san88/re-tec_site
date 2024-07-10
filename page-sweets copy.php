@@ -23,40 +23,21 @@
       <div class="newsBlock__contents">
         <div class="newsBlock__content">
           <ul class="newsBlock__lists">
-            <?php
-            // カスタム投稿タイプ 'news_sessions' の最新の 30 件を取得
-            $args = array(
-              'post_type' => 'news_sessions',
-              'posts_per_page' => 30,
-            );
-            $news_query = new WP_Query($args);
-
-            // 投稿が存在する場合
-            if ($news_query->have_posts()) :
-              while ($news_query->have_posts()) : $news_query->the_post();
-                $post_date = get_the_date('Y.m.d');
-                $link_url = get_post_meta(get_the_ID(), 'link_url', true);
-            ?>
-                <li class="newsBlock__list">
-                  <a href="<?php echo esc_url($link_url); ?>" target="_blank">
-                    <span class="newsBlock__date baseText"><?php echo esc_html($post_date); ?></span>
-                    <span class="newsBlock__title baseText"><?php the_title(); ?></span>
-                  </a>
-                </li>
-              <?php endwhile;
-              wp_reset_postdata(); // クエリをリセット
-            else : ?>
-              <li>お知らせはありません。</li>
-            <?php endif; ?>
-
-
+            <?php for ($count = 0; $count < 10; $count++) { ?>
+              <li class="newsBlock__list">
+                <a href="" class="hoverOpacity">
+                  <span class="newsBlock__date baseText">2024.2.23</span>
+                  <span class="newsBlock__title baseText">ここにお知らせ（リンク）のシステム追加</span>
+                </a>
+              </li>
+            <?php } ?>
           </ul>
         </div>
       </div>
     </div>
     <!-- スイーツ詳細 -->
     <div class="secSweetsContent1 secContent1-l">
-      <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->
+     <!-- メディアパーツ mod = st_yellow st_pink st_green reverse(PC時左右反転) ver2(titleが一番上に配置) -->
       <?php
       $args = [
         'mod' => 'st_pink ver2',

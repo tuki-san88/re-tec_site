@@ -40,7 +40,7 @@
             <p class="secGreeting__name"><img src="<?php echo get_template_directory_uri() ?>/images/sub/name_miyamoto.svg" width="462" height="94" alt="宮本 佳士"></p>
           </div>
           <div class="secGreeting__imgBlock">
-            <img src="<?php echo get_template_directory_uri() ?>/images/sub/img_president.png" width="462" height="94" alt="">
+            <img src="<?php echo get_template_directory_uri() ?>/images/sub/img_president.png?20240710" width="462" height="94" alt="">
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
             ],
             [
               'item' => '建設業番号',
-              'description' => '0000000000000<br><br>CCUS-　登録済み<br><br>グリーンサイト-　登録済み',
+              'description' => '電気工事業 一般 般-3第 13577号<br><br>CCUS-　登録済み<br><br>グリーンサイト-　登録済み',
             ],
           ];
           get_template_part('tmp/overview', null, $args);

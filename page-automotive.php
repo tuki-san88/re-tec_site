@@ -68,7 +68,7 @@
             'link' => $urls['contact'],
             'img' => 'sub/img_related_contact.jpg',
             'title' => 'お問い合わせ',
-            'titleColor' => 'gray',
+            'titleColor' => 'white',
             'position' => 'positionBottom',
           ],
         ];
