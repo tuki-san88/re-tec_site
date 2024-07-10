@@ -135,6 +135,10 @@ header {
   }
   img {
     height: inherit;
+
+    @include mq(tab) {
+      width: 105px;
+    }
   }
 }
 .header-right {
@@ -267,6 +271,7 @@ header {
       margin-left: initial;
       width: 100%;
       text-transform: uppercase;
+      color: var(--black);
     }
   }
 }
